@@ -39,6 +39,7 @@ ifeq ($(SUPERIOR_OFFICIAL), true)
       IS_OFFICIAL=true
       SUPERIOR_BUILD_TYPE := OFFICIAL
 
+include vendor/superior-priv/keys.mk
 PRODUCT_PACKAGES += \
     Updater
 
