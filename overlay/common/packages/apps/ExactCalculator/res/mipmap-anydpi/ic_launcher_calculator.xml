@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <background>
+        <vector android:height="108.0dip" android:width="108.0dip" android:viewportWidth="432.0" android:viewportHeight="432.0">
+            <path android:fillColor="#ff1de9b6" android:pathData="M0,0h432v432h-432z" />
+            <path android:fillColor="#fff5f5f5" android:pathData="M305.1,259.3v13.1h-52.4v-13.1H305.1zM252.7,285.5v13.1h52.4v-13.1H252.7z" />
+        </vector>
+    </background>
+    <foreground>
+        <layer-list>
+            <item>
+                <vector android:height="108.0dip" android:width="108.0dip" android:viewportWidth="432.0" android:viewportHeight="432.0">
+                    <path android:fillColor="#ff636363" android:pathData="M0,216l13.1,13.1l189.8,0l31.1,-31.1l0,-180l-18,-18l-216,0z" />
+                    <path android:fillColor="#fff5f5f5" android:pathData="M126.9,146.6h52.4v13.1h-52.4z" />
+                    <path android:fillColor="#ff515151" android:pathData="M0,216h216v216h-216z" />
+                    <path android:fillColor="#fff5f5f5" android:pathData="M159.6,272.4l0,-19.6l-13.1,0l0,19.6l-19.6,0l0,13.1l19.6,0l0,19.6l13.1,0l0,-19.6l19.6,0l0,-13.1z" />
+                    <path android:fillColor="#ff434343" android:pathData="M216,0h216v216h-216z" />
+                    <path android:fillColor="#ffeeeeee" android:pathData="M301.8,136.7l-6.6,-6.6l-16.4,16.4l-16.4,-16.4l-6.5,6.6l16.4,16.4l-16.4,16.4l6.5,6.6l16.4,-16.4l16.4,16.4l6.6,-6.6l-16.4,-16.4z" />
+                </vector>
+            </item>
+            <item android:drawable="@mipmap/launcher_calculator_banner" />
+        </layer-list>
+    </foreground>
+</adaptive-icon>

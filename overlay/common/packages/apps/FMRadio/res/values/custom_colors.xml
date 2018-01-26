@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2012 The Android Open Source Project
+  ~ Copyright (C) 2017 Cardinal-AOSP
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -15,6 +14,9 @@
   ~ limitations under the License
 -->
 
-<resources> 
-  <color name="ic_launcher_background">@color/dialer_theme_color</color>
+<resources>
+
+    <!-- Adaptive icon background layer color -->
+    <color name="ic_launcher_background">#e91e63</color>
+
 </resources>
