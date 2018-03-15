@@ -172,3 +172,7 @@ PRODUCT_PACKAGES += \
     QStileSquircleTrim \
     QStileTeardrop \
     QStileWavey
+
+#Font package
+PRODUCT_PACKAGES += \
+    Custom-Fonts
