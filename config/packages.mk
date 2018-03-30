@@ -52,7 +52,7 @@ PRODUCT_PACKAGES += \
     DialerThemeBlack \
     FilesThemeBlack
 
-# Overlays
+# Accents
 PRODUCT_PACKAGES += \
     AmberAccent \
     BlackAccent \
