@@ -43,7 +43,8 @@ PRODUCT_PACKAGES += \
     Stk \
     ThemePicker \
     ViaBrowser \
-    OmniStyle
+    OmniStyle \
+    Custom-Fonts
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
