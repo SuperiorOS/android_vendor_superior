@@ -34,17 +34,22 @@ PRODUCT_PACKAGES += \
     BlueGreyAccent \
     BrownAccent \
     CyanAccent \
+	CandyRedAccent \
     DeepOrangeAccent \
     DeepPurpleAccent \
     DuiDark \
+	ExtendedGreenAccent \
     GBoardDark \
     GreenAccent \
     GreyAccent \
     IndigoAccent \
+	JadeGreenAccent \
     LightBlueAccent \
     LightGreenAccent \
     LimeAccent \
     OrangeAccent \
+	PaleBlueAccent \
+    PaleRedAccent \
     PinkAccent \
     PurpleAccent \
     RedAccent \
