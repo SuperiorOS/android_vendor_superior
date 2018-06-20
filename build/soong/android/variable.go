@@ -3,6 +3,14 @@ type Product_variables struct {
 	Additional_gralloc_10_usage_bits struct {
 		Cppflags []string
 	}
+	Device_support_hwfde struct {
+		Cflags []string
+		Header_libs []string
+		Shared_libs []string
+	}
+	Device_support_hwfde_perf struct {
+		Cflags []string
+	}
 	Has_legacy_camera_hal1 struct {
 		Cflags []string
 	}
@@ -31,6 +39,8 @@ type Product_variables struct {
 
 type ProductVariables struct {
 	Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
+	Device_support_hwfde  *bool `json:",omitempty"`
+	Device_support_hwfde_perf  *bool `json:",omitempty"`
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
 	Needs_text_relocations  *bool `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
