@@ -175,6 +175,9 @@ $(call inherit-product, vendor/superior/config/telephony.mk)
 # Packages
 include vendor/superior/config/packages.mk
 
+# Fonts
+include vendor/superior/config/fonts.mk
+
 # Superior_props
 $(call inherit-product, vendor/superior/config/superior_props.mk)
 
