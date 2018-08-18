@@ -65,6 +65,7 @@ PRODUCT_PACKAGES += \
     Calendar \
     LiveWallpapers \
     LiveWallpapersPicker \
+    WallpaperPickerGooglePrebuilt \
     Stk \
     Recorder \
     Music \
