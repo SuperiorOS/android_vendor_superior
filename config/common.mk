@@ -51,7 +51,8 @@ endif
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/superior/overlay/common \
-    vendor/superior/overlay/dictionaries
+    vendor/superior/overlay/dictionaries \
+    vendor/superior/overlay/themes
 
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
@@ -116,8 +117,8 @@ PRODUCT_COPY_FILES += \
 
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml	
-	
+    vendor/superior/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
@@ -163,15 +164,12 @@ PRODUCT_PACKAGES += \
 # Clean cache
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
-	
+
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
 
 #Telephony
 $(call inherit-product, vendor/superior/config/telephony.mk)
-
-# Themes
-include vendor/themes/common.mk
 
 # Packages
 include vendor/superior/config/packages.mk
@@ -183,7 +181,7 @@ $(call inherit-product, vendor/superior/config/superior_props.mk)
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
 endif
-	
+
 # Include SDCLANG definitions if it is requested and available
 #ifeq ($(HOST_OS),linux)
 #    ifneq ($(wildcard vendor/qcom/sdclang-4.0/),)
