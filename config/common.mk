@@ -170,6 +170,9 @@ USE_DEX2OAT_DEBUG ?= false
 #Telephony
 $(call inherit-product, vendor/superior/config/telephony.mk)
 
+# Themes
+include vendor/themes/common.mk
+
 # Superior_props
 $(call inherit-product, vendor/superior/config/superior_props.mk)
 
@@ -177,7 +180,6 @@ $(call inherit-product, vendor/superior/config/superior_props.mk)
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
 endif
-
 	
 # Include SDCLANG definitions if it is requested and available
 #ifeq ($(HOST_OS),linux)
@@ -185,3 +187,4 @@ endif
 #        include vendor/superior/sdclang/sdclang.mk
 #    endif
 #endif
+
