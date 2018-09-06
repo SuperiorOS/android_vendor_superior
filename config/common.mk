@@ -173,6 +173,9 @@ $(call inherit-product, vendor/superior/config/telephony.mk)
 # Themes
 include vendor/themes/common.mk
 
+# Packages
+include vendor/superior/config/packages.mk
+
 # Superior_props
 $(call inherit-product, vendor/superior/config/superior_props.mk)
 
@@ -187,4 +190,3 @@ endif
 #        include vendor/superior/sdclang/sdclang.mk
 #    endif
 #endif
-
