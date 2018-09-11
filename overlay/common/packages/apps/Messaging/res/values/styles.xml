@@ -16,6 +16,14 @@
 -->
 <resources>
 
-  <color name="navigation_bar_color">@android:color/white</color>
+    <style name="BugleTheme" parent="BugleBaseTheme">
+         <item name="android:navigationBarColor">@color/navigation_bar_color</item>
+         <item name="android:windowLightNavigationBar">@bool/windowLightNavigationBar</item>
+    </style>
+
+    <style name="BugleTheme.ConversationActivity" parent="@style/BugleTheme.ConversationActivityBase">
+         <item name="android:navigationBarColor">@color/navigation_bar_color</item>
+         <item name="android:windowLightNavigationBar">@bool/windowLightNavigationBar</item>
+    </style>
 
 </resources>
