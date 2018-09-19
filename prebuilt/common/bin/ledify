@@ -1,0 +1,239 @@
+#!/system/bin/sh
+#
+# Copyright (c) 2015, Mattia "AntaresOne" D'Alleva
+# Copyright (c) 2015, JDCTeam
+#
+# JDCTeam presents LEDify!
+#
+# Funny script to control the notification LED at device boot. 
+#
+# <=== Introduction ===>
+# BRG is the brightness level for single channels; Range from 0 (minimum, off) to 255 (maximum)
+# HBCOLOR is the color channel for heartbeat pattern. Can be blue, green or red
+# LED_*letter* is the individual channel for primary colors through sysfs. Letter can be B for blue, G for green, R for red
+# TBX (Toolbox) will be our custom app to handle this script, if you are going to use this script in your ROM just ignore it
+# while :; do is a loop where sys.boot_completed from system properties is continuously checked. If BOOT=1 stop LEDify, otherwise set chosen LED colors
+#
+# <=== Settings ===>
+# PATTERN is the LED pattern which you prefer:
+# - jdcdefault is our default one, rainbow colors (red->orange->yellow->green->blue->indigo->violet->reverse)
+# - disabled to disable LEDify
+# - heartbeat is a realistic heartbeat simulation! (power on/off chosen channel gradually for two times, wait 1 and half second, pulse again)
+# - nexus follows the Google Nexus logo in clockwise (red->green->yellow->blue)
+# - nexusreverse is same as above, but anticlockwise (blue->yellow->green->red)
+# - police is alternate blue/red flashing as Police cars
+# - secdefault is Samsung stock blue pattern
+# SPD is color switch time in milliseconds (0.*value*) or seconds (*value*), sets a wait time before executing the next command. Our default value: 100ms ("sleep 0.10")
+#
+# <=== Usage example ===>
+# Put PATTERN and SPD values of your choice under "# Default" which is at the end of file
+# BRG with your preferred values
+# In case of heartbeat pattern put HBCOLOR of your choice, default is red. This pattern has its own SPD values
+#
+# <=== How can I make my own patterns? ===>
+# Take a look at these examples:
+# <= Blue->Cyan->White pattern =>
+# $BRG 255 > $LED_B applies 255 brightness value to the blue channel
+# $SPD sets the chosen wait time
+# $BRG 255 > $LED_G applies 255 brightness value to the green channel (at this point the LED is cyan)
+# $SPD same as above
+# $BRG 255 > $LED_R applies 255 brightness value to the red channel (at this point the LED is white)
+# $SPD
+# $BRG 0 | tee $LED_G $LED_R resets brightness for green and red channels (at this point the LED is blue again)
+# Then loop restarts
+# <==>
+# <= Red->Green->Blue pattern =>
+# $BRG 255 > $LED_R && $SPD applies 255 brightness value to the red channel and waits
+# $BRG 0 > $LED_R && $BRG 255 > $LED_G && $SPD resets brightness for the red channel, applies 255 brightness value to the green channel and waits
+# $BRG 0 > $LED_G && $BRG 255 > $LED_B && $SPD && $BRG 0 > $LED_B resets brightness for the green channel, applies 255 brightness value to the blue channel, waits and resets the blue channel
+# Then loop restarts
+# <==>
+#
+# <=== Can I add it in my ROM? ===>
+# Sure, follow these steps and don't forget to give credit to the owner :-)
+# 1- Add this binary in /system/bin or add PRODUCT_COPY_FILES in a makefile to automatically add it when building a ROM from source.
+# 2- By default, LEDify is started by kernel's init and stopped itself when boot is completed. Declare it as service in init and add a start command ("start /system/bin/ledify" is good)
+# 3- If SELinux is enforcing LEDify may not start. To fix just switch to permissive SELinux (androidboot.selinux=permissive for cmdline) until I don't add a denial for it.
+#
+# Further infos: https://goo.gl/AmzVqG || https://goo.gl/Yp8f1g
+#
+# Imagination is the only limit!
+
+# Brightness
+BRG=echo #value
+# Color channel sysfs
+LED_B=/sys/class/leds/led_b/brightness
+LED_G=/sys/class/leds/led_g/brightness
+LED_R=/sys/class/leds/led_r/brightness
+# Samsung stock LED pattern
+LED_SEC=/sys/devices/virtual/sec/led/led_pattern
+
+EXIT() {
+    # Reset channels
+    echo 0 | tee $LED_B $LED_G $LED_R $LED_SEC
+    exit 0
+}
+
+HEARTBEAT() {
+    # Set color channel
+    if [ "$HBCOLOR" == "blue" ]; then
+	LED=$LED_B
+    elif [ "$HBCOLOR" == "green" ]; then
+	LED=$LED_G
+    else
+        LED=$LED_R
+    fi
+    # Between each brightness value
+    SPD="sleep 0.01"
+    # Between a beat and the other
+    SPD2="sleep 0.02"
+    # Between end of two beats and start of another two
+    SPD3="sleep 1.5"
+    $BRG 30 > $LED | $SPD
+    $BRG 55 > $LED | $SPD
+    $BRG 80 > $LED | $SPD
+    $BRG 105 > $LED | $SPD
+    $BRG 130 > $LED | $SPD
+    $BRG 155 > $LED | $SPD
+    $BRG 180 > $LED | $SPD
+    $BRG 205 > $LED | $SPD
+    $BRG 230 > $LED | $SPD
+    $BRG 255 > $LED | $SPD
+    $BRG 230 > $LED | $SPD
+    $BRG 205 > $LED | $SPD
+    $BRG 180 > $LED | $SPD
+    $BRG 155 > $LED | $SPD
+    $BRG 130 > $LED | $SPD
+    $BRG 105 > $LED | $SPD
+    $BRG 80 > $LED | $SPD
+    $BRG 55 > $LED | $SPD
+    $BRG 30 > $LED | $SPD
+    $BRG 0 > $LED | $SPD
+    $SPD2
+    $BRG 30 > $LED | $SPD
+    $BRG 55 > $LED | $SPD
+    $BRG 80 > $LED | $SPD
+    $BRG 105 > $LED | $SPD
+    $BRG 130 > $LED | $SPD
+    $BRG 155 > $LED | $SPD
+    $BRG 180 > $LED | $SPD
+    $BRG 205 > $LED | $SPD
+    $BRG 230 > $LED | $SPD
+    $BRG 255 > $LED | $SPD
+    $BRG 230 > $LED | $SPD
+    $BRG 205 > $LED | $SPD
+    $BRG 180 > $LED | $SPD
+    $BRG 155 > $LED | $SPD
+    $BRG 130 > $LED | $SPD
+    $BRG 105 > $LED | $SPD
+    $BRG 80 > $LED | $SPD
+    $BRG 55 > $LED | $SPD
+    $BRG 30 > $LED | $SPD
+    $BRG 0 > $LED | $SPD
+    $SPD3
+}
+
+JDCDEF() {
+    if [ "$SPD" == "null" ]; then
+	SPD="sleep 0.10"
+    fi
+    # Red
+    $BRG 150 > $LED_R | $SPD
+    # Orange
+    $BRG 40 > $LED_G | $SPD
+    # Yellow
+    $BRG 150 > $LED_G | $SPD
+    # Green
+    $BRG 0 > $LED_R | $SPD
+    # Blue
+    $BRG 0 > $LED_G && $BRG 150 > $LED_B | $SPD
+    # Indigo
+    $BRG 10 > $LED_R | $SPD
+    # Violet
+    $BRG 150 > $LED_R | $SPD
+    ### Reverse ###
+    # Indigo
+    $BRG 10 > $LED_R | $SPD
+    # Blue
+    $BRG 0 | tee $LED_G $LED_R | $SPD
+    # Green
+    $BRG 0 > $LED_B && $BRG 150 > $LED_G | $SPD
+    # Yellow
+    $BRG 150 > $LED_R | $SPD
+    # Orange
+    $BRG 40 > $LED_G | $SPD
+    # Red
+    $BRG 0 > $LED_G
+}
+
+NEXUS() {
+    if [ "$SPD" == "null" ]; then
+	SPD="sleep 0.20"
+    fi
+    if [ "$REVERSE" == "true" ]; then
+	$BRG 255 > $LED_B | $SPD
+	$BRG 0 > $LED_B && $BRG 255 | tee $LED_G $LED_R | $SPD
+	$BRG 0 > $LED_R | $SPD
+	$BRG 0 > $LED_G && $BRG 255 > $LED_R | $SPD
+    else
+	$BRG 255 > $LED_R | $SPD
+	$BRG 0 > $LED_R && $BRG 255 > $LED_G | $SPD
+	$BRG 255 > $LED_R | $SPD
+	$BRG 0 | tee $LED_G $LED_R && $BRG 255 > $LED_B | $SPD
+	$BRG 0 > $LED_B
+    fi
+}
+
+POLICE() {
+    if [ "$SPD" == "null" ]; then
+	SPD="sleep 0.30"
+    fi
+    $BRG 255 > $LED_B | $SPD
+    $BRG 0 > $LED_B && $BRG 255 > $LED_R | $SPD
+    $BRG 0 > $LED_R
+}
+
+SECDEF() {
+    $BRG 6 > $LED_SEC
+    # Update each 10 seconds
+    sleep 10
+}
+
+RUN() {
+    case $PATTERN in
+    disabled) EXIT;;
+    heartbeatblue) HBCOLOR=blue; HEARTBEAT;;
+    heartbeatgreen) HBCOLOR=green; HEARTBEAT;;
+    heartbeatred) HEARTBEAT;;
+    jdcdefault) JDCDEF;;
+    nexus) NEXUS;;
+    nexusreverse) REVERSE=true; NEXUS;;
+    police) POLICE;;
+    secdefault) SECDEF;;
+    esac
+}
+
+LOOP() {
+    # Start a loop
+    while :; do
+        BOOT=$(getprop sys.boot_completed | grep "1")
+	if [ "$BOOT" == "1" ]; then
+	    PATTERN=disabled
+	fi
+	RUN
+    done
+}
+
+# <=== Start ===>
+# JDC Toolbox compatibility layer
+TBX=$(ls /data | grep "toolbox_ledify");
+if [ "$TBX" == "toolbox_ledify" ]; then
+    # Set user-chosen values, Toolbox-only
+    PATTERN=$(eval $(cat /data/toolbox_ledify | grep -o "PATTERN[^/].*"); echo $PATTERN);
+    SPD=$(eval $(cat /data/toolbox_ledify | grep -o "SPEED[^/].*"); echo $SPEED);
+else
+    # Default
+    PATTERN=jdcdefault
+    SPD=null # null applies default pattern-based speed values decided by us
+fi
+LOOP

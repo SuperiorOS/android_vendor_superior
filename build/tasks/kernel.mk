@@ -66,9 +66,7 @@
 #   USE_CCACHE                         = Enable ccache (global Android flag)
 #
 #   NEED_KERNEL_MODULE_ROOT            = Optional, if true, install kernel
-#                                          modules in root instead of vendor
-#   NEED_KERNEL_MODULE_SYSTEM          = Optional, if true, install kernel
-#                                          modules in system instead of vendor
+#                                          modules in root instead of system
 
 ifneq ($(TARGET_NO_KERNEL),true)
 
@@ -199,11 +197,6 @@ KERNEL_MODULES_INSTALL := root
 KERNEL_MODULES_OUT := $(TARGET_ROOT_OUT)/lib/modules
 KERNEL_DEPMOD_STAGING_DIR := $(call intermediates-dir-for,PACKAGING,depmod_recovery)
 KERNEL_MODULE_MOUNTPOINT :=
-else ifeq ($(NEED_KERNEL_MODULE_SYSTEM),true)
-KERNEL_MODULES_INSTALL := $(TARGET_COPY_OUT_SYSTEM)
-KERNEL_MODULES_OUT := $(TARGET_OUT)/lib/modules
-KERNEL_DEPMOD_STAGING_DIR := $(call intermediates-dir-for,PACKAGING,depmod_system)
-KERNEL_MODULE_MOUNTPOINT := system
 else
 KERNEL_MODULES_INSTALL := $(TARGET_COPY_OUT_VENDOR)
 KERNEL_MODULES_OUT := $(TARGET_OUT_VENDOR)/lib/modules
@@ -241,6 +234,8 @@ ifeq ($(TARGET_KERNEL_CLANG_COMPILE),true)
         KERNEL_CLANG_VERSION := $(LLVM_PREBUILTS_VERSION)
     endif
     TARGET_KERNEL_CLANG_PATH ?= $(BUILD_TOP)/prebuilts/clang/host/$(HOST_OS)-x86/$(KERNEL_CLANG_VERSION)/bin
+    KBUILD_COMPILER_STRING := $(shell $(TARGET_KERNEL_CLANG_PATH)/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g')
+    export KBUILD_COMPILER_STRING
     ifeq ($(KERNEL_ARCH),arm64)
         KERNEL_CLANG_TRIPLE ?= CLANG_TRIPLE=aarch64-linux-gnu-
     else ifeq ($(KERNEL_ARCH),arm)
@@ -324,7 +319,7 @@ TARGET_KERNEL_BINARIES: $(KERNEL_CONFIG)
 		fi
 
 .PHONY: INSTALLED_KERNEL_MODULES
-INSTALLED_KERNEL_MODULES: depmod-host
+INSTALLED_KERNEL_MODULES: depmod
 	$(hide) if grep -q '^CONFIG_MODULES=y' $(KERNEL_CONFIG); then \
 			echo "Installing Kernel Modules"; \
 			$(MAKE) $(MAKE_FLAGS) -C $(KERNEL_SRC) O=$(KERNEL_OUT) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) $(KERNEL_CLANG_TRIPLE) $(KERNEL_CC) INSTALL_MOD_PATH=../../$(KERNEL_MODULES_INSTALL) modules_install && \

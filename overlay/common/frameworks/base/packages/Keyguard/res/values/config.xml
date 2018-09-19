@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2013 The CyanogenMod Project
+     Copyright (C) 2015 The JDCTeam
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,10 +15,8 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- default to disabling the menu key. The Lineage setting to
-         do this is a no-op unless the below item is true -->
+    
+    <!-- default to disabling the menu key. -->
     <bool name="config_disableMenuKeyInLockScreen">true</bool>
-
-    <!-- config for showing AM/PM on lock screen in 12hour format -->
-    <bool name="config_showAmpm">false</bool>
+    
 </resources>

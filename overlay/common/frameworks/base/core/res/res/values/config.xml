@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2013 The CyanogenMod Project
-               (C) 2017 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -25,6 +24,10 @@
 
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
+    <!-- Flag indicating whether the assist disclosure can be disabled using
+         ASSIST_DISCLOSURE_ENABLED. -->
+    <bool name="config_allowDisablingAssistDisclosure">true</bool>
+
     <!-- Disable stock OTA components if installed -->
     <string-array name="config_disabledComponents" translatable="false">
         <item>com.google.android.gsf/com.google.android.gsf.update.SystemUpdateActivity</item>
@@ -36,7 +39,6 @@
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService$ActiveReceiver</item>
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService$SecretCodeReceiver</item>
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateServiceReceiver</item>
-        <item>com.google.android.setupwizard/com.google.android.setupwizard.time.DateTimeCheck</item>
     </string-array>
 
     <!-- Force enabling of some services that could have been previously disabled -->
@@ -45,14 +47,17 @@
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
     </string-array>
 
-    <string name="config_mms_user_agent">LineageOS</string>
-    <string name="config_mms_user_agent_profile_url">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
-
-    <!-- Enable lockscreen rotation by default -->
-    <bool name="config_enableLockScreenRotation">true</bool>
-
-    <!-- Whether to persist the notification for when a usb drive device is plugged in -->
-    <bool name="config_persistUsbDriveNotification">true</bool>
+    <!-- Defines the default set of global actions. Actions may still be disabled or hidden based
+         on the current state of the device. -->
+    <string-array translatable="false" name="config_globalActionsList">
+        <item>power</item>
+        <item>restart</item>
+        <item>profile</item>
+        <item>recovery</item>
+        <item>airplane</item>
+        <item>bugreport</item>
+        <item>users</item>
+    </string-array>
 
     <!-- Set this to true to enable the platform's auto-power-save modes like doze and
          app standby.  These are not enabled by default because they require a standard
@@ -63,36 +68,63 @@
          so that applications can still use their own mechanisms. -->
     <bool name="config_enableAutoPowerModes">true</bool>
 
-    <!-- If this is true, long press on power button will be available from a
-         non-interactive state. -->
-    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
+    <!-- set defaults for google services -->
+    <string name="config_appsAuthorizedForSharedAccounts">;com.android.vending;com.android.settings;</string>
+    <string name="config_persistentDataPackageName">com.google.android.gms</string>
 
+    <!-- default dnd acess packages -->
+    <string name="config_defaultDndAccessPackages">com.google.android.GoogleCamera</string>
+
+    <!-- non blockable notification packages -->
+    <string-array name="config_nonBlockableNotificationPackages">
+        <item>com.android.dialer</item>
+        <item>com.google.android.dialer</item>
+        <item>com.google.android.deskclock</item>
+    </string-array>
+
+    <!-- empheral resolver packages -->
+    <string-array name="config_ephemeralResolverPackage">
+        <item>com.google.android.gms</item>
+    </string-array>
+
+    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
+         in hardware. -->
+    <bool name="config_setColorTransformAccelerated">true</bool>
+
+    <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
+    <bool name="config_useRoundIcon">true</bool>
+
+    <!-- Support in Surfaceflinger for blur layers.
+         NOTE: This requires additional hardware-specific code. -->
+    <!-- <bool name="config_uiBlurEnabled">true</bool> -->
+	
     <!--  Whether Multiuser UI should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
-
-    <!-- Flag indicating which package name can access the persistent data partition -->
-    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
-
-   <!-- Set icon mask to circle -->
-   <string name="config_icon_mask" translatable="false">"M50 0A50 50,0,1,1,50 100A50 50,0,1,1,50 0"</string>
-
-    <!-- Controls the WiFi wakeup feature.
-          0 = Not available.
-          1 = Available.
+	
+	<!-- Whether WiFi display is supported by this device.
+         There are many prerequisites for this feature to work correctly.
+         Here are a few of them:
+         * The WiFi radio must support WiFi P2P.
+         * The WiFi radio must support concurrent connections to the WiFi display and
+           to an access point.
+         * The Audio Flinger audio_policy.conf file must specify a rule for the "r_submix"
+           remote submix module.  This module is used to record and stream system
+           audio output to the WiFi display encoder in the media server.
+         * The remote submix module "audio.r_submix.default" must be installed on the device.
+         * The device must be provisioned with HDCP keys (for protected content).
     -->
-    <integer translatable="false" name="config_wifi_wakeup_available">1</integer>
+    <bool name="config_enableWifiDisplay">true</bool>
 
-    <!-- Whether action menu items should be displayed in ALLCAPS or not.
-         Defaults to true. If this is not appropriate for specific locales
-         it should be disabled in that locale's resources. -->
-    <bool name="config_buttonTextAllCaps">false</bool>
-
-    <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
-    <bool name="config_useRoundIcon">true</bool>
-
-    <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
+    <!-- Pixel -->
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
+    <bool name="config_smart_battery_available">true</bool>
+    <bool name="config_buttonTextAllCaps">false</bool>
+    <bool name="config_unplugTurnsOnScreen">true</bool>
+    <bool name="config_sendPackageName">true</bool>
+    <dimen name="config_dialogCornerRadius">8.0dip</dimen>
+    <dimen name="config_buttonCornerRadius">4.0dip</dimen>
+    <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
 </resources>
