@@ -60,7 +60,7 @@ PRODUCT_COPY_FILES += \
 # Custom superiorOS packages
 PRODUCT_PACKAGES += \
     LatinIME \
-    Launcher3 \
+	PixelLauncher3 \
     LiveWallpapers \
     LiveWallpapersPicker \
     Stk \
@@ -69,8 +69,8 @@ PRODUCT_PACKAGES += \
     Browser \
     InterfaceCenter \
     SystemUpdates \
-	MarkupGoogle \
-	WellbeingPrebuilt
+    MarkupGoogle \
+    WellbeingPrebuilt
 
 # Extra tools
 PRODUCT_PACKAGES += \
