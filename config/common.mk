@@ -1,5 +1,5 @@
 # Copyright (C) 2018 Project dotOS
-# Copyright (C) 2018 Superior OS  
+# Copyright (C) 2018 Superior OS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -61,6 +61,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3 \
+    Calendar \
     LiveWallpapers \
     LiveWallpapersPicker \
     Stk \
