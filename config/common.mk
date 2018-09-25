@@ -130,6 +130,9 @@ include vendor/superior/config/packages.mk
 # Fonts
 include vendor/superior/config/fonts.mk
 
+# Sounds
+include vendor/superior/config/sounds.mk
+
 # Superior_props
 $(call inherit-product, vendor/superior/config/superior_props.mk)
 
