@@ -119,14 +119,8 @@
     <bool name="config_enableWifiDisplay">true</bool>
 
     <!-- Pixel -->
-    <bool name="config_swipe_up_gesture_setting_available">true</bool>
-    <bool name="config_smart_battery_available">true</bool>
-    <bool name="config_buttonTextAllCaps">false</bool>
     <bool name="config_unplugTurnsOnScreen">true</bool>
     <bool name="config_sendPackageName">true</bool>
-    <dimen name="config_dialogCornerRadius">8.0dip</dimen>
-    <dimen name="config_buttonCornerRadius">4.0dip</dimen>
-    <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
  
      <!-- Nexus Launcher -->
     <string name="config_recentsComponentName">com.google.android.apps.nexuslauncher/com.android.quickstep.RecentsActivity</string>
