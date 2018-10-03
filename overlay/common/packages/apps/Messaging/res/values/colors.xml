@@ -15,7 +15,7 @@
     limitations under the License.
 -->
 <resources>
-
+  <color name="ic_launcher_background">#9CCC65</color>
   <color name="navigation_bar_color">@android:color/white</color>
 
 </resources>
