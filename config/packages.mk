@@ -16,7 +16,8 @@
 # Custom superiorOS packages
 PRODUCT_PACKAGES += \
     LatinIME \
-    Launcher3 \
+    Lawnchair \
+	LawnConf \
     SuperiorWalls \
     Snap \
     Calendar \

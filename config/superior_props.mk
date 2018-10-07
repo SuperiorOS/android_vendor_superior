@@ -31,7 +31,7 @@ PRODUCT_GENERIC_PROPERTIES += \
     persist.sys.dun.override=0 \
     ro.storage_manager.enabled=true \
     ro.substratum.verified=true \
-    ro.boot.vendor.overlay.theme=com.google.android.theme.pixel \
+    ro.boot.vendor.overlay.theme=com.google.android.theme.pixel;com.potato.overlay.lawnconf \
     persist.sys.recovery_update=false \
     ro.com.google.ime.theme_id=5
 
