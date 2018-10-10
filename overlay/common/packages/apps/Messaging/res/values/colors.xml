@@ -16,4 +16,5 @@
 -->
 <resources>
     <color name="ic_launcher_background">@color/primary_color</color>
+    <color name="navigation_bar_color">@android:color/white</color>
 </resources>
