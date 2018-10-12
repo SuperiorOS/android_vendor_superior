@@ -14,7 +14,7 @@
 # limitations under the License.
 
 #Superior OS Versioning :
-SUPERIOR_MOD_VERSION = Lightining
+SUPERIOR_MOD_VERSION = Lightning
 
 ifndef SUPERIOR_BUILD_TYPE
     SUPERIOR_BUILD_TYPE := UNOFFICIAL
