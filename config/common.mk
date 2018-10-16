@@ -87,6 +87,9 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+#Include Lineage LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/superior/overlay/dictionaries
+
 # Latin IME lib - gesture typing
 ifeq ($(TARGET_ARCH), $(filter $(TARGET_ARCH), arm64))
 PRODUCT_COPY_FILES += \
