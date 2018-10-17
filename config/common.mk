@@ -111,5 +111,8 @@ ifeq ($(BUILD_WITH_GAPPS), true)
     $(call inherit-product, vendor/gapps/products/gapps.mk)
 endif
 
+# Includes qsthemes
+include vendor/ColtSpares/qsthemes/qsthemes.mk
+
 # Superior_props
 $(call inherit-product, vendor/superior/config/superior_props.mk)
