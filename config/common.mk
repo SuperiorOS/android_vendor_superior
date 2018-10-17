@@ -111,5 +111,12 @@ ifeq ($(BUILD_WITH_GAPPS), true)
     $(call inherit-product, vendor/gapps/products/gapps.mk)
 endif
 
+# QS tile styles
+PRODUCT_PACKAGES += \
+    QStileCircleTrim \
+    QStileDefault \
+    QStileDualToneCircle \
+    QStileSquircleTrim
+
 # Superior_props
 $(call inherit-product, vendor/superior/config/superior_props.mk)
