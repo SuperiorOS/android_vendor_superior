@@ -106,6 +106,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# Weather
+PRODUCT_COPY_FILES +=  \
+    vendor/superior/prebuilt/common/etc/sysconfig/org.pixelexperience.weather.client.xml:system/etc/sysconfig/org.pixelexperience.weather.client.xml \
+    vendor/superior/prebuilt/common/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    org.pixelexperience.weather.revision=2
+
 # Bootanimation
 include vendor/superior/config/bootanimation.mk
 

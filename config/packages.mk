@@ -29,7 +29,8 @@ PRODUCT_PACKAGES += \
     SystemUpdates \
     MarkupGoogle \
     WellbeingPrebuilt \
-    MatchmakerPrebuilt
+    MatchmakerPrebuilt \
+    WeatherClient
 	
 # Themes Dark
 PRODUCT_PACKAGES += \
