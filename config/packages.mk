@@ -24,7 +24,7 @@ PRODUCT_PACKAGES += \
     Stk \
     Recorder \
     Music \
-    Browser \
+    ViaBrowser \
     InterfaceCenter \
     SystemUpdates \
     MarkupGoogle \
