@@ -21,6 +21,7 @@ ifndef SUPERIOR_BUILD_TYPE
 endif
 
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+CUSTOM_BUILD_DATE := $(shell date -u +%Y%m%d-%H%M)
 
 ifeq ($(SUPERIOR_OFFICIAL), true)
    LIST = $(shell curl -s https://raw.githubusercontent.com/SuperiorOS/android_vendor_superior/pie/superior.devices)
@@ -44,9 +45,9 @@ endif
 
 TARGET_PRODUCT_SHORT := $(subst superior_,,$(CUSTOM_BUILD))
 
-SUPERIOR_VERSION := SuperiorOS-$(SUPERIOR_MOD_VERSION)-$(CURRENT_DEVICE)-$(SUPERIOR_BUILD_TYPE)-$(shell date -u +%Y%m%d)
+SUPERIOR_VERSION := SuperiorOS-$(SUPERIOR_MOD_VERSION)-$(CURRENT_DEVICE)-$(SUPERIOR_BUILD_TYPE)-$(CUSTOM_BUILD_DATE)
 
-SUPERIOR_FINGERPRINT := SuperiorOS/$(SUPERIOR_MOD_VERSION)/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%Y%m%d)
+SUPERIOR_FINGERPRINT := SuperiorOS/$(SUPERIOR_MOD_VERSION)/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(CUSTOM_BUILD_DATE)
 
 PRODUCT_GENERIC_PROPERTIES += \
   ro.superior.version=$(SUPERIOR_VERSION) \
@@ -57,4 +58,4 @@ SUPERIOR_DISPLAY_VERSION := SuperiorOS-$(SUPERIOR_MOD_VERSION)-$(SUPERIOR_BUILD_
 
 PRODUCT_GENERIC_PROPERTIES += \
   ro.superior.display.version=$(SUPERIOR_DISPLAY_VERSION)\
-  ro.superior.fingerprint=$(EXTENDED_FINGERPRINT)
+  ro.superior.fingerprint=$(SUPERIOR_FINGERPRINT)
