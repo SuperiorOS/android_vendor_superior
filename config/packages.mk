@@ -28,7 +28,9 @@ PRODUCT_PACKAGES += \
     InterfaceCenter \
     SystemUpdates \
     MarkupGoogle \
-    WellbeingPrebuilt
+    WellbeingPrebuilt \
+    MatchmakerPrebuilt \
+    NexusWallpapersStubPrebuilt2017
 	
 # Themes Dark
 PRODUCT_PACKAGES += \
@@ -51,21 +53,21 @@ PRODUCT_PACKAGES += \
     BlueGreyAccent \
     BrownAccent \
     CyanAccent \
-	CandyRedAccent \
+    CandyRedAccent \
     DeepOrangeAccent \
     DeepPurpleAccent \
     DuiDark \
-	ExtendedGreenAccent \
+    ExtendedGreenAccent \
     GBoardDark \
     GreenAccent \
     GreyAccent \
     IndigoAccent \
-	JadeGreenAccent \
+    JadeGreenAccent \
     LightBlueAccent \
     LightGreenAccent \
     LimeAccent \
     OrangeAccent \
-	PaleBlueAccent \
+    PaleBlueAccent \
     PaleRedAccent \
     PinkAccent \
     PurpleAccent \
@@ -81,15 +83,9 @@ PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
     tune2fs \
-    mount.exfat \
-    fsck.exfat \
-    mkfs.exfat \
     mkfs.f2fs \
     fsck.f2fs \
     fibmap.f2fs \
-    mkfs.ntfs \
-    fsck.ntfs \
-    mount.ntfs \
     7z \
     bzip2 \
     curl \
@@ -100,18 +96,35 @@ PRODUCT_PACKAGES += \
     unrar \
     unzip \
     zip \
-	vim \
-    rsync \
-	bash
+    vim \
+    bash
 
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
 
-# exFAT tools
- PRODUCT_PACKAGES += \
+# Openssh
+PRODUCT_PACKAGES += \
+    scp \
+    sftp \
+    ssh \
+    sshd \
+    sshd_config \
+    ssh-keygen \
+    start-ssh
+
+ # rsync
+PRODUCT_PACKAGES += \
+    rsync
+
+# Filesystems tools
+PRODUCT_PACKAGES += \
     fsck.exfat \
-    mkfs.exfat
+    fsck.ntfs \
+    mke2fs \
+    mkfs.exfat \
+    mkfs.ntfs \
+    mount.ntfs
 
 # Needed by some RILs and for some Gapps packages
 PRODUCT_PACKAGES += \
