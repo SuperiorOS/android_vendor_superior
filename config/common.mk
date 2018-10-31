@@ -34,7 +34,6 @@ endif
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/superior/overlay/common \
-    vendor/superior/overlay/dictionaries \
     vendor/superior/overlay/themes
 
 # EXT4/F2FS format script
