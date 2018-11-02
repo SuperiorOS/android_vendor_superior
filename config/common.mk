@@ -31,6 +31,10 @@ PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
+# priv-app permissions
+PRODUCT_COPY_FILES += \
+    vendor/superior/prebuilt/common/etc/permissions/privapp-permissions-superior.xml:system/etc/permissions/privapp-permissions-superior.xml
+
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/superior/overlay/common \
