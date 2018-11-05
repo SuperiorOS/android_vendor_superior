@@ -107,6 +107,10 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     telephony-ext
 
+# Subs
+PRODUCT_PACKAGES += \
+    SubstratumSignature
+
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
