@@ -99,9 +99,16 @@ PRODUCT_PACKAGES += \
     QStileCircleTrim \
     QStileDefault \
     QStileDualToneCircle \
-    QStileSquircleTrim
+    QStileSquircleTrim \
+    QStileAttemptMountain \
+    QStileCircleDualTone \
+    QStileCircleGradient \
+    QStileDottedCircle \
+    QStileNinja \
+    QStilePokesign \
+    QStileWavey
 
-# Omni Poor Man Themes
+# Omni's PoorMan Themes
 PRODUCT_PACKAGES += \
     DocumentsUITheme \
     DialerTheme \
