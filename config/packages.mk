@@ -25,12 +25,10 @@ PRODUCT_PACKAGES += \
     Recorder \
     Music \
     ViaBrowser \
-    InterfaceCenter \
     SystemUpdates \
     MarkupGoogle \
     WellbeingPrebuilt \
-    MatchmakerPrebuilt \
-    NexusWallpapersStubPrebuilt2017
+    MatchmakerPrebuilt
 	
 # Themes Dark
 PRODUCT_PACKAGES += \
