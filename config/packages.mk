@@ -132,3 +132,7 @@ PRODUCT_PACKAGES += \
 # Charger images
 PRODUCT_PACKAGES += \
     charger_res_images
+
+# Ambient Play
+PRODUCT_PACKAGES += \
+    AmbientPlayHistoryProvider
