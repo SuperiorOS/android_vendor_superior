@@ -17,6 +17,7 @@
 PRODUCT_PACKAGES += \
     LatinIME \
     PixelLauncher3 \
+    SuperiorWalls \
     Calendar \
     LiveWallpapers \
     LiveWallpapersPicker \
