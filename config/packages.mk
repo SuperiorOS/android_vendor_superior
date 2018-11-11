@@ -147,3 +147,11 @@ PRODUCT_PACKAGES += \
 # Ambient Play
 PRODUCT_PACKAGES += \
     AmbientPlayHistoryProvider
+
+# QS header styles
+PRODUCT_PACKAGES += \
+    QSHeaderBlack \
+    QSHeaderGrey \
+    QSHeaderLightGrey \
+    QSHeaderAccent \
+    QSHeaderTransparent
