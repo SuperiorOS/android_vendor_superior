@@ -20,6 +20,11 @@ ifndef SUPERIOR_BUILD_TYPE
     SUPERIOR_BUILD_TYPE := UNOFFICIAL
 endif
 
+# Test Build Tag
+ifeq ($(SUPERIOR_TEST),true)
+    SUPERIOR_BUILD_TYPE := DEVELOPER
+endif
+
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 DATE := $(shell date -u +%Y%m%d)
 CUSTOM_BUILD_DATE := $(DATE)-$(shell date -u +%H%M)
