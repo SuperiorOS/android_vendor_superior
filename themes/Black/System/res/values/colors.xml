@@ -48,4 +48,18 @@
     <!-- Toast text and bg colors -->
     <color name="toast_bg_color">@*android:color/black</color>
     <color name="toast_text_color">@android:color/white</color>
+
+    <!-- System Backgrounds -->	
+    <color name="material_grey_900">@*android:color/black</color>
+    <color name="material_grey_850">@*android:color/black</color>
+    <color name="material_grey_800">@*android:color/black</color>
+    <color name="material_grey_600">@*android:color/black</color>
+    <color name="material_blue_grey_700">@*android:color/black</color>
+    <color name="material_blue_grey_800">@*android:color/black</color>
+    <color name="material_blue_grey_900">@*android:color/black</color>
+    <color name="material_blue_grey_950">@*android:color/black</color>
+
+    <!-- Two target preference vertical divider color -->
+    <color name="list_divider_dark">#64eeeeee</color>
+
 </resources>
