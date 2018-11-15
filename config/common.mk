@@ -94,30 +94,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_GENERIC_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
 
-# QS tile styles
-PRODUCT_PACKAGES += \
-    QStileCircleTrim \
-    QStileDefault \
-    QStileDualToneCircle \
-    QStileSquircleTrim \
-    QStileAttemptMountain \
-    QStileCircleDual \
-    QStileCircleGradient \
-    QStileDottedCircle \
-    QStileNinja \
-    QStilePokesign \
-    QStileWavey \
-    QStileSquaremedo \
-    QStileOreo \
-    QStileOreoCircleTrim \
-    QStileOreoSquircleTrim
-
-# Omni's PoorMan Themes
-PRODUCT_PACKAGES += \
-    DocumentsUITheme \
-    DialerTheme \
-    TelecommTheme
-
 # Clean cache
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
