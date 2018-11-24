@@ -126,9 +126,6 @@ include vendor/superior/config/packages.mk
 # Fonts
 include vendor/superior/config/fonts.mk
 
-#Gapps
-include vendor/gapps/config.mk
-
 # Superior_props
 $(call inherit-product, vendor/superior/config/superior_props.mk)
 
