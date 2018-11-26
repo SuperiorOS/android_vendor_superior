@@ -37,13 +37,19 @@ PRODUCT_PACKAGES += \
     GBoardDarkTheme \
     SettingsDarkTheme \
     SystemDarkTheme \
-    SystemUIDarkTheme
+    SystemUIDarkTheme \
+    ContactsThemeDark \
+    DialerThemeDark \
+    FilesThemeDark
 
 # Themes Black
 PRODUCT_PACKAGES += \
     SettingsBlackTheme \
     SystemBlackTheme \
-    SystemUIBlackTheme
+    SystemUIBlackTheme \
+    ContactsThemeBlack \
+    DialerThemeBlack \
+    FilesThemeBlack
 
 # Overlays
 PRODUCT_PACKAGES += \
