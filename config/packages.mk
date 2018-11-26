@@ -18,6 +18,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     PixelLauncher3 \
     SuperiorWalls \
+    Snap \
     Calendar \
     LiveWallpapers \
     LiveWallpapersPicker \
