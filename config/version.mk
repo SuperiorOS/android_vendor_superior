@@ -43,6 +43,15 @@ ifeq ($(SUPERIOR_OFFICIAL), true)
     endif
 endif
 
+ifeq ($(SUPERIOR_OFFICIAL), true)
+PRODUCT_GENERIC_PROPERTIES += \
+    ro.superior.buildtype=official
+
+PRODUCT_PACKAGES += \
+    Updater
+
+endif
+
 TARGET_PRODUCT_SHORT := $(subst superior_,,$(CUSTOM_BUILD))
 
 SUPERIOR_VERSION := SuperiorOS-$(SUPERIOR_MOD_VERSION)-$(CURRENT_DEVICE)-$(SUPERIOR_BUILD_TYPE)-$(CUSTOM_BUILD_DATE)
