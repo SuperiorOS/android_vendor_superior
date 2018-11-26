@@ -18,6 +18,10 @@ PRODUCT_BRAND ?= SuperiorOS
 
 include vendor/superior/config/version.mk
 
+# init file
+PRODUCT_COPY_FILES += \
+    vendor/superior/prebuilt/common/etc/init.superior.rc:system/etc/init/init.superior.rc
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
