@@ -35,21 +35,15 @@ ifeq ($(SUPERIOR_OFFICIAL), true)
     ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
       IS_OFFICIAL=true
       SUPERIOR_BUILD_TYPE := OFFICIAL
-      
+     
+PRODUCT_PACKAGES += \
+    Updater
+	
     endif
     ifneq ($(IS_OFFICIAL), true)
        SUPERIOR_BUILD_TYPE := UNOFFICIAL
        $(error Device is not official "$(FOUND)")
     endif
-endif
-
-ifeq ($(SUPERIOR_OFFICIAL), true)
-PRODUCT_GENERIC_PROPERTIES += \
-    ro.superior.buildtype=official
-
-PRODUCT_PACKAGES += \
-    Updater
-
 endif
 
 TARGET_PRODUCT_SHORT := $(subst superior_,,$(CUSTOM_BUILD))
