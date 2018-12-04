@@ -34,9 +34,6 @@ PRODUCT_COPY_FILES += \
 	vendor/superior/sounds/alarms/Neon.ogg:system/media/audio/alarms/Neon.ogg \
 	vendor/superior/sounds/alarms/Nudge.ogg:system/media/audio/alarms/Nudge.ogg \
 	vendor/superior/sounds/alarms/Orbit.ogg:system/media/audio/alarms/Orbit.ogg \
-	vendor/superior/sounds/alarms/Osmium.ogg:system/media/audio/alarms/Osmium.ogg \
-	vendor/superior/sounds/alarms/Oxygen.ogg:system/media/audio/alarms/Oxygen.ogg \
-	vendor/superior/sounds/alarms/Platinum.ogg:system/media/audio/alarms/Platinum.ogg \
 	vendor/superior/sounds/alarms/Rise.ogg:system/media/audio/alarms/Rise.ogg \
 	vendor/superior/sounds/alarms/Rolling_fog.ogg:system/media/audio/alarms/Rolling_fog.ogg \
 	vendor/superior/sounds/alarms/Spokes.ogg:system/media/audio/alarms/Spokes.ogg \
@@ -138,5 +135,6 @@ PRODUCT_COPY_FILES += \
 	vendor/superior/sounds/ringtones/Zen_too.ogg:system/media/audio/ringtones/Zen_too.ogg
 
 PRODUCT_PROPERTY_OVERRIDES += \
-   ro.config.ringtone=Zen_too.ogg \
-   ro.config.notification_sound=Chime.ogg
+   ro.config.ringtone=Zen_too.ogg,Zen.ogg \
+   ro.config.notification_sound=Rhea.ogg \
+   ro.config.alarm_alert=Timer.ogg
