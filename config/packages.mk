@@ -164,13 +164,9 @@ PRODUCT_PACKAGES += \
     QStileCircleGradient \
     QStileDottedCircle \
     QStileDualToneCircle \
-    QStileInk \
     QStileInkdrop \
     QStileMountain \
     QStileNinja \
-    QStileOreo \
-    QStileOreoCircleTrim \
-    QStileOreoSquircleTrim \
     QStilePokesign \
     QStileSquaremedo \
     QStileSquircle \
