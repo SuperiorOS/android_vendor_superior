@@ -5,6 +5,7 @@
 
 export S=/system
 export C=/postinstall/tmp/backupdir
+export V=10.0
 
 export ADDOND_VERSION=2
 
@@ -49,10 +50,7 @@ if [ ! -r /system/build.prop ]; then
     return 0
 fi
 
-grep -q "^ro.lineage.version=$V.*" /system/build.prop && return 1
-
-echo "Not backing up files from incompatible version: $V"
-return 0
+return 1
 }
 
 check_blacklist() {

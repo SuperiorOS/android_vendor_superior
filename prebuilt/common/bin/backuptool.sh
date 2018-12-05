@@ -4,6 +4,8 @@
 #
 
 export C=/tmp/backupdir
+export S=$2
+export V=10.0
 
 export ADDOND_VERSION=1
 
@@ -46,6 +48,8 @@ check_prereq() {
 if [ ! -r $S/build.prop ]; then
     return 0
 fi
+
+
 return 1
 }
 
