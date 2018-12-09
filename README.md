@@ -1,7 +1,7 @@
 -----------------------------------------------------------------------------
 
 <p align="center">
- <img src="https://github.com/SuperiorOS/android_vendor_superior/blob/pie/superior.png" > 
+ <img src="https://github.com/SuperiorOS/android_vendor_superior/blob/pie/Destructor.png" > 
 </p>
 
 -----------------------------------------------------------------------------

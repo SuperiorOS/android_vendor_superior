@@ -17,7 +17,7 @@
 PRODUCT_PACKAGES += \
     LatinIME \
     Lawnchair \
-	LawnConf \
+    LawnConf \
     SuperiorWalls \
     Snap \
     Calendar \
