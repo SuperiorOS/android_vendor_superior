@@ -123,6 +123,12 @@ PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
     vendor/superior/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
 
+# Default ringtone/notification/alarm sounds
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.config.ringtone=Zen_too.ogg,Hotline.ogg \
+    ro.config.notification_sound=Doink.ogg \
+    ro.config.alarm_alert=Bright_morning.ogg
+
 # Bootanimation
 include vendor/superior/config/bootanimation.mk
 

@@ -133,6 +133,3 @@ PRODUCT_COPY_FILES += \
 	vendor/superior/sounds/ringtones/Umbriel.ogg:system/media/audio/ringtones/Umbriel.ogg \
 	vendor/superior/sounds/ringtones/Zen.ogg:system/media/audio/ringtones/Zen.ogg \
 	vendor/superior/sounds/ringtones/Zen_too.ogg:system/media/audio/ringtones/Zen_too.ogg
-
-PRODUCT_PROPERTY_OVERRIDES += \
-   ro.config.alarm_alert=Timer.ogg
