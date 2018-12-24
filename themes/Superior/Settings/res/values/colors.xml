@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="condition_card_background">@*android:color/black</color>
+    <color name="suggestion_condition_background">#ff473e38</color>
+    <!-- <color name="suggestion_tile_background">@*android:color/black</color>
+    <color name="suggestion_title_text_color">@*android:color/white</color>
+    <color name="suggestion_summary_text_color">@*android:color/white</color> -->
+    <color name="material_grey_300">@*android:color/black</color>
+    <color name="search_bar_background_color">#ff473e38</color>
+
+    <!-- Wifi network details -->
+    <color name="wifi_details_icon_color">#8AFFFFFF</color>
+
+    <!-- Color for the background of the shortcut icons.-->
+    <color name="shortcut_background">@*android:color/black</color>
+
+    <!-- Dashboard/homepage icon background colors -->
+    <color name="homepage_network_background">#ff473e38</color>
+    <color name="homepage_connected_device_background">#ff473e38</color>
+    <color name="homepage_app_and_notification_background">#ff473e38</color>
+    <color name="homepage_battery_background">#ff473e38</color>
+    <color name="homepage_display_background">#ff473e38</color>
+    <color name="homepage_sound_background">#ff473e38</color>
+    <color name="homepage_storage_background">#ff473e38</color>
+    <color name="homepage_security_background">#ff473e38</color>
+    <color name="homepage_accounts_background">#ff473e38</color>
+    <color name="homepage_accessibility_background">#ff473e38</color>
+    <color name="homepage_system_background">#ff473e38</color>
+    <color name="homepage_support_background">#ff473e38</color>
+    <color name="homepage_generic_icon_background">#ff473e38</color>
+    <color name="homepage_extensions_background">#ff473e38</color>
+    <!-- End of dashboard/homepage icon background colors -->
+
+</resources>

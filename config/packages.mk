@@ -55,6 +55,15 @@ PRODUCT_PACKAGES += \
     FilesThemeBlack \
     UpdaterBlack
 
+# Themes Superior
+PRODUCT_PACKAGES += \
+    SettingsSuperiorTheme \
+    SystemSuperiorTheme \
+    SystemUISuperiorTheme \
+    ContactsThemeSuperior \
+    DialerThemeSuperior \
+    FilesThemeSuperior
+
 # Accents
 PRODUCT_PACKAGES += \
     AmberAccent \
