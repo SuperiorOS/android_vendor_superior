@@ -13,22 +13,4 @@
 
     <!-- Color for the background of the shortcut icons.-->
     <color name="shortcut_background">@*android:color/black</color>
-
-    <!-- Dashboard/homepage icon background colors -->
-    <color name="homepage_network_background">#ff473e38</color>
-    <color name="homepage_connected_device_background">#ff473e38</color>
-    <color name="homepage_app_and_notification_background">#ff473e38</color>
-    <color name="homepage_battery_background">#ff473e38</color>
-    <color name="homepage_display_background">#ff473e38</color>
-    <color name="homepage_sound_background">#ff473e38</color>
-    <color name="homepage_storage_background">#ff473e38</color>
-    <color name="homepage_security_background">#ff473e38</color>
-    <color name="homepage_accounts_background">#ff473e38</color>
-    <color name="homepage_accessibility_background">#ff473e38</color>
-    <color name="homepage_system_background">#ff473e38</color>
-    <color name="homepage_support_background">#ff473e38</color>
-    <color name="homepage_generic_icon_background">#ff473e38</color>
-    <color name="homepage_extensions_background">#ff473e38</color>
-    <!-- End of dashboard/homepage icon background colors -->
-
 </resources>
