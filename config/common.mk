@@ -125,9 +125,9 @@ PRODUCT_COPY_FILES += \
 
 # Default ringtone/notification/alarm sounds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.config.ringtone=Zen_too.ogg,Hotline.ogg \
-    ro.config.notification_sound=Doink.ogg \
-    ro.config.alarm_alert=Bright_morning.ogg
+    ro.config.ringtone=Dione.ogg,Hotline.ogg \
+    ro.config.notification_sound=Trill.ogg \
+    ro.config.alarm_alert=Helium.ogg
 
 # Bootanimation
 include vendor/superior/config/bootanimation.mk
