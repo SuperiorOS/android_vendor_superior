@@ -25,23 +25,17 @@ PRODUCT_GENERIC_PROPERTIES += \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
     ro.setupwizard.rotation_locked=true \
     ro.opa.eligible_device=true\
+    keyguard.no_require_sim=true \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0 \
-    ro.build.selinux=0 \
+    persist.sys.disable_rescue=true \
+    ro.build.selinux=1 \
     persist.sys.dun.override=0 \
     ro.storage_manager.enabled=true \
     ro.substratum.verified=true \
     ro.boot.vendor.overlay.theme=com.accents.deeppurple;com.superior.overlay.lawnconf \
     persist.sys.recovery_update=false \
     ro.com.google.ime.theme_id=5
-
-# Disable HDCP check
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.wfd.nohdcp=1
-
-# Disable Rescue Party
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.disable_rescue=true
 
 # Set cache location
 ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)

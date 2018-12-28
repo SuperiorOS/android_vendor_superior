@@ -11,7 +11,4 @@
     <color name="zen_introduction">#ff000000</color>
     <color name="zen_qs_panel_close_button_color">@android:color/black</color>
 
-    <!-- Quicksettings main QS background-->
-    <color name="quick_settings_status_bar_background_color">@android:color/transparent</color>
-
 </resources>

@@ -16,6 +16,8 @@
 
 PRODUCT_BRAND ?= SuperiorOS
 
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+
 include vendor/superior/config/version.mk
 
 # init file
@@ -158,10 +160,3 @@ else
 # Enable ADB authentication
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
 endif
-
-# Include SDCLANG definitions if it is requested and available
-#ifeq ($(HOST_OS),linux)
-#    ifneq ($(wildcard vendor/qcom/sdclang-4.0/),)
-#        include vendor/superior/sdclang/sdclang.mk
-#    endif
-#endif
