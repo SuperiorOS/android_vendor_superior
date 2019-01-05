@@ -66,70 +66,38 @@ PRODUCT_COPY_FILES += \
 	vendor/superior/sounds/ui/VideoRecord.ogg:system/media/audio/ui/VideoRecord.ogg \
 	vendor/superior/sounds/ui/VideoStop.ogg:system/media/audio/ui/VideoStop.ogg \
 	vendor/superior/sounds/ui/WirelessChargingStarted.ogg:system/media/audio/ui/WirelessChargingStarted.ogg \
+	vendor/superior/sounds/notifications/Angrybirds.ogg:system/media/audio/notifications/Angrybirds.ogg \
+	vendor/superior/sounds/notifications/Are_you_kidding.ogg:system/media/audio/notifications/Are_you_kidding.ogg \
 	vendor/superior/sounds/notifications/Ariel.ogg:system/media/audio/notifications/Ariel.ogg \
-	vendor/superior/sounds/notifications/Beginning.ogg:system/media/audio/notifications/Beginning.ogg \
-	vendor/superior/sounds/notifications/Birdsong.ogg:system/media/audio/notifications/Birdsong.ogg \
 	vendor/superior/sounds/notifications/Carme.ogg:system/media/audio/notifications/Carme.ogg \
 	vendor/superior/sounds/notifications/Ceres.ogg:system/media/audio/notifications/Ceres.ogg \
 	vendor/superior/sounds/notifications/Chime.ogg:system/media/audio/notifications/Chime.ogg \
-	vendor/superior/sounds/notifications/Clink.ogg:system/media/audio/notifications/Clink.ogg \
-	vendor/superior/sounds/notifications/Coconuts.ogg:system/media/audio/notifications/Coconuts.ogg \
 	vendor/superior/sounds/notifications/Duet.ogg:system/media/audio/notifications/Duet.ogg \
-	vendor/superior/sounds/notifications/Elara.ogg:system/media/audio/notifications/Elara.ogg \
-	vendor/superior/sounds/notifications/End_note.ogg:system/media/audio/notifications/End_note.ogg \
-	vendor/superior/sounds/notifications/Europa.ogg:system/media/audio/notifications/Europa.ogg \
-	vendor/superior/sounds/notifications/Flick.ogg:system/media/audio/notifications/Flick.ogg \
 	vendor/superior/sounds/notifications/Gentle_gong.ogg:system/media/audio/notifications/Gentle_gong.ogg \
 	vendor/superior/sounds/notifications/Hey.ogg:system/media/audio/notifications/Hey.ogg \
 	vendor/superior/sounds/notifications/Iapetus.ogg:system/media/audio/notifications/Iapetus.ogg \
+	vendor/superior/sounds/notifications/Incoming.ogg:system/media/audio/notifications/Incoming.ogg \
 	vendor/superior/sounds/notifications/Io.ogg:system/media/audio/notifications/Io.ogg \
 	vendor/superior/sounds/notifications/Mallet.ogg:system/media/audio/notifications/Mallet.ogg \
+	vendor/superior/sounds/notifications/Messagetone.ogg:system/media/audio/notifications/Messagetone.ogg \
 	vendor/superior/sounds/notifications/Note.ogg:system/media/audio/notifications/Note.ogg \
-	vendor/superior/sounds/notifications/Orders_up.ogg:system/media/audio/notifications/Orders_up.ogg \
+	vendor/superior/sounds/notifications/Pikachu.ogg:system/media/audio/notifications/Pikachu.ogg \
 	vendor/superior/sounds/notifications/Ping.ogg:system/media/audio/notifications/Ping.ogg \
-	vendor/superior/sounds/notifications/Pipes.ogg:system/media/audio/notifications/Pipes.ogg \
-	vendor/superior/sounds/notifications/Popcorn.ogg:system/media/audio/notifications/Popcorn.ogg \
 	vendor/superior/sounds/notifications/Rhea.ogg:system/media/audio/notifications/Rhea.ogg \
-	vendor/superior/sounds/notifications/Salacia.ogg:system/media/audio/notifications/Salacia.ogg \
-	vendor/superior/sounds/notifications/Shopkeeper.ogg:system/media/audio/notifications/Shopkeeper.ogg \
-	vendor/superior/sounds/notifications/Sticks_and_stones.ogg:system/media/audio/notifications/Sticks_and_stones.ogg \
-	vendor/superior/sounds/notifications/Strum.ogg:system/media/audio/notifications/Strum.ogg \
-	vendor/superior/sounds/notifications/Tethys.ogg:system/media/audio/notifications/Tethys.ogg \
+	vendor/superior/sounds/notifications/Spinner.ogg:system/media/audio/notifications/Spinner.ogg \
+	vendor/superior/sounds/notifications/Spirit.ogg:system/media/audio/notifications/Spirit.ogg \
 	vendor/superior/sounds/notifications/Titan.ogg:system/media/audio/notifications/Titan.ogg \
 	vendor/superior/sounds/notifications/Trill.ogg:system/media/audio/notifications/Trill.ogg \
 	vendor/superior/sounds/notifications/Tuneup.ogg:system/media/audio/notifications/Tuneup.ogg \
-	vendor/superior/sounds/notifications/Tweeter.ogg:system/media/audio/notifications/Tweeter.ogg \
-	vendor/superior/sounds/notifications/Twinkle.ogg:system/media/audio/notifications/Twinkle.ogg \
-	vendor/superior/sounds/ringtones/Atria.ogg:system/media/audio/ringtones/Atria.ogg \
-	vendor/superior/sounds/ringtones/Beats.ogg:system/media/audio/ringtones/Beats.ogg \
-	vendor/superior/sounds/ringtones/Callisto.ogg:system/media/audio/ringtones/Callisto.ogg \
-	vendor/superior/sounds/ringtones/Copycat.ogg:system/media/audio/ringtones/Copycat.ogg \
-	vendor/superior/sounds/ringtones/Crackle.ogg:system/media/audio/ringtones/Crackle.ogg \
-	vendor/superior/sounds/ringtones/Dance_party.ogg:system/media/audio/ringtones/Dance_party.ogg \
+	vendor/superior/sounds/notifications/Tuturu.ogg:system/media/audio/notifications/Tuturu.ogg \
 	vendor/superior/sounds/ringtones/Dione.ogg:system/media/audio/ringtones/Dione.ogg \
-	vendor/superior/sounds/ringtones/Early_bird.ogg:system/media/audio/ringtones/Early_bird.ogg \
-	vendor/superior/sounds/ringtones/Flutterby.ogg:system/media/audio/ringtones/Flutterby.ogg \
-	vendor/superior/sounds/ringtones/Ganymede.ogg:system/media/audio/ringtones/Ganymede.ogg \
-	vendor/superior/sounds/ringtones/Hey_hey.ogg:system/media/audio/ringtones/Hey_hey.ogg \
+	vendor/superior/sounds/ringtones/Faded_Remix.ogg:system/media/audio/ringtones/Faded_Remix.ogg \
+	vendor/superior/sounds/ringtones/Havana_Remix.ogg:system/media/audio/ringtones/Havana_Remix.ogg \
 	vendor/superior/sounds/ringtones/Hotline.ogg:system/media/audio/ringtones/Hotline.ogg \
-	vendor/superior/sounds/ringtones/Leaps_and_bounds.ogg:system/media/audio/ringtones/Leaps_and_bounds.ogg \
 	vendor/superior/sounds/ringtones/Lollipop.ogg:system/media/audio/ringtones/Lollipop.ogg \
-	vendor/superior/sounds/ringtones/Lost_and_found.ogg:system/media/audio/ringtones/Lost_and_found.ogg \
-	vendor/superior/sounds/ringtones/Luna.ogg:system/media/audio/ringtones/Luna.ogg \
-	vendor/superior/sounds/ringtones/Mash_up.ogg:system/media/audio/ringtones/Mash_up.ogg \
-	vendor/superior/sounds/ringtones/Monkey_around.ogg:system/media/audio/ringtones/Monkey_around.ogg \
-	vendor/superior/sounds/ringtones/Oberon.ogg:system/media/audio/ringtones/Oberon.ogg \
-	vendor/superior/sounds/ringtones/Phobos.ogg:system/media/audio/ringtones/Phobos.ogg \
+	vendor/superior/sounds/ringtones/Pubg.ogg:system/media/audio/ringtones/Pubg.ogg \
+	vendor/superior/sounds/ringtones/Pubg_Remix.ogg:system/media/audio/ringtones/Pubg_Remix.ogg \
 	vendor/superior/sounds/ringtones/Pyxis.ogg:system/media/audio/ringtones/Pyxis.ogg \
-	vendor/superior/sounds/ringtones/Rrrring.ogg:system/media/audio/ringtones/Rrrring.ogg \
-	vendor/superior/sounds/ringtones/Sedna.ogg:system/media/audio/ringtones/Sedna.ogg \
-	vendor/superior/sounds/ringtones/Schools_out.ogg:system/media/audio/ringtones/Schools_out.ogg \
-	vendor/superior/sounds/ringtones/Shooting_star.ogg:system/media/audio/ringtones/Shooting_star.ogg \
-	vendor/superior/sounds/ringtones/Spaceship.ogg:system/media/audio/ringtones/Spaceship.ogg \
-	vendor/superior/sounds/ringtones/Summer_night.ogg:system/media/audio/ringtones/Summer_night.ogg \
-	vendor/superior/sounds/ringtones/The_big_adventure.ogg:system/media/audio/ringtones/The_big_adventure.ogg \
-	vendor/superior/sounds/ringtones/Titania.ogg:system/media/audio/ringtones/Titania.ogg \
-	vendor/superior/sounds/ringtones/Triton.ogg:system/media/audio/ringtones/Triton.ogg \
-	vendor/superior/sounds/ringtones/Umbriel.ogg:system/media/audio/ringtones/Umbriel.ogg \
+	vendor/superior/sounds/ringtones/Shape_of_you.ogg:system/media/audio/ringtones/Shape_of_you.ogg \
 	vendor/superior/sounds/ringtones/Zen.ogg:system/media/audio/ringtones/Zen.ogg \
 	vendor/superior/sounds/ringtones/Zen_too.ogg:system/media/audio/ringtones/Zen_too.ogg
