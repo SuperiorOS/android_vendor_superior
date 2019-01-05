@@ -140,11 +140,6 @@ PRODUCT_PACKAGES += \
     mkfs.ntfs \
     mount.ntfs
 
-# Needed by some RILs and for some Gapps packages
-PRODUCT_PACKAGES += \
-    librsjni \
-    libprotobuf-cpp-full
-
 # Charger images
 PRODUCT_PACKAGES += \
     charger_res_images
