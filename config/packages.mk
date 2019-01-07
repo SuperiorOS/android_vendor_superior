@@ -36,7 +36,6 @@ PRODUCT_PACKAGES += \
 	
 # Themes Dark
 PRODUCT_PACKAGES += \
-    GBoardDarkTheme \
     SettingsDarkTheme \
     SystemDarkTheme \
     SystemUIDarkTheme \
@@ -75,9 +74,7 @@ PRODUCT_PACKAGES += \
     CandyRedAccent \
     DeepOrangeAccent \
     DeepPurpleAccent \
-    DuiDark \
     ExtendedGreenAccent \
-    GBoardDark \
     GreenAccent \
     GreyAccent \
     IndigoAccent \
@@ -91,8 +88,6 @@ PRODUCT_PACKAGES += \
     PinkAccent \
     PurpleAccent \
     RedAccent \
-    SettingsDark \
-    SystemDark \
     TealAccent \
     YellowAccent \
     WhiteAccent
