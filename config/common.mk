@@ -43,8 +43,7 @@ PRODUCT_COPY_FILES += \
 
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    vendor/superior/overlay/common \
-    vendor/superior/overlay/themes
+    vendor/superior/overlay/common
 
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
