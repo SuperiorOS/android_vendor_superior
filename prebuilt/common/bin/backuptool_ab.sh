@@ -3,9 +3,11 @@
 # Backup and restore addon /system files
 #
 
+rm -rf /data/system/package_cache
+rm -rf /data/data/org.pixelexperience.weather.client
+
 export S=/system
 export C=/postinstall/tmp/backupdir
-export V=15.1
 
 export ADDOND_VERSION=2
 
