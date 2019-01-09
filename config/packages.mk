@@ -149,10 +149,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
-# Ambient Play
-PRODUCT_PACKAGES += \
-    AmbientPlayHistoryProvider
-
 # QS header styles
 PRODUCT_PACKAGES += \
     QSHeaderBlack \
