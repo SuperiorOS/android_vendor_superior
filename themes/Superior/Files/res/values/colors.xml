@@ -7,7 +7,7 @@
     <color name="item_doc_grid_background">@*android:color/black</color>
  <color name="bright_foreground_material_dark">#ffffffff</color>
  <color name="bright_foreground_material_light">#ffffffff</color>
-    <color name="drawer_background_color">@*android:color/black</color>
+    <color name="drawer_background_color">#CD070707</color>
     <color name="font_color_doc_grid">#ffffff</color>
  <color name="doc_icon_color">#ffffffff</color>
     <color name="primary_dark">@*android:color/black</color>
@@ -22,10 +22,10 @@
     <color name="material_grey_400">#ffbdbdbd</color>
     <color name="material_teal_700">#ff00796b</color>
      <color name="item_doc_title">#ffffffff</color>
-    <color name="window_background">@*android:color/black</color>
-    <color name="drawer_background">@*android:color/black</color>
-    <color name="directory_background">@*android:color/black</color>
-    <color name="menu_search_background">@*android:color/transparent</color>
+    <color name="window_background">#CD070707</color>
+    <color name="drawer_background">#CD070707</color>
+    <color name="directory_background">#CD070707</color>
+    <color name="menu_search_background">#CD070707</color>
     <color name="root_activated_color">@*android:color/accent_device_default_light</color>
 <color name="root_details_color">#ffffffff</color>
     <color name="root_focus_color">#ff555555</color>
@@ -71,5 +71,5 @@
     <color name="dim_foreground_disabled_material_light">@*android:color/accent_device_default_light</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
 <color name="dim_foreground_material_light">#ffbebebe</color>
-    <color name="navigation_bar_color">@android:color/black</color>
+    <color name="navigation_bar_color">#CD070707</color>
 </resources>

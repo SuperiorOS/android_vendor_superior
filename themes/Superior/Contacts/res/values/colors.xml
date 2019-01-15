@@ -8,8 +8,8 @@
     <color name="dialer_theme_color">@*android:color/black</color>
     <color name="dialer_theme_color_dark">@*android:color/black</color>
     <color name="accent">@*android:color/accent_device_default_light</color>
-    <color name="background_primary">@*android:color/black</color>
-    <color name="action_bar_background">@*android:color/black</color>
+    <color name="background_primary">#CD070707</color>
+    <color name="action_bar_background">#CD070707</color>
     <color name="action_bar_background_highlight">@*android:color/accent_device_default_light</color>
     <color name="background_social_updates">@*android:color/black</color>
     <color name="expanding_entry_card_background_color">@*android:color/black</color>
@@ -70,7 +70,7 @@
     <color name="quantum_black_text">#ddffffff</color>
     <color name="holo_list_background_color">@*android:color/black</color>
 	
-	<color name="exposed_bg_dark">@*android:color/black</color>
+	<color name="exposed_bg_dark">#CD070707</color>
     <color name="exposed_contact_list_name_text_color">#ffffffff</color>
     <color name="exposed_ContactsActionBarTheme_hint">#ffdddddd</color>
     <color name="exposed_ContactsActionBarTheme_text">#ffffffff</color>

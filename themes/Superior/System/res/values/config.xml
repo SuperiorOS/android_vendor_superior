@@ -3,4 +3,8 @@
     <bool name="config_useDarkBgNotificationIconTextTinting">true</bool>
     <bool name="config_useDarkBgNotificationTinting_override">true</bool>
     <bool name="config_notificationTinting_override">true</bool>
+    <bool name="config_allowNotificationIconTextTinting">false</bool>
+    <bool name="config_allowNotificationAppNameTextTinting">true</bool>
+    <item name="config_buttonTextLetterSpacing" format="float" type="dimen">0.08</item>
+    <bool name="config_buttonTextAllCaps">true</bool>
 </resources>
