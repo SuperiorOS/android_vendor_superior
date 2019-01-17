@@ -29,7 +29,6 @@ PRODUCT_GENERIC_PROPERTIES += \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0 \
     persist.sys.disable_rescue=true \
-    ro.build.selinux=1 \
     persist.sys.dun.override=0 \
     ro.storage_manager.enabled=true \
     ro.substratum.verified=true \
