@@ -38,3 +38,16 @@ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := SoundPickerPrebuilt
+LOCAL_MODULE_TAGS := optional
+ifeq ($(TARGET_USE_OLD_SOUND_PICKER),true)
+LOCAL_SRC_FILES := SoundPickerPrebuilt/SoundPickerPrebuilt_old.apk
+else
+LOCAL_SRC_FILES := SoundPickerPrebuilt/SoundPickerPrebuilt.apk
+endif
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_DEX_PREOPT := false
+include $(BUILD_PREBUILT)
