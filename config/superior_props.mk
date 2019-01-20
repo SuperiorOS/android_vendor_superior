@@ -37,6 +37,14 @@ PRODUCT_GENERIC_PROPERTIES += \
     persist.sys.recovery_update=false \
     ro.com.google.ime.theme_id=5
 
+ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=android-google
+else
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
+endif
+
 # Set cache location
 ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
