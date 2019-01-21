@@ -32,8 +32,9 @@ PRODUCT_PACKAGES += \
     MarkupGoogle \
     WellbeingPrebuilt \
     MatchmakerPrebuilt \
-    WeatherClient
-	
+    WeatherClient \
+    SoundPickerPrebuilt
+
 # Themes Dark
 PRODUCT_PACKAGES += \
     SettingsDarkTheme \
