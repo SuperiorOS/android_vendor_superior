@@ -12,11 +12,14 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
 
-#Matchmaker
 include $(CLEAR_VARS)
-LOCAL_MODULE := MatchmakerPrebuilt
+LOCAL_MODULE := SoundPickerPrebuilt
 LOCAL_MODULE_TAGS := optional
+ifeq ($(TARGET_USE_OLD_SOUND_PICKER),true)
+LOCAL_SRC_FILES := priv-app/$(LOCAL_MODULE)_old.apk
+else
 LOCAL_SRC_FILES := priv-app/$(LOCAL_MODULE).apk
+endif
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_CLASS := APPS
 LOCAL_PRIVILEGED_MODULE := true

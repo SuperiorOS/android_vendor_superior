@@ -18,7 +18,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Lawnchair \
     LawnConf \
-    SuperiorWalls \
+    SoundPickerPrebuilt \
     Snap \
     Calendar \
     LiveWallpapers \
@@ -29,11 +29,7 @@ PRODUCT_PACKAGES += \
     Music \
     ViaBrowser \
     SystemUpdates \
-    MarkupGoogle \
-    WellbeingPrebuilt \
-    MatchmakerPrebuilt \
-    WeatherClient \
-    SoundPickerPrebuilt
+    WeatherClient
 
 # Themes Dark
 PRODUCT_PACKAGES += \

@@ -157,7 +157,7 @@
     </string-array>
 
     <!-- Enable the RingtonePickerActivity in 'com.android.providers.media'. -->
-    <bool name="config_defaultRingtonePickerEnabled">false</bool>
+    <bool name="config_defaultRingtonePickerEnabled">true</bool>
 
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
     <bool name="config_custom_swipe_up_gesture_setting_available">true</bool>
