@@ -42,4 +42,8 @@
     <color name="error_color_device_default_dark">#ffe25142</color>
     <color name="error_color_device_default_light">#ffd93025</color>
 
+    <!-- Multi-sim sim colors -->
+    <color name="Teal_700">#ff00796b</color>
+    <color name="Blue_700">#ff1976d2</color>
+
 </resources>
