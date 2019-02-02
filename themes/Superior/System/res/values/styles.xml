@@ -20,13 +20,13 @@
         <item name="android:navigationBarColor">@*android:color/background_material_dark</item>
         <item name="android:textColorPrimaryInverse">@*android:color/background_material_dark</item>
         <item name="android:windowShowWallpaper">true</item>   <!--Nukes navbar fade-out on Android 8.1: No fixes-->
-        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowIsTranslucent">true</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowLightNavigationBar">false</item>
     </style>
     <style name="Theme.DeviceDefault.SearchBar" parent="@*android:style/Theme.Material.SearchBar">
-        <item name="android:colorPrimary">@*android:color/background_material_dark</item>
+        <item name="android:colorPrimary">@*android:color/accent_device_default_light</item>
         <item name="android:colorPrimaryDark">@*android:color/background_material_dark</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
     </style>
