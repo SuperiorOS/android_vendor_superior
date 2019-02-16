@@ -24,8 +24,8 @@ else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
      PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-1080p.zip:system/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),1440)
      PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-1440p.zip:system/media/bootanimation.zip
-else ifeq ($(TARGET_BOOT_ANIMATION_RES),2140)
-     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-2140p.zip:system/media/bootanimation.zip
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),2160)
+     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-2160p.zip:system/media/bootanimation.zip
 else
      $(warning TARGET_BOOT_ANIMATION_RES is invalid or undefined, using generic bootanimation)
      PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
