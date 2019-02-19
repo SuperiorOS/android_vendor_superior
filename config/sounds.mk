@@ -100,4 +100,6 @@ PRODUCT_COPY_FILES += \
 	vendor/superior/sounds/ringtones/Pyxis.ogg:system/media/audio/ringtones/Pyxis.ogg \
 	vendor/superior/sounds/ringtones/Shape_of_you.ogg:system/media/audio/ringtones/Shape_of_you.ogg \
 	vendor/superior/sounds/ringtones/Zen.ogg:system/media/audio/ringtones/Zen.ogg \
+	vendor/superior/sounds/ringtones/Soulful.ogg:system/media/audio/ringtones/Soulful.ogg \
+	vendor/superior/sounds/ringtones/YaLili.ogg:system/media/audio/ringtones/YaLili.ogg \
 	vendor/superior/sounds/ringtones/Zen_too.ogg:system/media/audio/ringtones/Zen_too.ogg
