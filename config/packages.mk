@@ -25,7 +25,6 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     WallpaperPickerGooglePrebuilt \
     Stk \
-    Recorder \
     Music \
     ViaBrowser \
     SystemUpdates \
