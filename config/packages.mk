@@ -34,7 +34,7 @@ PRODUCT_PACKAGES += \
     Dialer \
     ExactCalculator \
     LatinIME \
-    Launcher3QuickStep \
+    Lawnchair \
     Longshot \
     messaging \
     Music \
@@ -130,3 +130,8 @@ PRODUCT_PACKAGES += \
 # Cutout control overlay
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
+
+# Lawnchair
+PRODUCT_COPY_FILES += \
+    vendor/superior/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
+    vendor/superior/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
