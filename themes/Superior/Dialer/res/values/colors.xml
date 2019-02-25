@@ -217,5 +217,5 @@
       <color name="call_accept_background">#ff388e3c</color>
       <color name="compose_and_call_background">#ff388e3c</color>
       <color name="answered_call">#ff388e3c</color>
-  <color name="navigation_bar_color">@android:color/black</color>
+  <color name="navigation_bar_color">@*android:color/black</color>
 </resources>
