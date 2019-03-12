@@ -72,6 +72,13 @@
     <string name="config_appsAuthorizedForSharedAccounts">;com.android.vending;com.android.settings;</string>
     <string name="config_persistentDataPackageName">com.google.android.gms</string>
 
+    <!-- The component name, flattened to a string, for the default autofill service
+         to  enabled for an user. This service must be trusted, as it can be activated
+         without explicit consent of the user. If no autofill service with the
+          specified name exists on the device, autofill will be disabled by default.
+    -->
+    <string name="config_defaultAutofillService" translatable="false">com.google.android.gms/.autofill.service.AutofillService</string>
+
     <!-- default dnd acess packages -->
     <string name="config_defaultDndAccessPackages">com.google.android.GoogleCamera</string>
 
