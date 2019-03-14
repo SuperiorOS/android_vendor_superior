@@ -720,11 +720,11 @@ function oat2dex() {
     fi
 
     if [ -z "$VDEXEXTRACTOR" ]; then
-        export VDEXEXTRACTOR="$AOSP_ROOT"/vendor/aosp/build/tools/"$HOST"/vdexExtractor
+        export VDEXEXTRACTOR="$SUPERIOR_ROOT"/vendor/superior/build/tools/"$HOST"/vdexExtractor
     fi
 
     if [ -z "$CDEXCONVERTER" ]; then
-        export CDEXCONVERTER="$AOSP_ROOT"/vendor/aosp/build/tools/"$HOST"/compact_dex_converter
+        export CDEXCONVERTER="$SUPERIOR_ROOT"/vendor/superior/build/tools/"$HOST"/compact_dex_converter
     fi
 
     # Extract existing boot.oats to the temp folder
