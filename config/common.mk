@@ -62,6 +62,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
 
+# Google Assistant
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.opa.eligible_device=true
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
