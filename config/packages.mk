@@ -136,3 +136,7 @@ PRODUCT_PACKAGES += \
 # Charger images
 PRODUCT_PACKAGES += \
     charger_res_images
+
+# Cutout control overlay
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay
