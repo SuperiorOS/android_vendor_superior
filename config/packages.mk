@@ -82,6 +82,7 @@ PRODUCT_PACKAGES += \
     LightBlueAccent \
     LightGreenAccent \
     LimeAccent \
+    OnePlusRedAccent \
     OrangeAccent \
     PaleBlueAccent \
     PaleRedAccent \
