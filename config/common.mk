@@ -112,9 +112,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_GENERIC_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
 
-# Clean cache
-PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
 
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
