@@ -26,6 +26,7 @@ PRODUCT_PACKAGES += \
     WallpaperPickerGooglePrebuilt \
     Stk \
     Music \
+    Superiorwalls \
     ViaBrowser \
     SystemUpdates \
     WeatherClient
