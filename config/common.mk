@@ -29,7 +29,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.bs_theme=true \
     ro.com.google.ime.theme_id=5
 
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
@@ -91,8 +90,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/superior/overlay
 
 # Default ringtone/notification/alarm sounds
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=Soulful.ogg \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.config.ringtone=Soulful.ogg,on_my_way.ogg \
     ro.config.notification_sound=Pikachu.ogg \
     ro.config.alarm_alert=Helium.ogg
 
