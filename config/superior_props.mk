@@ -27,6 +27,7 @@ PRODUCT_GENERIC_PROPERTIES += \
     ro.opa.eligible_device=true\
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0 \
+    ro.build.selinux=1 \
     persist.sys.disable_rescue=true \
     persist.sys.dun.override=0 \
     ro.storage_manager.enabled=true \
