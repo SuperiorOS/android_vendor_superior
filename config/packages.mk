@@ -87,6 +87,7 @@ PRODUCT_PACKAGES += \
     PaleRedAccent \
     PinkAccent \
     PurpleAccent \
+    QGreen \
     QPurple \
     RedAccent \
     TealAccent \
