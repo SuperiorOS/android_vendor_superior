@@ -66,7 +66,6 @@ PRODUCT_PACKAGES += \
 # Accents
 PRODUCT_PACKAGES += \
     AmberAccent \
-    BlackAccent \
     BlueAccent \
     BlueGreyAccent \
     BrownAccent \
@@ -92,8 +91,7 @@ PRODUCT_PACKAGES += \
     QPurple \
     RedAccent \
     TealAccent \
-    YellowAccent \
-    WhiteAccent
+    YellowAccent
 
 # Extra tools
 PRODUCT_PACKAGES += \
