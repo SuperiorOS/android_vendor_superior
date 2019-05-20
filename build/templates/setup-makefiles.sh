@@ -27,9 +27,9 @@ INITIAL_COPYRIGHT_YEAR=**** FILL IN COPYRIGHT YEAR ****
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-CM_ROOT="$MY_DIR"/../../..
+SUPERIOR_ROOT="$MY_DIR"/../../..
 
-HELPER="$CM_ROOT"/vendor/superior/build/tools/extract_utils.sh
+HELPER="$SUPERIOR_ROOT"/vendor/superior/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -37,7 +37,7 @@ fi
 . "$HELPER"
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
+setup_vendor "$DEVICE" "$VENDOR" "$SUPERIOR_ROOT"
 
 # Copyright headers and guards
 write_headers
