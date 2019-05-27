@@ -157,7 +157,7 @@ $(call inherit-product, vendor/superior/config/telephony.mk)
 
 # LiveDisplay
 PRODUCT_COPY_FILES += \
-    vendor/aosp/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml
+    vendor/superior/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml
 
 # Some Apps
 PRODUCT_COPY_FILES += \
