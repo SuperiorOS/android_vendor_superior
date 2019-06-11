@@ -16,7 +16,7 @@ LOCAL_PATH:= $(call my-dir)
 
 #Substratum
 include $(CLEAR_VARS)
-LOCAL_MODULE := SubstratumKey
+LOCAL_MODULE := SubstratumSignature
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
 LOCAL_CERTIFICATE := PRESIGNED

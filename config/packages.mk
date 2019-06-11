@@ -28,7 +28,7 @@ PRODUCT_PACKAGES += \
     ViaBrowser \
     SystemUpdates \
     WeatherClient \
-    SubstratumKey
+    SubstratumSignature
 
 # Themes Dark
 PRODUCT_PACKAGES += \
