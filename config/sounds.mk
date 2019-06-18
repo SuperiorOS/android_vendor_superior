@@ -95,11 +95,11 @@ PRODUCT_COPY_FILES += \
 	vendor/superior/sounds/ringtones/Havana_Remix.ogg:system/media/audio/ringtones/Havana_Remix.ogg \
 	vendor/superior/sounds/ringtones/Hotline.ogg:system/media/audio/ringtones/Hotline.ogg \
 	vendor/superior/sounds/ringtones/Lollipop.ogg:system/media/audio/ringtones/Lollipop.ogg \
-	vendor/superior/sounds/ringtones/Pubg.ogg:system/media/audio/ringtones/Pubg.ogg \
-	vendor/superior/sounds/ringtones/Pubg_Remix.ogg:system/media/audio/ringtones/Pubg_Remix.ogg \
+	vendor/superior/sounds/ringtones/on_my_way.ogg:system/media/audio/ringtones/on_my_way.ogg \
+	vendor/superior/sounds/ringtones/xiaomi.ogg:system/media/audio/ringtones/xiaomi.ogg \
 	vendor/superior/sounds/ringtones/Pyxis.ogg:system/media/audio/ringtones/Pyxis.ogg \
 	vendor/superior/sounds/ringtones/Shape_of_you.ogg:system/media/audio/ringtones/Shape_of_you.ogg \
 	vendor/superior/sounds/ringtones/Zen.ogg:system/media/audio/ringtones/Zen.ogg \
 	vendor/superior/sounds/ringtones/Soulful.ogg:system/media/audio/ringtones/Soulful.ogg \
-	vendor/superior/sounds/ringtones/YaLili.ogg:system/media/audio/ringtones/YaLili.ogg \
+	vendor/superior/sounds/ringtones/galaxy.ogg:system/media/audio/ringtones/galaxy.ogg \
 	vendor/superior/sounds/ringtones/Zen_too.ogg:system/media/audio/ringtones/Zen_too.ogg
