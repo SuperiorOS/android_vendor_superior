@@ -2,3 +2,6 @@ on post-fs-data
     # Create an additional OTA package directory that unlike /data/ota_package
     # will not be touched by GmsCore.
     mkdir /data/superiorOS_updates 0770 system cache
+    chown system system /sys/class/power_supply/battery/battery_charging_enabled
+    chown system system /sys/class/power_supply/battery/charging_enabled
+    chown system system /sys/class/power_supply/battery/input_suspend
