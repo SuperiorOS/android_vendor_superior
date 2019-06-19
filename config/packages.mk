@@ -18,12 +18,10 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Lawnchair \
     LawnConf \
-    SoundPickerPrebuilt \
     Snap \
     Calendar \
     LiveWallpapers \
     LiveWallpapersPicker \
-    WallpaperPickerGooglePrebuilt \
     Stk \
     Music \
     Superiorwalls \

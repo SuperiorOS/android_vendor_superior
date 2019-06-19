@@ -53,11 +53,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/superior/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
-# Markup libs
-PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
-    vendor/superior/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
-
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
@@ -138,6 +133,10 @@ PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
     vendor/superior/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
 
+# LiveDisplay
+PRODUCT_COPY_FILES += \
+    vendor/superior/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml
+
 # Cutout control overlays
 PRODUCT_PACKAGES += \
     HideCutout \
@@ -154,16 +153,6 @@ include vendor/superior/config/bootanimation.mk
 
 #Telephony
 $(call inherit-product, vendor/superior/config/telephony.mk)
-
-# LiveDisplay
-PRODUCT_COPY_FILES += \
-    vendor/superior/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml
-
-# Some Apps
-PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/priv-app/MatchmakerPrebuilt.apk:system/priv-app/MatchmakerPrebuilt/MatchmakerPrebuilt.apk \
-    vendor/superior/prebuilt/common/apk/MarkupGoogle.apk:system/app/MarkupGoogle/MarkupGoogle.apk \
-    vendor/superior/prebuilt/common/apk/WellbeingPrebuilt.apk:system/app/WellbeingPrebuilt/WellbeingPrebuilt.apk
 
 # Packages
 include vendor/superior/config/packages.mk
