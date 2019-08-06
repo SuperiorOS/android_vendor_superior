@@ -171,7 +171,8 @@ PRODUCT_PACKAGES += \
     QStileTeardrop \
     QStileWavey \
     QStileRoundedRect \
-    QStileSquare
+    QStileSquare \
+    QStileOxygen
 
 #Font package
 PRODUCT_PACKAGES += \
