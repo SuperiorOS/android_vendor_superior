@@ -137,6 +137,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/superior/config/permissions/privapp-permissions-custom.xml:system/etc/permissions/privapp-permissions-custom.xml
 
+#Recorder Permissions
+PRODUCT_COPY_FILES += \
+    vendor/superior/config/permissions/privapp-permissions-recorder.xml:system/etc/permissions/privapp-permissions-recorder.xml \
+    vendor/superior/config/permissions/org.pixelexperience.recorder.xml:system/etc/permissions/org.pixelexperience.recorder.xml
+
 # Cutout control overlays
 PRODUCT_PACKAGES += \
     HideCutout \
