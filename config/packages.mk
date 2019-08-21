@@ -28,7 +28,8 @@ PRODUCT_PACKAGES += \
     ViaBrowser \
     SystemUpdates \
     WeatherClient \
-    SubstratumSignature
+    SubstratumSignature \
+    CustomDoze
 
 # Themes Dark
 PRODUCT_PACKAGES += \
