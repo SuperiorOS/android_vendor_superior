@@ -29,7 +29,9 @@ PRODUCT_PACKAGES += \
     SystemUpdates \
     WeatherClient \
     SubstratumSignature \
-    CustomDoze
+    CustomDoze \
+    Recorder \
+    Longshot
 
 # Themes Dark
 PRODUCT_PACKAGES += \
