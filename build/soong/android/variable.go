@@ -42,6 +42,7 @@ type Product_variables struct {
 		Cppflags []string
 	}
 	Uses_qcom_bsp_legacy struct {
+		Cflags []string
 		Cppflags []string
 	}
 	Uses_qti_camera_device struct {
