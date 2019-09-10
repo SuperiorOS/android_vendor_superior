@@ -38,6 +38,7 @@ PRODUCT_PACKAGES += \
     messaging \
     Music \
     Recorder \
+    SafetyHubPrebuilt \
     SettingsIntelligenceGooglePrebuilt \
     Superiorwalls \
     Stk \
