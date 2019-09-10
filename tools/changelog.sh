@@ -4,12 +4,10 @@ export Changelog=Changelog.txt
 
 if [ -f $Changelog ];
 then
-	rm -f $Changelog
+    rm -f $Changelog
 fi
 
 touch $Changelog
-
-echo "Generating changelog..."
 
 for i in $(seq 14);
 do
