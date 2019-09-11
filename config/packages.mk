@@ -46,10 +46,21 @@ PRODUCT_PACKAGES += \
 
 # Accents
 PRODUCT_PACKAGES += \
-    AccentColorSluttyPinkOverlay \
+    AccentColorBlueGrayOverlay \
     AccentColorBlueMondayOverlay \
+    AccentColorCyanOverlay \
+    AccentColorFlatPinkOverlay \
+    AccentColorGoldenShowerOverlay \
+    AccentColorIndigoOverlay \
+    AccentColorLightPurpleOverlay \
     AccentColorOmniOverlay \
-    AccentColorGoldenShowerOverlay
+    AccentColorPinkOverlay \
+    AccentColorQGreenOverlay \
+    AccentColorRedOverlay \
+    AccentColorSluttyPinkOverlay \
+    AccentColorTealOverlay \
+    AccentColorVioletOverlay \
+    AccentColorYellowOverlay
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
