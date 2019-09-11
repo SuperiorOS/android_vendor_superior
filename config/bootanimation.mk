@@ -14,15 +14,15 @@
 
 # Bootanimation
 ifeq ($(TARGET_BOOT_ANIMATION_RES),480)
-     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-480p.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-480p.zip:system/product/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
-     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-720p.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-720p.zip:system/product/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
-     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-1080p.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-1080p.zip:system/product/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),1440)
-     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-1440p.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-1440p.zip:system/product/media/bootanimation.zip
 else
      $(warning TARGET_BOOT_ANIMATION_RES is invalid or undefined, using generic bootanimation)
 PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/bootanimation/bootanimation-720p.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
+    vendor/superior/prebuilt/common/bootanimation/bootanimation-720p.zip:system/product/media/bootanimation.zip
 endif
