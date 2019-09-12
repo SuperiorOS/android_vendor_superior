@@ -33,11 +33,9 @@ SUPERIOR_DATE_MINUTE := $(shell date -u +%M)
 SUPERIOR_BUILD_DATE_UTC := $(shell date -d '$(SUPERIOR_DATE_YEAR)-$(SUPERIOR_DATE_MONTH)-$(SUPERIOR_DATE_DAY) $(SUPERIOR_DATE_HOUR):$(SUPERIOR_DATE_MINUTE) UTC' +%s)
 CUSTOM_BUILD_DATE := $(SUPERIOR_DATE_YEAR)$(SUPERIOR_DATE_MONTH)$(SUPERIOR_DATE_DAY)-$(SUPERIOR_DATE_HOUR)$(SUPERIOR_DATE_MINUTE)
 
-
 ifeq ($(SUPERIOR_OFFICIAL), true)
-   LIST = $(shell curl -s https://raw.githubusercontent.com/SuperiorOS/android_vendor_superior/ten/superior.devices)
-   FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
-    ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
+   LIST = $(shell cat vendor/superior/superior.devices)
+    ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
       IS_OFFICIAL=true
       SUPERIOR_BUILD_TYPE := OFFICIAL
 
@@ -47,7 +45,7 @@ PRODUCT_PACKAGES += \
     endif
     ifneq ($(IS_OFFICIAL), true)
        SUPERIOR_BUILD_TYPE := UNOFFICIAL
-       $(error Device is not official "$(FOUND)")
+       $(error Device is not official "$(CURRENT_DEVICE)")
     endif
 endif
 
