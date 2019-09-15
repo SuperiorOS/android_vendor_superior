@@ -23,33 +23,33 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/superior/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/superior/prebuilt/common/bin/50-superior.sh:system/addon.d/50-superior.sh \
-    vendor/superior/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+    vendor/superior/prebuilt/common/bin/50-superior.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-superior.sh \
+    vendor/superior/prebuilt/common/bin/blacklist:$(TARGET_COPY_OUT_SYSTEM)/addon.d/blacklist
 
 ifeq ($(AB_OTA_UPDATER),true)
 PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
-    vendor/superior/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
-    vendor/superior/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+    vendor/superior/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
+    vendor/superior/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
+    vendor/superior/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 endif
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/superior/prebuilt/common/etc/init.d/90userinit:$(TARGET_COPY_OUT_SYSTEM)/etc/init.d/90userinit
 endif
 
 # Copy all Superior-specific init rc files
 $(foreach f,$(wildcard vendor/superior/prebuilt/common/etc/init/*.rc),\
-	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
+	$(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+    frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.sip.voip.xml
 
 # Enable wireless Xbox 360 controller support
 PRODUCT_COPY_FILES += \
-    frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
+    frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Vendor_045e_Product_0719.kl
 
 # Include LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/superior/overlay/dictionaries
