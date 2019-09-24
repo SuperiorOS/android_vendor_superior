@@ -4,8 +4,9 @@
 #
 
 export C=/tmp/backupdir
-export S=$2
-
+export SYSDEV="$(readlink -nf "$2")"
+export SYSFS="$3"
+export V=10
 export ADDOND_VERSION=1
 
 # Scripts in /$S/addon.d expect to find backuptool.functions in /tmp
@@ -50,21 +51,65 @@ if [ -d /tmp/addon.d/ ]; then
 fi
 }
 
+determine_system_mount() {
+  if grep -q -e"^$SYSDEV" /proc/mounts; then
+    umount $(grep -e"^$SYSDEV" /proc/mounts | cut -d" " -f2)
+  fi
+
+  if [ -d /mnt/system ]; then
+    SYSMOUNT="/mnt/system"
+  elif [ -d /system_root ]; then
+    SYSMOUNT="/system_root"
+  else
+    SYSMOUNT="/system"
+  fi
+
+  export S=$SYSMOUNT/system
+}
+
+mount_system() {
+  mount -t $SYSFS $SYSDEV $SYSMOUNT -o rw,discard
+}
+
+unmount_system() {
+  umount $SYSMOUNT
+}
+
+determine_system_mount
+
 case "$1" in
   backup)
+    mount_system
     mkdir -p $C
+    if check_prereq; then
+        if check_whitelist system; then
+            unmount_system
+            exit 127
+        fi
+    fi
+    check_blacklist system
     preserve_addon_d
     run_stage pre-backup
     run_stage backup
     run_stage post-backup
+    unmount_system
   ;;
   restore)
+    mount_system
+    if check_prereq; then
+        if check_whitelist tmp; then
+            unmount_system
+            exit 127
+        fi
+    fi
+    check_blacklist tmp
     run_stage pre-restore
     run_stage restore
     run_stage post-restore
     restore_addon_d
     rm -rf $C
     sync
+    unmount_system
   ;;
   *)
     echo "Usage: $0 {backup|restore}"
