@@ -80,6 +80,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.notification_sound=OnTheHunt.ogg \
     ro.config.alarm_alert=Helium.ogg
 
+#OmniJaws
+PRODUCT_PACKAGES += \
+    OmniJaws \
+    WeatherIcons
+
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/superior/overlay/common
