@@ -27,6 +27,11 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.dun.override=0
 endif
 
+# Custom superiorOS packages
+PRODUCT_PACKAGES += \
+    LatinIME \
+    Launcher3
+
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \
