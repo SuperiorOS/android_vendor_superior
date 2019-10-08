@@ -4,8 +4,6 @@
 #
 
 export C=/tmp/backupdir
-export S=$2
-export V=16.0
 
 export ADDOND_VERSION=1
 
@@ -47,10 +45,6 @@ check_prereq() {
 # If there is no build.prop file the partition is probably empty.
 if [ ! -r $S/build.prop ]; then
     return 0
-fi
-if ! grep -q "^ro.lineage.version=$V.*" $S/build.prop; then
-  echo "Not backing up files from incompatible version: $V"
-  return 0
 fi
 return 1
 }
