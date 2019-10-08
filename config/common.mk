@@ -81,4 +81,12 @@ include vendor/superior/config/packages.mk
 #versioning
 include vendor/superior/config/version.mk
 
+# Fonts
+include vendor/superior/config/fonts.mk
+
+# Sounds
+include vendor/superior/config/sounds.mk
+
+# Bootanimation
+include vendor/superior/config/bootanimation.mk
 
