@@ -103,3 +103,10 @@ PRODUCT_COPY_FILES += \
 	vendor/superior/sounds/ringtones/Soulful.ogg:$(TARGET_COPY_OUT_SYSTEM)/media/audio/ringtones/Soulful.ogg \
 	vendor/superior/sounds/ringtones/galaxy.ogg:$(TARGET_COPY_OUT_SYSTEM)/media/audio/ringtones/galaxy.ogg \
 	vendor/superior/sounds/ringtones/Zen_too.ogg:$(TARGET_COPY_OUT_SYSTEM)/media/audio/ringtones/Zen_too.ogg
+
+
+# Default ringtone/notification/alarm sounds
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.config.ringtone=Soulful.ogg,galaxy.ogg \
+    ro.config.notification_sound=Pikachu.ogg \
+    ro.config.alarm_alert=Helium.ogg

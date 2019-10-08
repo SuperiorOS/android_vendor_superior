@@ -26,12 +26,6 @@ PRODUCT_PACKAGES += \
     Stk \
     CellBroadcastReceiver
 
-# Default ringtone
-PRODUCT_GENERIC_PROPERTIES += \
-    ro.config.ringtone=Zen_too.ogg\
-    ro.config.notification_sound=Mallet.ogg \
-    ro.config.alarm_alert=Bright_morning.ogg
-
 # Tethering - allow without requiring a provisioning app
 # (for devices that check this)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
