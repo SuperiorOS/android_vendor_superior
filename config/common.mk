@@ -16,9 +16,6 @@ PRODUCT_BRAND ?= SuperiorOS
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.build.selinux=1
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
@@ -90,3 +87,5 @@ include vendor/superior/config/sounds.mk
 # Bootanimation
 include vendor/superior/config/bootanimation.mk
 
+# Superior_props
+$(call inherit-product, vendor/superior/config/superior_props.mk)
