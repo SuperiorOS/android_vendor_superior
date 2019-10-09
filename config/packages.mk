@@ -27,10 +27,18 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.dun.override=0
 endif
 
-# Custom superiorOS packages
+# Required packages
 PRODUCT_PACKAGES += \
+    BluetoothExt \
+    Calendar \
+    DeskClock \
+    Dialer \
+    ExactCalculator \
     LatinIME \
-    Launcher3
+    Launcher3QuickStep \
+    messaging \
+    Stk \
+    ThemePicker
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
@@ -52,6 +60,10 @@ PRODUCT_PACKAGES += \
     wget \
     zip
 
+# exFAT tools
+ PRODUCT_PACKAGES += \
+    fsck.exfat \
+    mkfs.exfat
 
 # Openssh
 PRODUCT_PACKAGES += \
@@ -66,3 +78,11 @@ PRODUCT_PACKAGES += \
 # init file
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/etc/init.local.rc:system/etc/init/init.superior.rc
+
+# APN
+PRODUCT_PACKAGES += \
+    apns-conf.xml
+
+# Charger images
+PRODUCT_PACKAGES += \
+    charger_res_images
