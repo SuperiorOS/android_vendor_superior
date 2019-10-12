@@ -42,7 +42,8 @@ PRODUCT_PACKAGES += \
     Superiorwalls \
     Stk \
     ThemePicker \
-    ViaBrowser
+    ViaBrowser \
+    PixelThemes
 
 # Accents
 PRODUCT_PACKAGES += \
