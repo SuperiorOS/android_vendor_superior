@@ -35,8 +35,11 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3QuickStep \
     messaging \
+    Music \
+    Superiorwalls \
     Stk \
-    ThemePicker
+    ThemePicker \
+    ViaBrowser
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
