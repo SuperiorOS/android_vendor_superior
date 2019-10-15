@@ -69,6 +69,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/superior/overlay
 
+# Device Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    vendor/superior/overlay/common
+
 #Telephony
 $(call inherit-product, vendor/superior/config/telephony.mk)
 
