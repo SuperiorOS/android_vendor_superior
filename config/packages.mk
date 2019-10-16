@@ -30,12 +30,11 @@ endif
 # Required packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
-    Dialer \
     ExactCalculator \
     LatinIME \
     Launcher3QuickStep \
-    messaging \
     Music \
+    Recorder \
     Superiorwalls \
     Stk \
     ThemePicker \
