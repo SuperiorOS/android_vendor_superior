@@ -29,10 +29,13 @@ endif
 
 # Required packages
 PRODUCT_PACKAGES += \
+    Contacts \
     BluetoothExt \
+    Dialer \
     ExactCalculator \
     LatinIME \
     Launcher3QuickStep \
+    messaging \
     Music \
     Recorder \
     Superiorwalls \
