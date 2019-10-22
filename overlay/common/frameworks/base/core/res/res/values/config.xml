@@ -42,7 +42,7 @@
     </string-array>
 
     <!-- Enable the RingtonePickerActivity in 'com.android.providers.media'. -->
-    <bool name="config_defaultRingtonePickerEnabled">true</bool>
+    <bool name="config_defaultRingtonePickerEnabled">false</bool>
 
     <!-- Force enabling of some services that could have been previously disabled -->
     <string-array name="config_forceEnabledComponents" translatable="false">
