@@ -76,8 +76,8 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/superior/overlay
 
 # Default ringtone/notification/alarm sounds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.config.ringtone=Zen.ogg \
-    ro.config.notification_sound=OnTheHunt.ogg \
+    ro.config.ringtone=Soulful.ogg,galaxy.ogg \
+    ro.config.notification_sound=Pikachu.ogg \
     ro.config.alarm_alert=Helium.ogg
 
 #OmniJaws
