@@ -30,6 +30,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opa.eligible_device=true \
     persist.sys.disable_rescue=true \
     ro.config.calibration_cad=/system/etc/calibration_cad.xml
+    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
     ro.adb.secure=0 \

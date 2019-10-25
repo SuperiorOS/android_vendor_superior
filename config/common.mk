@@ -29,6 +29,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.bs_theme=true \
     ro.com.google.ime.theme_id=5
 
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
