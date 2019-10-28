@@ -62,6 +62,19 @@ PRODUCT_PACKAGES += \
     AccentColorVioletOverlay \
     AccentColorYellowOverlay
 
+# fonts
+PRODUCT_PACKAGES += \
+    FontAppleMintOverlay \
+    FontCartoonistHandOverlay \
+    FontChinacatOverlay \
+    FontLatoOverlay \
+    FontRobotoOrigOverlay \
+    FontRosemaryOverlay \
+    FontRubikOverlay \
+    FontSanFransiscoOverlay \
+    FontSlateProOverlay \
+    FontZillaSlabOverlay
+
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \

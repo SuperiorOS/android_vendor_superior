@@ -8,4 +8,103 @@
         <font weight="700" style="italic">GoogleSans-BoldItalic.ttf</font>
     </family>
     <alias name="google-sans-medium" to="google-sans" weight="500" />
+	
+    <family customizationType="new-named-family" name="arbutus-slab">
+      <font weight="400" style="normal">ArbutusSlab-Regular.ttf</font>
+    </family>
+
+    <family customizationType="new-named-family" name="lato">
+      <font weight="400" style="normal">Lato-Regular.ttf</font>
+      <font weight="400" style="italic">Lato-Italic.ttf</font>
+      <font weight="700" style="normal">Lato-Bold.ttf</font>
+      <font weight="700" style="italic">Lato-BoldItalic.ttf</font>
+    </family>
+    <alias name="lato-bold" to="lato" weight="700" />
+
+    <family customizationType="new-named-family" name="rubik">
+      <font weight="400" style="normal">Rubik-Regular.ttf</font>
+      <font weight="400" style="italic">Rubik-Italic.ttf</font>
+      <font weight="500" style="normal">Rubik-Medium.ttf</font>
+      <font weight="500" style="italic">Rubik-MediumItalic.ttf</font>
+      <font weight="700" style="normal">Rubik-Bold.ttf</font>
+      <font weight="700" style="italic">Rubik-BoldItalic.ttf</font>
+    </family>
+    <alias name="rubik-medium" to="rubik" weight="500" />
+
+    <family customizationType="new-named-family" name="zilla-slab-medium">
+      <font weight="500" style="normal">ZillaSlab-Medium.ttf</font>
+      <font weight="500" style="italic">ZillaSlab-MediumItalic.ttf</font>
+      <font weight="600" style="normal">ZillaSlab-SemiBold.ttf</font>
+      <font weight="600" style="italic">ZillaSlab-SemiBoldItalic.ttf</font>
+    </family>
+    <alias name="zilla-slab-semi-bold" to="zilla-slab-medium" weight="600" />
+
+   <family customizationType="new-named-family" name="SlatePro">
+      <font weight="400" style="normal">SlateProSans-Regular.ttf</font>
+      <font weight="400" style="italic">SlateProSans-Italic.ttf</font>
+      <font weight="500" style="normal">SlatePro-Medium.ttf</font>
+      <font weight="500" style="italic">SlatePro-MediumItalic.ttf</font>
+      <font weight="600" style="normal">SlatePro-SemiBold.ttf</font>
+      <font weight="600" style="italic">SlatePro-SemiBoldItalic.ttf</font>
+    </family>
+    <alias name="SlatePro-medium" to="SlatePro-medium" weight="500" />
+
+   <family customizationType="new-named-family" name="SanFransisco">
+      <font weight="400" style="normal">SanFransisco-Regular.ttf</font>
+      <font weight="500" style="normal">SanFransisco-Medium.ttf</font>
+      <font weight="500" style="italic">SanFransisco-MediumItalic.ttf</font>
+      <font weight="600" style="normal">SanFransisco-SemiBold.ttf</font>
+      <font weight="600" style="italic">SanFransisco-SemiBoldItalic.ttf</font>
+    </family>
+    <alias name="SanFransisco-medium" to="SanFransisco" weight="500" />
+
+    <family customizationType="new-named-family" name="AppleMint">
+      <font weight="400" style="normal">AppleMint-Regular.ttf</font>
+      <font weight="400" style="italic">AppleMint-Italic.ttf</font>
+      <font weight="500" style="normal">AppleMint-Medium.ttf</font>
+      <font weight="500" style="italic">AppleMint-MediumItalic.ttf</font>
+      <font weight="700" style="normal">AppleMint-Bold.ttf</font>
+      <font weight="700" style="italic">AppleMint-BoldItalic.ttf</font>
+    </family>
+    <alias name="AppleMint-medium" to="AppleMint" weight="500" />
+
+    <family customizationType="new-named-family" name="CartoonistHand">
+      <font weight="500" style="normal">CartoonistHand-Regular.ttf</font>
+      <font weight="500" style="italic">CartoonistHand-Italic.ttf</font>
+      <font weight="600" style="normal">CartoonistHand-Medium.ttf</font>
+      <font weight="600" style="italic">CartoonistHand-MediumItalic.ttf</font>
+      <font weight="700" style="normal">CartoonistHand-Bold.ttf</font>
+      <font weight="700" style="italic">CartoonistHand-BoldItalic.ttf</font>
+    </family>
+    <alias name="CartoonistHand-medium" to="CartoonistHand" weight="600" />
+
+    <family customizationType="new-named-family" name="Chinacat">
+      <font weight="400" style="normal">Chinacat-Regular.ttf</font>
+      <font weight="400" style="italic">Chinacat-Italic.ttf</font>
+      <font weight="500" style="normal">Chinacat-Medium.ttf</font>
+      <font weight="500" style="italic">Chinacat-MediumItalic.ttf</font>
+      <font weight="700" style="normal">Chinacat-Bold.ttf</font>
+      <font weight="700" style="italic">Chinacat-BoldItalic.ttf</font>
+    </family>
+    <alias name="Chinacat-medium" to="Chinacat" weight="500" />
+
+    <family customizationType="new-named-family" name="Rosemary">
+      <font weight="400" style="normal">Rosemary-Regular.ttf</font>
+      <font weight="400" style="italic">Rosemary-Italic.ttf</font>
+      <font weight="500" style="normal">Rosemary-Medium.ttf</font>
+      <font weight="500" style="italic">Rosemary-MediumItalic.ttf</font>
+      <font weight="700" style="normal">Rosemary-Bold.ttf</font>
+      <font weight="700" style="italic">Rosemary-BoldItalic.ttf</font>
+    </family>
+    <alias name="Rosemary-medium" to="Rosemary" weight="500" />
+
+    <family customizationType="new-named-family" name="RobotoOrig">
+      <font weight="400" style="normal">RobotoOrig-Regular.ttf</font>
+      <font weight="400" style="italic">RobotoOrig-Italic.ttf</font>
+      <font weight="500" style="normal">RobotoOrig-Medium.ttf</font>
+      <font weight="500" style="italic">RobotoOrig-MediumItalic.ttf</font>
+      <font weight="700" style="normal">RobotoOrig-Bold.ttf</font>
+      <font weight="700" style="italic">RobotoOrig-BoldItalic.ttf</font>
+    </family>
+    <alias name="RobotoOrig-medium" to="RobotoOrig" weight="500" />
 </fonts-modification>
