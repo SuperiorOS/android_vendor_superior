@@ -73,7 +73,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/superior/overlay
 
 # Default ringtone/notification/alarm sounds
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Soulful.ogg \
     ro.config.notification_sound=Pikachu.ogg \
     ro.config.alarm_alert=Helium.ogg
