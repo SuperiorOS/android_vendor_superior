@@ -38,7 +38,7 @@ PRODUCT_PACKAGES += \
     messaging \
     Music \
     Recorder \
-    SettingsIntelligence \
+    SettingsIntelligenceGooglePrebuilt \
     Superiorwalls \
     Stk \
     ThemePicker \
