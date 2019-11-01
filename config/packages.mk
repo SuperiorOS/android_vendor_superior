@@ -36,6 +36,7 @@ PRODUCT_PACKAGES += \
     Launcher3QuickStep \
     messaging \
     Stk \
+    SuperiorThemesStub \
     Superiorwalls \
     ThemePicker \
     ViaBrowser
