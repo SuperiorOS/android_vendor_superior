@@ -27,4 +27,7 @@
         <item>com.google.android.youtube</item>
         <item>com.android.vending</item>
     </array>
+
+    <string name="themes_stub_package">com.google.android.apps.customization.pixel</string>
+
 </resources>
