@@ -62,7 +62,13 @@ PRODUCT_PACKAGES += \
     AccentColorTealOverlay \
     AccentColorVioletOverlay \
     AccentColorYellowOverlay \
-    AccentColorMintOverlay
+    AccentColorMintOverlay \
+    AccentColorAmberOverlay \
+    AccentColorBrownOverlay \
+    AccentColorCandyRedOverlay \
+    AccentColorDeepOrangeOverlay \
+    AccentColorDeepPurpleOverlay \
+    AccentColorElegantGreenOverlay
 
 # fonts
 PRODUCT_PACKAGES += \
