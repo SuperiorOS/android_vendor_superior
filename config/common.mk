@@ -105,11 +105,11 @@ include vendor/superior/config/fonts.mk
 # Icon Shapes
 include vendor/superior/config/iconshapes.mk
 
-# Sounds
-include vendor/superior/config/sounds.mk
-
 # Bootanimation
 include vendor/superior/config/bootanimation.mk
+
+#Audio
+include vendor/superior/config/audio.mk
 
 # Superior_props
 $(call inherit-product, vendor/superior/config/superior_props.mk)
