@@ -37,13 +37,15 @@ PRODUCT_PACKAGES += \
     Launcher3QuickStep \
     messaging \
     Music \
+    OmniJaws \
     Recorder \
     SafetyHubPrebuilt \
     SettingsIntelligenceGooglePrebuilt \
     Superiorwalls \
     Stk \
     ThemePicker \
-    ViaBrowser
+    ViaBrowser \
+    WeatherIcons
 
 # Accents
 PRODUCT_PACKAGES += \

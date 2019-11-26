@@ -16,19 +16,6 @@ PRODUCT_BRAND ?= SuperiorOS
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
-# SetupWizard
-PRODUCT_PRODUCT_PROPERTIES += \
-    setupwizard.enable_assist_gesture_training=true \
-    setupwizard.feature.baseline_setupwizard_enabled=true \
-    setupwizard.feature.show_pixel_tos=true \
-    setupwizard.feature.show_support_link_in_deferred_setup=false \
-    setupwizard.theme=glif_v3_light
-
-# IME
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.com.google.ime.bs_theme=true \
-    ro.com.google.ime.theme_id=5
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
@@ -94,11 +81,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.ringtone=Soulful.ogg,on_my_way.ogg \
     ro.config.notification_sound=Pikachu.ogg \
     ro.config.alarm_alert=Helium.ogg
-
-#OmniJaws
-PRODUCT_PACKAGES += \
-    OmniJaws \
-    WeatherIcons
 
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += \

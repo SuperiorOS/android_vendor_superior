@@ -54,4 +54,5 @@
 
     <!-- Emergency app intent action -->
     <string name="config_emergency_intent_action">com.google.android.safetyhub.SAFETY_HUB</string>
+	
 </resources>

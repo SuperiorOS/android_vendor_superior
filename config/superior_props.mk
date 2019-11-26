@@ -12,27 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    dalvik.vm.debug.alloc=0 \
     keyguard.no_require_sim=true \
+    media.recorder.show_manufacturer_and_model=true \
+    net.tethering.noprovisioning=true \
+    persist.sys.disable_rescue=true \
+    ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
+    ro.carrier=unknown \
+    ro.com.android.dataroaming=false \
+    ro.com.android.dateformat=MM-dd-yyyy \
+    ro.config.bt_sco_vol_steps=30 \
+    ro.config.media_vol_steps=30 \
+    ro.error.receiver.system.apps=com.google.android.gms \
+    ro.opa.eligible_device=true \
+    ro.setupwizard.enterprise_mode=1 \
+    ro.storage_manager.enabled=true \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-    ro.com.google.clientidbase=android-google \
-    ro.com.android.wifi-watchlist=GoogleGuest \
-    ro.setupwizard.enterprise_mode=1 \
-    ro.setupwizard.network_required=false \
-    ro.setupwizard.gservices_delay=-1 \
-    ro.com.android.dataroaming=false \
-    drm.service.enabled=true \
-    net.tethering.noprovisioning=true \
-    persist.sys.dun.override=0 \
-    ro.build.selinux=1 \
-    ro.setupwizard.rotation_locked=true \
-    ro.opa.eligible_device=true \
-    persist.sys.disable_rescue=true \
-    ro.config.calibration_cad=/system/etc/calibration_cad.xml
     ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
-    ro.adb.secure=0 \
-    ro.secure=0 \
-    persist.service.adb.enable=1
