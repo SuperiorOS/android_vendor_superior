@@ -3,4 +3,6 @@ PRODUCT_PACKAGES += \
     IconShapeRoundedRectOverlay \
     IconShapeSquareOverlay \
     IconShapeSquircleOverlay \
-    IconShapeTeardropOverlay
+    IconShapeTeardropOverlay \
+    IconShapeCylinderOverlay \
+    IconShapeHexagonOverlay
