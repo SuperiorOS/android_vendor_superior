@@ -102,6 +102,9 @@ include vendor/superior/config/version.mk
 # Fonts
 include vendor/superior/config/fonts.mk
 
+# Icon Shapes
+include vendor/superior/config/iconshapes.mk
+
 # Sounds
 include vendor/superior/config/sounds.mk
 
