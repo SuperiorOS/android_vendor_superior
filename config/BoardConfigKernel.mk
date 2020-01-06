@@ -28,6 +28,7 @@
 #
 #   TARGET_KERNEL_CLANG_COMPILE        = Compile kernel with clang, defaults to true
 #   TARGET_KERNEL_LLVM_BINUTILS        = Use LLVM binutils, defaults to true
+#   TARGET_KERNEL_NEW_GCC_COMPILE      = Compile kernel with newer version GCC, defaults to false
 #   TARGET_KERNEL_VERSION              = Reported kernel version in top level kernel
 #                                        makefile. Can be overriden in device trees
 #                                        in the event of prebuilt kernel.
@@ -68,17 +69,32 @@ KERNEL_VERSION := $(shell grep -s "^VERSION = " $(TARGET_KERNEL_SOURCE)/Makefile
 KERNEL_PATCHLEVEL := $(shell grep -s "^PATCHLEVEL = " $(TARGET_KERNEL_SOURCE)/Makefile | awk '{ print $$3 }')
 TARGET_KERNEL_VERSION ?= $(shell echo $(KERNEL_VERSION)"."$(KERNEL_PATCHLEVEL))
 
+TARGET_KERNEL_HEADERS ?= $(TARGET_KERNEL_SOURCE)
+
 CLANG_PREBUILTS := $(BUILD_TOP)/prebuilts/clang/host/$(HOST_PREBUILT_TAG)/clang-r450784d
 GCC_PREBUILTS := $(BUILD_TOP)/prebuilts/gcc/$(HOST_PREBUILT_TAG)
-# arm64 toolchain
-KERNEL_TOOLCHAIN_arm64 := $(GCC_PREBUILTS)/aarch64/aarch64-linux-android-4.9/bin
-KERNEL_TOOLCHAIN_PREFIX_arm64 := aarch64-linux-android-
-# arm toolchain
-KERNEL_TOOLCHAIN_arm := $(GCC_PREBUILTS)/arm/arm-linux-androideabi-4.9/bin
-KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-androidkernel-
 # x86 toolchain
 KERNEL_TOOLCHAIN_x86 := $(GCC_PREBUILTS)/x86/x86_64-linux-android-4.9/bin
 KERNEL_TOOLCHAIN_PREFIX_x86 := x86_64-linux-android-
+
+ifeq ($(TARGET_KERNEL_NEW_GCC_COMPILE),true)
+    ifeq ($(TARGET_KERNEL_CLANG_COMPILE),true)
+        $(error TARGET_KERNEL_NEW_GCC_COMPILE cannot be used with TARGET_KERNEL_CLANG_COMPILE!)
+    endif
+    # arm64 toolchain
+    KERNEL_TOOLCHAIN_arm64 := $(GCC_PREBUILTS)/aarch64/aarch64-elf/bin
+    KERNEL_TOOLCHAIN_PREFIX_arm64 := aarch64-elf-
+    # arm toolchain
+    KERNEL_TOOLCHAIN_arm := $(GCC_PREBUILTS)/arm/arm-eabi/bin
+    KERNEL_TOOLCHAIN_PREFIX_arm := arm-eabi-
+else
+    # arm64 toolchain
+    KERNEL_TOOLCHAIN_arm64 := $(GCC_PREBUILTS)/aarch64/aarch64-linux-android-4.9/bin
+    KERNEL_TOOLCHAIN_PREFIX_arm64 := aarch64-linux-android-
+    # arm toolchain
+    KERNEL_TOOLCHAIN_arm := $(GCC_PREBUILTS)/arm/arm-linux-androideabi-4.9/bin
+    KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-androidkernel-
+endif
 
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(strip $(TARGET_KERNEL_CROSS_COMPILE_PREFIX))
 ifneq ($(TARGET_KERNEL_CROSS_COMPILE_PREFIX),)
