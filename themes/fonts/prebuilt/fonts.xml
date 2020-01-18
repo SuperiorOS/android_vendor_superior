@@ -283,6 +283,27 @@
     <alias name="fantasy" to="samsungone" />
     <alias name="ITC Stone Serif" to="samsungone" />
 
+    <family name="firasans">
+        <font weight="400" style="normal">FiraSans-Regular.ttf</font>
+        <font weight="400" style="italic">FiraSans-Italic.ttf</font>
+        <font weight="500" style="normal">FiraSans-Medium.ttf</font>
+        <font weight="500" style="italic">FiraSans-MediumItalic.ttf</font>
+        <font weight="700" style="normal">FiraSans-Bold.ttf</font>
+        <font weight="700" style="italic">FiraSans-BoldItalic.ttf</font>
+    </family>
+
+    <alias name="firasans-medium" to="firasans" weight="500" />
+    <alias name="firasans-semi-bold" to="firasans" weight="600" />
+    <alias name="firasans-bold" to="firasans" weight="700" />
+    <alias name="times" to="firasans" />
+    <alias name="times new roman" to="firasans" />
+    <alias name="palatino" to="firasans" />
+    <alias name="georgia" to="firasans" />
+    <alias name="baskerville" to="firasans" />
+    <alias name="goudy" to="firasans" />
+    <alias name="fantasy" to="firasans" />
+    <alias name="ITC Stone Serif" to="firasans" />
+
     <family name="monospace">
         <font weight="400" style="normal">DroidSansMono.ttf</font>
     </family>

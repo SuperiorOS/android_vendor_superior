@@ -7,6 +7,7 @@ PRODUCT_PACKAGES += \
     FontCagliostroSourceOverlay \
     FontComicSansSourceOverlay \
     FontCoolstorySourceOverlay \
+    FontFiraSansSourceOverlay \
     FontGoogleSansSourceOverlay \
     FontLGSmartGothicSourceOverlay \
     FontOneplusSlateSource \
@@ -24,6 +25,12 @@ PRODUCT_COPY_FILES += \
     vendor/superior/themes/fonts/prebuilt/Comic_Sans.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Comic_Sans.ttf \
     vendor/superior/themes/fonts/prebuilt/Coolstory-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Coolstory-Regular.ttf \
     vendor/superior/themes/fonts/prebuilt/dumbledor.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Dumbledor-Regular.ttf \
+    vendor/superior/themes/fonts/prebuilt/FiraSans-Bold.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/FiraSans-Bold.ttf \
+    vendor/superior/themes/fonts/prebuilt/FiraSans-BoldItalic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/FiraSans-BoldItalic.ttf \
+    vendor/superior/themes/fonts/prebuilt/FiraSans-Italic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/FiraSans-Italic.ttf \
+    vendor/superior/themes/fonts/prebuilt/FiraSans-Medium.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/FiraSans-Medium.ttf \
+    vendor/superior/themes/fonts/prebuilt/FiraSans-MediumItalic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/FiraSans-MediumItalic.ttf \
+    vendor/superior/themes/fonts/prebuilt/FiraSans-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/FiraSans-Regular.ttf \
     vendor/superior/themes/fonts/prebuilt/Gobold.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Gobold.ttf \
     vendor/superior/themes/fonts/prebuilt/GoogleSans-Bold.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoogleSans-Bold.ttf \
     vendor/superior/themes/fonts/prebuilt/GoogleSans-BoldItalic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoogleSans-BoldItalic.ttf \
