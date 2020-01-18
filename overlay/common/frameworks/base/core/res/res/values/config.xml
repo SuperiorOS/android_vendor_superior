@@ -125,11 +125,8 @@
     <integer name="config_maxShortcutTargetsPerApp">8</integer>
 
     <!-- Name of a font family to use for headlines. If empty, falls back to platform default -->
-    <string name="config_headlineFontFamily">google-sans</string>
-    <!-- Name of the font family used for system surfaces where the font should use medium weight -->
-    <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
-    <!-- Allows setting custom fontFeatureSettings on specific text. -->
-    <string name="config_headlineFontFeatureSettings">ss03</string>
+    <string name="config_headlineFontFamily" translatable="false">sans-serif</string>
+    <string name="config_headlineFontFamilyMedium" translateable="false">sans-serif-medium</string>
 
     <!-- Colon separated list of package names that should be granted DND access -->
     <string name="config_defaultDndAccessPackages" translatable="false">com.google.android.gms:com.google.android.GoogleCamera:com.google.intelligence.sense:com.google.android.settings.intelligence</string>
