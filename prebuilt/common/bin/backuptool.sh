@@ -42,7 +42,49 @@ restore_addon_d() {
   fi
 }
 
-# Execute /$S/addon.d/*.sh scripts with $1 parameter
+# Proceed only if /system is the expected major and minor version
+check_prereq() {
+# If there is no build.prop file the partition is probably empty.
+if [ ! -r $S/build.prop ]; then
+    return 0
+fi
+ if [ ! grep -q "^ro.aosip.version=$V.*" $S/etc/prop.default $S/build.prop ]; then
+   echo "Not backing up files from incompatible version: $V"
+   return 0
+ fi
+return 1
+}
+
+check_blacklist() {
+  if [ -f $S/addon.d/blacklist -a -d /$1/addon.d/ ]; then
+      ## Discard any known bad backup scripts
+      for f in /$1/addon.d/*sh; do
+          [ -f $f ] || continue
+          s=$(md5sum $f | cut -c-32)
+          grep -q $s $S/addon.d/blacklist && rm -f $f
+      done
+  fi
+}
+
+check_whitelist() {
+  found=0
+  if [ -f $S/addon.d/whitelist ];then
+      ## forcefully keep any version-independent stuff
+      cd /$1/addon.d/
+      for f in *sh; do
+          s=$(md5sum $f | cut -c-32)
+          grep -q $s $S/addon.d/whitelist
+          if [ $? -eq 0 ]; then
+              found=1
+          else
+              rm -f $f
+          fi
+      done
+  fi
+  return $found
+}
+
+# Execute /system/addon.d/*.sh scripts with $1 parameter
 run_stage() {
 if [ -d /tmp/addon.d/ ]; then
   for script in $(find /tmp/addon.d/ -name '*.sh' |sort -n); do
