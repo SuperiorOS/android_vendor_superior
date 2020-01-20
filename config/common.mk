@@ -99,6 +99,9 @@ include vendor/superior/config/packages.mk
 #versioning
 include vendor/superior/config/version.mk
 
+# Include Superior theme files
+include vendor/superior/themes/backgrounds/themes.mk
+
 # Fonts
 include vendor/superior/config/fonts.mk
 
