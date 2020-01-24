@@ -59,6 +59,13 @@ PRODUCT_PACKAGES += \
     FodAnimations
 endif
 
+# Charger mode images
+ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
+endif
+
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \
