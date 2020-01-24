@@ -92,9 +92,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     apns-conf.xml
 
-# Charger images
+# Offline charger
 PRODUCT_PACKAGES += \
-    charger_res_images
+    charger_res_images \
+    product_charger_res_images
 
 # Cutout control overlay
 PRODUCT_PACKAGES += \
