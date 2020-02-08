@@ -1,0 +1,3 @@
+<config>
+  <hidden-api-whitelisted-app package="org.mokee.screenshot" />
+</config>

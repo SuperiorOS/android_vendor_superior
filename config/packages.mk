@@ -35,6 +35,7 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LatinIME \
     Launcher3QuickStep \
+    Longshot \
     messaging \
     Music \
     OmniJaws \

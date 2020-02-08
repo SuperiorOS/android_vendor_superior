@@ -54,6 +54,7 @@ PRODUCT_COPY_FILES += \
 #Superior Permissions
 PRODUCT_COPY_FILES += \
     vendor/superior/config/permissions/privapp-permissions-superior-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-superior.xml \
+    vendor/superior/config/permissions/superior-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/superior-hiddenapi-package-whitelist.xml
 
 # Include LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/superior/overlay/dictionaries
