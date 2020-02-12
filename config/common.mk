@@ -48,7 +48,8 @@ PRODUCT_COPY_FILES += \
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
+    SystemUI \
+    Launcher3QuickStep
 
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
