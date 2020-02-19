@@ -3,4 +3,10 @@ PRODUCT_PACKAGES += \
     PitchBlackSystemOverlay \
     PitchBlackSystemUIOverlay \
     SolarizedDarkSystemOverlay \
-    SolarizedDarkSystemUIOverlay
+    SolarizedDarkSystemUIOverlay \
+    BakedGreenSystemOverlay \
+    BakedGreenSystemUIOverlay \
+    ChocoXSystemOverlay \
+    ChocoXSystemUIOverlay \
+    DarkGreySystemOverlay \
+    DarkGreySystemUIOverlay
