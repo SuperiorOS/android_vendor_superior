@@ -346,6 +346,118 @@
     </family>
     <alias name="source-sans-pro-semi-bold" to="source-sans-pro" weight="600" />
 
+    <family name="domkrat">
+        <font weight="400" style="normal">Domkrat.ttf</font>
+    </family>
+    <alias name="domkrat-semi-bold" to="domkrat" weight="600" />
+    <alias name="domkrat-bold" to="domkrat" weight="700" />
+    <alias name="times" to="domkrat" />
+    <alias name="times new roman" to="domkrat" />
+    <alias name="palatino" to="domkrat" />
+    <alias name="georgia" to="domkrat" />
+    <alias name="baskerville" to="domkrat" />
+    <alias name="goudy" to="domkrat" />
+    <alias name="fantasy" to="domkrat" />
+    <alias name="ITC Stone Serif" to="domkrat" />
+
+    <family name="fakedes">
+        <font weight="400" style="normal">Fakedes.otf</font>
+    </family>
+    <alias name="fakedes-semi-bold" to="fakedes" weight="600" />
+    <alias name="fakedes-bold" to="fakedes" weight="700" />
+    <alias name="times" to="fakedes" />
+    <alias name="times new roman" to="fakedes" />
+    <alias name="palatino" to="fakedes" />
+    <alias name="georgia" to="fakedes" />
+    <alias name="baskerville" to="fakedes" />
+    <alias name="goudy" to="fakedes" />
+    <alias name="fantasy" to="fakedes" />
+    <alias name="ITC Stone Serif" to="fakedes" />
+
+    <family name="honda">
+        <font weight="400" style="normal">Honda.ttf</font>
+    </family>
+    <alias name="honda-semi-bold" to="honda" weight="600" />
+    <alias name="honda-bold" to="honda" weight="700" />
+    <alias name="times" to="honda" />
+    <alias name="times new roman" to="honda" />
+    <alias name="palatino" to="honda" />
+    <alias name="georgia" to="honda" />
+    <alias name="baskerville" to="honda" />
+    <alias name="goudy" to="honda" />
+    <alias name="fantasy" to="honda" />
+    <alias name="ITC Stone Serif" to="honda" />
+
+    <family name="hortensia">
+        <font weight="400" style="normal">Hortensia.ttf</font>
+    </family>
+    <alias name="hortensia-semi-bold" to="hortensia" weight="600" />
+    <alias name="hortensia-bold" to="hortensia" weight="700" />
+    <alias name="times" to="hortensia" />
+    <alias name="times new roman" to="hortensia" />
+    <alias name="palatino" to="hortensia" />
+    <alias name="georgia" to="hortensia" />
+    <alias name="baskerville" to="hortensia" />
+    <alias name="goudy" to="hortensia" />
+    <alias name="fantasy" to="hortensia" />
+    <alias name="ITC Stone Serif" to="hortensia" />
+
+    <family name="minusman">
+        <font weight="400" style="normal">Minusman.ttf</font>
+    </family>
+    <alias name="minusman-semi-bold" to="minusman" weight="600" />
+    <alias name="minusman-bold" to="minusman" weight="700" />
+    <alias name="times" to="minusman" />
+    <alias name="times new roman" to="minusman" />
+    <alias name="palatino" to="minusman" />
+    <alias name="georgia" to="minusman" />
+    <alias name="baskerville" to="minusman" />
+    <alias name="goudy" to="minusman" />
+    <alias name="fantasy" to="minusman" />
+    <alias name="ITC Stone Serif" to="minusman" />
+
+    <family name="nova">
+        <font weight="400" style="normal">Nova.ttf</font>
+    </family>
+    <alias name="nova-semi-bold" to="nova" weight="600" />
+    <alias name="nova-bold" to="nova" weight="700" />
+    <alias name="times" to="nova" />
+    <alias name="times new roman" to="nova" />
+    <alias name="palatino" to="nova" />
+    <alias name="georgia" to="nova" />
+    <alias name="baskerville" to="nova" />
+    <alias name="goudy" to="nova" />
+    <alias name="fantasy" to="nova" />
+    <alias name="ITC Stone Serif" to="nova" />
+
+    <family name="taurus">
+        <font weight="400" style="normal">Taurus.ttf</font>
+    </family>
+    <alias name="taurus-semi-bold" to="taurus" weight="600" />
+    <alias name="taurus-bold" to="taurus" weight="700" />
+    <alias name="times" to="taurus" />
+    <alias name="times new roman" to="taurus" />
+    <alias name="palatino" to="taurus" />
+    <alias name="georgia" to="taurus" />
+    <alias name="baskerville" to="taurus" />
+    <alias name="goudy" to="taurus" />
+    <alias name="fantasy" to="tauruso" />
+    <alias name="ITC Stone Serif" to="taurus" />
+
+    <family name="technical">
+        <font weight="400" style="normal">Technical.ttf</font>
+    </family>
+    <alias name="technical-semi-bold" to="technical" weight="600" />
+    <alias name="technical-bold" to="technical" weight="700" />
+    <alias name="times" to="technical" />
+    <alias name="times new roman" to="technical" />
+    <alias name="palatino" to="technical" />
+    <alias name="georgia" to="technical" />
+    <alias name="baskerville" to="technical" />
+    <alias name="goudy" to="technical" />
+    <alias name="fantasy" to="technical" />
+    <alias name="ITC Stone Serif" to="technical" />
+
     <!-- fallback fonts -->
     <family lang="und-Arab" variant="elegant">
         <font weight="400" style="normal">NotoNaskhArabic-Regular.ttf</font>

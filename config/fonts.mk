@@ -7,14 +7,22 @@ PRODUCT_PACKAGES += \
     FontCagliostroSourceOverlay \
     FontComicSansSourceOverlay \
     FontCoolstorySourceOverlay \
+    FontDomkratSourceOverlay \
+    FontFakedesSourceOverlay \
     FontFiraSansSourceOverlay \
     FontGoogleSansSourceOverlay \
+    FontHondaSourceOverlay \
+    FontHortensiaSourceOverlay \
     FontLGSmartGothicSourceOverlay \
+    FontMinusmanSourceOverlay \
+    FontNovaSourceOverlay \
     FontOneplusSlateSource \
     FontRosemarySourceOverlay \
     FontSamsungOneSourceOverlay \
     FontSonySketchSourceOverlay \
-    FontSurferSourceOverlay
+    FontSurferSourceOverlay \
+    FontTaurusSourceOverlay \
+    FontTechnicalSourceOverlay
 
 PRODUCT_COPY_FILES += \
     vendor/superior/themes/fonts/prebuilt/Aclonica.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Aclonica.ttf \
@@ -24,7 +32,9 @@ PRODUCT_COPY_FILES += \
     vendor/superior/themes/fonts/prebuilt/Cagliostro-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Cagliostro-Regular.ttf \
     vendor/superior/themes/fonts/prebuilt/Comic_Sans.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Comic_Sans.ttf \
     vendor/superior/themes/fonts/prebuilt/Coolstory-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Coolstory-Regular.ttf \
+    vendor/superior/themes/fonts/prebuilt/Domkrat.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Domkrat.ttf \
     vendor/superior/themes/fonts/prebuilt/dumbledor.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Dumbledor-Regular.ttf \
+    vendor/superior/themes/fonts/prebuilt/Fakedes.otf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Fakedes.otf \
     vendor/superior/themes/fonts/prebuilt/FiraSans-Bold.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/FiraSans-Bold.ttf \
     vendor/superior/themes/fonts/prebuilt/FiraSans-BoldItalic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/FiraSans-BoldItalic.ttf \
     vendor/superior/themes/fonts/prebuilt/FiraSans-Italic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/FiraSans-Italic.ttf \
@@ -38,8 +48,12 @@ PRODUCT_COPY_FILES += \
     vendor/superior/themes/fonts/prebuilt/GoogleSans-Medium.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoogleSans-Medium.ttf \
     vendor/superior/themes/fonts/prebuilt/GoogleSans-MediumItalic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoogleSans-MediumItalic.ttf \
     vendor/superior/themes/fonts/prebuilt/GoogleSans-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoogleSans-Regular.ttf \
+    vendor/superior/themes/fonts/prebuilt/Honda.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Honda.ttf \
+    vendor/superior/themes/fonts/prebuilt/Hortensia.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Hortensia.ttf \
     vendor/superior/themes/fonts/prebuilt/LGSmartGothic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/LGSmartGothic.ttf \
     vendor/superior/themes/fonts/prebuilt/mexcellent.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Mexcellent-Regular.ttf \
+    vendor/superior/themes/fonts/prebuilt/Minusman.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Minusman.ttf \
+    vendor/superior/themes/fonts/prebuilt/Nova.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Nova.ttf \
     vendor/superior/themes/fonts/prebuilt/neoneon.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Neoneon-Regular.ttf \
     vendor/superior/themes/fonts/prebuilt/PhantomBold.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/PhantomBold-Regular.ttf \
     vendor/superior/themes/fonts/prebuilt/road_rage.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/RoadRage-Regular.ttf \
@@ -51,4 +65,6 @@ PRODUCT_COPY_FILES += \
     vendor/superior/themes/fonts/prebuilt/snowstorm.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Snowstorm-Regular.ttf \
     vendor/superior/themes/fonts/prebuilt/SonySketch.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/SonySketch.ttf \
     vendor/superior/themes/fonts/prebuilt/Surfer.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Surfer.ttf \
+    vendor/superior/themes/fonts/prebuilt/Taurus.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Taurus.ttf \
+    vendor/superior/themes/fonts/prebuilt/Technical.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Technical.ttf \
     vendor/superior/themes/fonts/prebuilt/vcr_osd_mono.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/ThemeableFont-Regular.ttf
