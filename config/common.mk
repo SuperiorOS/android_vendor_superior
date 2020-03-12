@@ -87,8 +87,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.alarm_alert=Helium.ogg
 
 # Device Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    vendor/superior/overlay/common
+DEVICE_PACKAGE_OVERLAYS += vendor/superior/overlay/common
+ifeq ($(EXTRA_FOD_ANIMATIONS),true)
+DEVICE_PACKAGE_OVERLAYS += vendor/superior/overlay/fod
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/superior/overlay/fod
+endif
 
 #Telephony
 $(call inherit-product, vendor/superior/config/telephony.mk)
