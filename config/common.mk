@@ -34,10 +34,6 @@ endif
 $(foreach f,$(wildcard vendor/superior/prebuilt/common/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
 
-# system mount
-PRODUCT_COPY_FILES += \
-    vendor/superior/build/tools/system-mount.sh:install/bin/system-mount.sh
-
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.sip.voip.xml
