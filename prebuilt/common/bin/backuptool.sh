@@ -1,6 +1,6 @@
 #!/sbin/sh
 #
-# Backup and restore addon /$S files
+# Backup and restore addon /system files
 #
 
 export C=/tmp/backupdir
@@ -8,10 +8,10 @@ export SYSDEV="$(readlink -nf "$2")"
 export SYSFS="$3"
 export V=10
 
-# Scripts in /$S/addon.d expect to find backuptool.functions in /tmp
+# Scripts in /system/addon.d expect to find backuptool.functions in /tmp
 cp -f /tmp/install/bin/backuptool.functions /tmp
 
-# Preserve /$S/addon.d in /tmp/addon.d
+# Preserve /system/addon.d in /tmp/addon.d
 preserve_addon_d() {
   if [ -d $S/addon.d/ ]; then
     mkdir -p /tmp/addon.d/
@@ -20,7 +20,7 @@ preserve_addon_d() {
   fi
 }
 
-# Restore /$S/addon.d in /tmp/addon.d
+# Restore /system/addon.d from /tmp/addon.d
 restore_addon_d() {
   if [ -d /tmp/addon.d/ ]; then
     mkdir -p $S/addon.d/
@@ -36,7 +36,7 @@ if [ ! -r $S/build.prop ]; then
   echo "Backup/restore is not possible. Partition is probably empty"
   return 1
 fi
-if ! grep -q "^ro.superior.version=$V.*" $S/build.prop $S/etc/prop.default; then
+if ! grep -q "^ro.build.version.release=$V.*" $S/build.prop; then
   echo "Backup/restore is not possible. Incompatible ROM version: $V"
   return 2
 fi
