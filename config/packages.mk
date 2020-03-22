@@ -46,6 +46,7 @@ PRODUCT_PACKAGES += \
     Stk \
     ThemePicker \
     ViaBrowser \
+    OmniStyle \
     WeatherIcons
 
 # Accents
