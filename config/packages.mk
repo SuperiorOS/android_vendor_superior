@@ -49,38 +49,6 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     WeatherIcons
 
-# Accents
-PRODUCT_PACKAGES += \
-    AccentColorBlueGrayOverlay \
-    AccentColorBlueMondayOverlay \
-    AccentColorCyanOverlay \
-    AccentColorFlatPinkOverlay \
-    AccentColorGoldenShowerOverlay \
-    AccentColorIndigoOverlay \
-    AccentColorLightPurpleOverlay \
-    AccentColorOmniOverlay \
-    AccentColorPinkOverlay \
-    AccentColorQGreenOverlay \
-    AccentColorRedOverlay \
-    AccentColorSluttyPinkOverlay \
-    AccentColorTealOverlay \
-    AccentColorVioletOverlay \
-    AccentColorYellowOverlay \
-    AccentColorMintOverlay \
-    AccentColorAmberOverlay \
-    AccentColorBrownOverlay \
-    AccentColorCandyRedOverlay \
-    AccentColorDeepOrangeOverlay \
-    AccentColorDeepPurpleOverlay \
-    AccentColorElegantGreenOverlay \
-    AccentColorExtendedGreenOverlay \
-    AccentColorJadeGreenOverlay \
-    AccentColorLimeOverlay \
-    AccentColorOnePlusRedOverlay \
-    AccentColorPaleBlueOverlay \
-    AccentColorPaleRedOverlay \
-    AccentColorWhiteOverlay
-
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \
