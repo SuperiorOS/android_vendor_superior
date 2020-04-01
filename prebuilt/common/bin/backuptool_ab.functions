@@ -5,7 +5,7 @@
 
 export S=/system
 export C=/postinstall/tmp/backupdir
-export V=Phoenix
+export V=10
 export backuptool_ab=true
 
 copy_file() {
