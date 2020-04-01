@@ -35,4 +35,8 @@
         <permission name="android.permission.LOCATION_HARDWARE"/>
     </privapp-permissions>
 
+    <privapp-permissions package="com.oneplus.screenrecord">
+        <permission name="android.permission.INSTALL_PACKAGES"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
 </permissions>

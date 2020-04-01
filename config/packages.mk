@@ -39,7 +39,7 @@ PRODUCT_PACKAGES += \
     messaging \
     Music \
     OmniJaws \
-    Recorder \
+    OPScreenRecorder \
     SafetyHubPrebuilt \
     SettingsIntelligenceGooglePrebuilt \
     Superiorwalls \
