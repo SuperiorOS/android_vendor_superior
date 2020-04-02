@@ -35,6 +35,7 @@ PRODUCT_PACKAGES += \
     Launcher3QuickStep \
     messaging \
     Stk \
+    StitchImage \
     Superiorwalls \
     ThemePicker \
     ViaBrowser \
