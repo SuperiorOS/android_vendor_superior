@@ -42,6 +42,7 @@ PRODUCT_PACKAGES += \
     SafetyHubPrebuilt \
     SettingsIntelligenceGooglePrebuilt \
     Superiorwalls \
+    StitchImage \
     Stk \
     ThemePicker \
     ViaBrowser \
