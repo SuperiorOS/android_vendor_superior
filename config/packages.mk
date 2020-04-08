@@ -35,7 +35,6 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LatinIME \
     Lawnchair \
-    Longshot \
     messaging \
     Music \
     OmniJaws \

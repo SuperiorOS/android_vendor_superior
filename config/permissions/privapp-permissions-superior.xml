@@ -23,10 +23,6 @@
         <permission name="android.permission.READ_EXTERNAL_STORAGE" />
     </privapp-permissions>
 
-    <privapp-permissions package="org.mokee.screenshot">
-        <permission name="android.permission.READ_FRAME_BUFFER"/>
-    </privapp-permissions>
-
     <privapp-permissions package="org.omnirom.omnistyle">
         <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
     </privapp-permissions>
