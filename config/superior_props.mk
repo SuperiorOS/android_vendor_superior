@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_GENERIC_PROPERTIES += \
+CUSTOM_PROPERTIES += \
     dalvik.vm.debug.alloc=0 \
     keyguard.no_require_sim=true \
     media.recorder.show_manufacturer_and_model=true \
