@@ -40,7 +40,6 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     OPScreenRecorder \
     SafetyHubPrebuilt \
-    SettingsIntelligenceGooglePrebuilt \
     Superiorwalls \
     StitchImage \
     Stk \
