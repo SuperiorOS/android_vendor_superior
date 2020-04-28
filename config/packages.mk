@@ -79,3 +79,6 @@ PRODUCT_PACKAGES += \
     sshd_config \
     ssh-keygen \
     start-ssh
+
+# Includes themes
+include vendor/superior/themes/themes.mk
