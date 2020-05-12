@@ -34,7 +34,7 @@ PRODUCT_PACKAGES += \
     Dialer \
     ExactCalculator \
     LatinIME \
-    Lawnchair \
+    Launcher3QuickStep \
     messaging \
     Music \
     OmniJaws \
@@ -47,6 +47,22 @@ PRODUCT_PACKAGES += \
     ViaBrowser \
     OmniStyle \
     WeatherIcons
+
+# Dex preopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI \
+    Launcher3QuickStep
+
+# Lawnchair
+ifeq ($(TARGET_EXCLUDE_LAWNCHAIR),)
+PRODUCT_PACKAGES += \
+    Lawnchair \
+    LawnConf
+
+PRODUCT_COPY_FILES += \
+    vendor/superior/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
+    vendor/superior/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
+endif
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
@@ -100,7 +116,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
 
-# Lawnchair
-PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
-    vendor/superior/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
