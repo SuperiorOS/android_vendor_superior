@@ -1,0 +1,8 @@
+android_app {
+    name: "FaceUnlockService-res",
+    resource_dirs: ["res"],
+    dex_preopt: {
+        enabled: false,
+    },
+    installable: false
+}
