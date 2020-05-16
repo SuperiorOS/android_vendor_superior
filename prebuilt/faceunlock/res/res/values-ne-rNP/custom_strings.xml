@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_try">फेरी प्रयास गर्नुहोस्</string>
+    <string name="confirm_lock_screen_btn_auth">प्रमाणित</string>
+    <string name="confirm_lock_screen_to_enable_face_summary">फेस अनलक सक्रिय गर्न, तपाईंको पिन, पासवर्ड, वा ढाँचा प्रविष्ट गर्नुहोस्</string>
+    <string name="confirm_lock_screen_to_enable_face_title">प्रमाणीकरण आवाश्यक छ</string>
+    <string name="disabled_because_device_policy">प्रशासकद्वारा बन्द गरिएको छ</string>
+    <string name="disabled_because_no_backup_security">प्रयोग गर्न, पहिले स्क्रिन लक सेट गर्नुहोस्</string>
+    <string name="face_finish_header_2">सक्किन लागेको छ</string>
+    <string name="face_instruct_anime_header">उठाउनुहोस्, हेर्नुहोस्, र अनलक गर्नुहोस्</string>
+    <string name="face_instruct_anime_next">थाहा पांए</string>
+    <string name="face_intro_conten_first_point">अनुहार मिलान प्याटर्न, पिन, वा पासवर्ड भन्दा कम सुरक्षित छ</string>
+</resources>

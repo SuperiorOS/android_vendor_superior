@@ -1,0 +1,121 @@
+java_library {
+    name: "faceunlock_utils",
+    installable: true,
+
+    srcs: [
+        "src/**/*.java",
+        "src/**/*.aidl",
+    ],
+    aidl: {
+        local_include_dirs: ["src"],
+    },
+}
+
+android_app_import {
+    name: "FaceUnlockService",
+    apk: "prebuilt/priv-app/FaceUnlockService/FaceUnlockService.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    required: [
+        "FaceUnlockService-res",
+        "libFaceDetectCA",
+        "libmegface",
+        "libMegviiUnlock",
+        "libMegviiUnlock-jni-1.2",
+        "faceunlock_perm",
+        "privapp_whitelist_com.motorola.faceunlock",
+        "hiddenapi-whitelist-com.motorola.faceunlock"
+    ],
+}
+
+cc_prebuilt_library_shared {
+    name: "libFaceDetectCA",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["prebuilt/lib/libFaceDetectCA.so"],
+		},
+	android_arm64: {
+            srcs: ["prebuilt/lib64/libFaceDetectCA.so"],
+		},
+    },
+    compile_multilib: "both",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmegface",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["prebuilt/lib/libmegface.so"],
+        },
+	android_arm64: {
+            srcs: ["prebuilt/lib64/libmegface.so"],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMegviiUnlock",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["prebuilt/lib/libMegviiUnlock.so"],
+        },
+	android_arm64: {
+            srcs: ["prebuilt/lib64/libMegviiUnlock.so"],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMegviiUnlock-jni-1.2",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["prebuilt/lib/libMegviiUnlock-jni-1.2.so"],
+        },
+	android_arm64: {
+            srcs: ["prebuilt/lib64/libMegviiUnlock-jni-1.2.so"],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+}
+
+prebuilt_etc {
+    name: "faceunlock_perm",
+    sub_dir: "permissions",
+    src: "prebuilt/etc/permissions/android.hardware.biometrics.face.xml",
+    filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_com.motorola.faceunlock",
+    sub_dir: "permissions",
+    src: "prebuilt/etc/permissions/com.motorola.faceunlock.xml",
+    filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "hiddenapi-whitelist-com.motorola.faceunlock",
+    sub_dir: "sysconfig",
+    src: "prebuilt/etc/sysconfig/hiddenapi-whitelist-com.motorola.faceunlock.xml",
+    filename_from_src: true,
+}
