@@ -2,8 +2,31 @@ function __print_superior_functions_help() {
 cat <<EOF
 Additional SUPERIOR functions:
 - mka:             Builds using SCHED_BATCH on all processors.
+- gerrit:          Adds a remote for SuperiorOS Gerrit
 EOF
-} 
+}
+
+function repopick() {
+    T=$(gettop)
+    $T/vendor/superior/build/tools/repopick.py $@
+}
+
+function gerrit()
+{
+    if [ ! -d ".git" ]; then
+        echo -e "Please run this inside a git directory";
+    else
+        if [[ ! -z $(git config --get remote.gerrit.url) ]]; then
+            git remote rm gerrit;
+        fi
+        [[ -z "${GERRIT_USER}" ]] && export GERRIT_USER=$(git config --get gerrit.superioros.org.username);
+        if [[ -z "${GERRIT_USER}" ]]; then
+            git remote add gerrit $(git remote -v | grep superior | awk '{print $2}' | uniq | sed -e "s|https://github.com/SuperiorOS|ssh://gerrit.superioros.org:29418/SuperiorOS|");
+        else
+            git remote add gerrit $(git remote -v | grep superior | awk '{print $2}' | uniq | sed -e "s|https://github.com/SuperiorOS|ssh://${GERRIT_USER}@gerrit.superioros.org:29418/SuperiorOS|");
+        fi
+    fi
+}
 
 function mk_timer()
 {
