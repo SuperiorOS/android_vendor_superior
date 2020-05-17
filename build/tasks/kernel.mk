@@ -188,6 +188,13 @@ ifeq ($(TARGET_KERNEL_CLANG_COMPILE),true)
     ifeq ($(KERNEL_LD),)
         KERNEL_LD :=
     endif
+    ifeq ($(TARGET_KERNEL_CLANG_VERSION),11)
+        KERNEL_CC += AR=llvm-ar
+        KERNEL_CC += NM=llvm-nm
+        KERNEL_CC += OBJCOPY=llvm-objcopy
+        KERNEL_CC += OBJDUMP=llvm-objdump
+        KERNEL_CC += STRIP=llvm-strip
+    endif
 endif
 
 ifneq ($(TARGET_KERNEL_MODULES),)
