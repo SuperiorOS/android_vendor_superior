@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "26dbff9b_208f7148",
+        "filename": "superior.devices",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000001
+      },
+      "writtenOn": "2020-05-19T06:30:30Z",
+      "side": 1,
+      "message": "Alphabetical order plox",
+      "revId": "386d9d1e69b8e77749867248633953d70de6554f",
+      "serverId": "cff56331-b3cb-4e5e-bf6a-abac220d6299",
+      "unresolved": true
+    }
+  ]
+}
