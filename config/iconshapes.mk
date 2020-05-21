@@ -5,4 +5,5 @@ PRODUCT_PACKAGES += \
     IconShapeSquircleOverlay \
     IconShapeTeardropOverlay \
     IconShapeCylinderOverlay \
-    IconShapeHexagonOverlay
+    IconShapeHexagonOverlay \
+    IconShapeFlowerOverlay
