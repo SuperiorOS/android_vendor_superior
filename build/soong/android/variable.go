@@ -75,7 +75,6 @@ type ProductVariables struct {
 	Should_wait_for_qsee  *bool `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
 	Supports_extended_compress_format  *bool `json:",omitempty"`
-	Recovery_skip_ev_rel_input  *bool `json:",omitempty"`
 	Supports_hw_fde  *bool `json:",omitempty"`
 	Supports_hw_fde_perf  *bool `json:",omitempty"`
 	Target_ignores_ftp_pptp_conntrack_failure  *bool `json:",omitempty"`
