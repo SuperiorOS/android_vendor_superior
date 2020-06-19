@@ -225,7 +225,8 @@ if __name__ == '__main__':
 
     for project in projects:
         name = project.get('name')
-        path = project.get('path')
+        # when name and path are equal, "repo manifest" doesn't return a path at all, so fall back to name
+        path = project.get('path', name)
         if path is None:
             path=name
         revision = project.get('revision')
