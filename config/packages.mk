@@ -37,7 +37,6 @@ PRODUCT_PACKAGES += \
     Lawnchair \
     messaging \
     Music \
-    OmniJaws \
     OPScreenRecorder \
     SafetyHubPrebuilt \
     Superiorwalls \
@@ -45,8 +44,7 @@ PRODUCT_PACKAGES += \
     Stk \
     ThemePicker \
     ViaBrowser \
-    OmniStyle \
-    WeatherIcons
+    OmniStyle
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
