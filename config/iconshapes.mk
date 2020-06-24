@@ -6,4 +6,7 @@ PRODUCT_PACKAGES += \
     IconShapeTeardropOverlay \
     IconShapeCylinderOverlay \
     IconShapeHexagonOverlay \
-    IconShapeFlowerOverlay
+    IconShapeFlowerOverlay  \
+    IconShapePebbleOverlay \
+    IconShapeTaperedRectOverlay \
+    IconShapeVesselOverlay
