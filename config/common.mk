@@ -67,6 +67,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/superior/overlay/dictionaries
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
+# Livedisplay
+PRODUCT_COPY_FILES += \
+    vendor/superior/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml
+
 # Strip the local variable table and the local variable type table to reduce
 # the size of the system image. This has no bearing on stack traces, but will
 # leave less information available via JDWP.
