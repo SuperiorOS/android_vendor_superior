@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "30cb595e_27585079",
+        "filename": "config/common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-06-28T03:37:25Z",
+      "side": 1,
+      "message": "Change it to superior",
+      "range": {
+        "startLine": 42,
+        "startChar": 11,
+        "endLine": 42,
+        "endChar": 15
+      },
+      "revId": "5c35c0d64ebab3a9644b85fe1ff9e66aa625d93a",
+      "serverId": "cff56331-b3cb-4e5e-bf6a-abac220d6299",
+      "unresolved": true
+    }
+  ]
+}
