@@ -47,7 +47,7 @@ cc_library_headers {
 soong_config_module_type {
     name: "force_build_fingerprint",
     module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
+    config_namespace: "superiorGlobalVars",
     value_variables: ["force_build_fingerprint"],
     properties: [
         "cppflags"
@@ -149,6 +149,23 @@ surfaceflinger_fod_lib {
         target_surfaceflinger_fod_lib: {
             cppflags: ["-DTARGET_PROVIDES_FOD_LIB"],
             whole_static_libs: ["%s"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "target_uses_prebuilt_dynamic_partitions",
+    module_type: "cc_defaults",
+    config_namespace: "customGlobalVars",
+    bool_variables: ["target_uses_prebuilt_dynamic_partitions"],
+    properties: ["cppflags"],
+}
+
+target_uses_prebuilt_dynamic_partitions {
+    name: "target_uses_prebuilt_dynamic_partitions_defaults",
+    soong_config_variables: {
+        target_uses_prebuilt_dynamic_partitions: {
+            cppflags: ["-DTARGET_USES_PREBUILT_DYNAMIC_PARTITIONS"],
         },
     },
 }
