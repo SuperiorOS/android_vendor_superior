@@ -46,6 +46,16 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     Custom-Fonts
 
+# Switch themes
+PRODUCT_PACKAGES += \
+    Stock \
+    OnePlus \
+    Narrow \
+    Contained \
+    Telegram \
+    Retro \
+    MD2
+
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \
