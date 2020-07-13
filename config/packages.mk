@@ -38,6 +38,7 @@ PRODUCT_PACKAGES += \
     messaging \
     Music \
     OPScreenRecorder \
+    PixelThemesStub2019 \
     SafetyHubPrebuilt \
     Superiorwalls \
     StitchImage \
