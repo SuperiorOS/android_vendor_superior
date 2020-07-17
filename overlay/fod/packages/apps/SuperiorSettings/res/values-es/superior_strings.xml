@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016-2020 crDroid Android Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="fod_recog_animation_miui_normal">Normal MIUI</string>
+    <string name="fod_recog_animation_miui_aod">MIUI AOD</string>
+    <string name="fod_recog_animation_miui_light">MIUI - Claro</string>
+    <string name="fod_recog_animation_miui_pop">Pop MIUI</string>
+    <string name="fod_recog_animation_miui_pulse">Pulso MIUI</string>
+    <string name="fod_recog_animation_miui_pulse_white">Pulso MIUI (Blanco)</string>
+    <string name="fod_recog_animation_miui_rhythm">Ritmo MIUI</string>
+    <string name="fod_recog_animation_op_cosmos">OnePlus Cosmos</string>
+    <string name="fod_recog_animation_op_mclaren">OnePlus McLaren</string>
+    <string name="fod_recog_animation_op_stripe">OnePlus Stripe</string>
+    <string name="fod_recog_animation_op_wave">OnePlus One</string>
+    <string name="fod_recog_animation_pureview_dna">ADN de PureView</string>
+    <string name="fod_recog_animation_pureview_future">Futuro de PureView</string>
+    <string name="fod_recog_animation_pureview_halo_ring">Anillo de Halo PureView</string>
+    <string name="fod_recog_animation_pureview_molecular">Molecular de PureView</string>
+</resources>
