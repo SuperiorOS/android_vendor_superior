@@ -37,7 +37,6 @@ PRODUCT_PACKAGES += \
     Lawnchair \
     messaging \
     Music \
-    OPScreenRecorder \
     PixelThemesStub2019 \
     SafetyHubPrebuilt \
     Superiorwalls \
