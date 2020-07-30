@@ -19,6 +19,6 @@ BUILD_RRO_SYSTEM_PACKAGE := $(TOPDIR)vendor/superior/build/core/system_rro.mk
 include $(TOPDIR)vendor/superior/build/core/qcom_target.mk
 
 # We modify several neverallows, so let the build proceed
-ifneq ($(TARGET_BUILD_VARIANT),user)
-SELINUX_IGNORE_NEVERALLOWS := true
-endif
+#ifneq ($(TARGET_BUILD_VARIANT),user)
+#SELINUX_IGNORE_NEVERALLOWS := true
+#endif
