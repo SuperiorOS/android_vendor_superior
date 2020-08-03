@@ -126,4 +126,10 @@ PRODUCT_PACKAGES += \
     SwitchAOSP \
     SwitchTelegram \
     SwitchMD2 \
-    SwitchOOS
+    SwitchOOS \
+    GVM-SBH-L \
+    GVM-SBH-M \
+    GVM-SBH-XL \
+    GVM-URM-M \
+    GVM-URM-L \
+    GVM-URM-R
