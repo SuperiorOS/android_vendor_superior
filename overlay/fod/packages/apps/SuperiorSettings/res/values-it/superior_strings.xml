@@ -14,4 +14,20 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="fod_recog_animation_miui_normal">MIUI Normale</string>
+    <string name="fod_recog_animation_miui_aod">MIUI AOD</string>
+    <string name="fod_recog_animation_miui_light">MIUI Light</string>
+    <string name="fod_recog_animation_miui_pop">MIUI Pop</string>
+    <string name="fod_recog_animation_miui_pulse">MIUI Pulse</string>
+    <string name="fod_recog_animation_miui_pulse_white">MIUI Pulse (Bianco)</string>
+    <string name="fod_recog_animation_miui_rhythm">MIUI Rhythm</string>
+    <string name="fod_recog_animation_op_cosmos">OnePlus Cosmos</string>
+    <string name="fod_recog_animation_op_mclaren">OnePlus McLaren</string>
+    <string name="fod_recog_animation_op_stripe">OnePlus Stripe</string>
+    <string name="fod_recog_animation_op_wave">Onda OnePlus</string>
+    <string name="fod_recog_animation_pureview_dna">PureView DNA</string>
+    <string name="fod_recog_animation_pureview_future">PureView Future</string>
+    <string name="fod_recog_animation_pureview_halo_ring">Anello PureView Halo</string>
+    <string name="fod_recog_animation_pureview_molecular">PureView Molecolare</string>
+</resources>
