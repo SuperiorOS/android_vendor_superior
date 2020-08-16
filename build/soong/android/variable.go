@@ -35,6 +35,26 @@ type Product_variables struct {
 	Supports_hw_fde_perf struct {
 		Cflags []string
 	}
+	Uses_qcom_um_3_18_family struct {
+		Cflags []string
+		Header_libs []string
+	}
+	Uses_qcom_um_4_4_family struct {
+		Cflags []string
+		Header_libs []string
+	}
+	Uses_qcom_um_4_9_family struct {
+		Cflags []string
+		Header_libs []string
+	}
+	Uses_qcom_um_4_14_family struct {
+		Cflags []string
+		Header_libs []string
+	}
+        Uses_qcom_um_4_19_family struct {
+		Cflags []string
+                Header_libs []string
+        }
 	Target_ignores_ftp_pptp_conntrack_failure struct {
 		Cppflags []string
 	}
@@ -74,9 +94,13 @@ type ProductVariables struct {
 	Apply_msm8974_1440p_egl_workaround  *bool `json:",omitempty"`
 	Bootloader_message_offset  *int `json:",omitempty"`
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
-	Qcom_um_soong_namespace  *string `json:",omitempty"`
 	Recovery_skip_ev_rel_input  *bool `json:",omitempty"`
 	Should_wait_for_qsee  *bool `json:",omitempty"`
+	Uses_qcom_um_3_18_family  *bool `json:",omitempty"`
+	Uses_qcom_um_4_4_family  *bool `json:",omitempty"`
+	Uses_qcom_um_4_9_family  *bool `json:",omitempty"`
+        Uses_qcom_um_4_14_family  *bool `json:",omitempty"`
+	Uses_qcom_um_4_19_family  *bool `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
 	Supports_extended_compress_format  *bool `json:",omitempty"`
 	Supports_hw_fde  *bool `json:",omitempty"`

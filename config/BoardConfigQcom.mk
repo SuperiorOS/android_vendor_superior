@@ -101,3 +101,16 @@ endif
 # Allow a device to opt-out hardset of PRODUCT_SOONG_NAMESPACES
 QCOM_SOONG_NAMESPACE ?= hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT)
 PRODUCT_SOONG_NAMESPACES += $(QCOM_SOONG_NAMESPACE)
+
+# Required for frameworks/native
+ifeq ($(QCOM_HARDWARE_VARIANT),msm8996)
+    TARGET_USES_QCOM_UM_3_18_FAMILY := true
+else ifeq ($(QCOM_HARDWARE_VARIANT),msm8998)
+    TARGET_USES_QCOM_UM_4_4_FAMILY := true
+else ifeq ($(QCOM_HARDWARE_VARIANT),sdm845)
+    TARGET_USES_QCOM_UM_4_9_FAMILY := true
+else ifeq ($(QCOM_HARDWARE_VARIANT),sm8150)
+    TARGET_USES_QCOM_UM_4_14_FAMILY := true
+else ifeq ($(QCOM_HARDWARE_VARIANT),sm8250)
+    TARGET_USES_QCOM_UM_4_19_FAMILY := true
+endif
