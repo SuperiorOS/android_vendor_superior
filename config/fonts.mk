@@ -14,6 +14,7 @@ PRODUCT_PACKAGES += \
     FontHondaSourceOverlay \
     FontHortensiaSourceOverlay \
     FontLGSmartGothicSourceOverlay \
+    FontLinotteSourceOverlay \
     FontMinusmanSourceOverlay \
     FontNovaSourceOverlay \
     FontOneplusSlateSource \
@@ -51,6 +52,7 @@ PRODUCT_COPY_FILES += \
     vendor/superior/themes/fonts/prebuilt/Honda.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Honda.ttf \
     vendor/superior/themes/fonts/prebuilt/Hortensia.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Hortensia.ttf \
     vendor/superior/themes/fonts/prebuilt/LGSmartGothic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/LGSmartGothic.ttf \
+    vendor/superior/themes/fonts/prebuilt/Linotte.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Linotte.ttf \
     vendor/superior/themes/fonts/prebuilt/mexcellent.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Mexcellent-Regular.ttf \
     vendor/superior/themes/fonts/prebuilt/Minusman.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Minusman.ttf \
     vendor/superior/themes/fonts/prebuilt/Nova.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Nova.ttf \

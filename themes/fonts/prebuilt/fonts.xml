@@ -194,6 +194,10 @@
     <alias name="fantasy" to="lgsmartgothic" />
     <alias name="ITC Stone Serif" to="lgsmartgothic" />
 
+    <family name="linotte">
+        <font weight="300" style="normal">Linotte.ttf</font>
+    </family>
+
     <family name="mexcellent-sys">
         <font weight="300" style="normal">Mexcellent-Regular.ttf</font>
     </family>
