@@ -50,7 +50,7 @@ if [ ! -r /system/build.prop ]; then
   echo "Backup/restore is not possible. Partition is probably empty"
   return 1
 fi
-if ! grep -q "^ro.build.version.release=$V.*" /system/build.prop /system/etc/prop.default; then
+if ! grep -q "^ro.build.version.release=$V.*" /system/build.prop; then
   echo "Backup/restore is not possible. Incompatible ROM version: $V"
   return 2
 fi
