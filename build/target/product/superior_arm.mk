@@ -1,4 +1,4 @@
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2018-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@ $(call inherit-product, vendor/superior/config/common.mk)
 # Allow building otatools
 TARGET_FORCE_OTA_PACKAGE := true
 
+TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_USES_64_BIT_BINDER := true
 
 PRODUCT_NAME := superior_arm
