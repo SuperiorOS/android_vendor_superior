@@ -33,29 +33,11 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     Dialer \
     ExactCalculator \
-    LatinIME \
     messaging \
     Music \
-    PixelThemesStub2019 \
-    SafetyHubPrebuilt \
     Superiorwalls \
-    StitchImage \
     Stk \
-    ThemePicker \
-    ViaBrowser \
-    OmniStyle \
-    Custom-Fonts
-
-# Switch themes
-PRODUCT_PACKAGES += \
-    Stock \
-    OnePlus \
-    Narrow \
-    Contained \
-    Telegram \
-    Retro \
-    MD2 \
-    Stockish
+    ThemePicker
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
@@ -104,20 +86,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images \
     product_charger_res_images
-
-# Cutout control overlay
-PRODUCT_PACKAGES += \
-    NoCutoutOverlay
-
-# Launchers
-
-ifeq ($(TARGET_LAUNCHER),lawnchair)
-include vendor/superior/prebuilt/app/Lawnchair/lawnchair.mk
-else ifeq ($(TARGET_LAUNCHER),oplauncher)
-include vendor/superior/prebuilt/app/OPlauncher/OPLauncher2.mk
-else
-     $(warning TARGET_LAUNCHER is invalid or undefined, building Launcher3 as default launcher)
-
-PRODUCT_PACKAGES += \
-    Launcher3QuickStep
-endif

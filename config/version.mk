@@ -1,4 +1,4 @@
-# Copyright (C) 2018-19 Superior OS Project
+# Copyright (C) 2018-20 The SuperiorOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #Superior OS Versioning :
-SUPERIOR_MOD_VERSION = Phoenix
+SUPERIOR_MOD_VERSION = Xcalibur
 
 ifndef SUPERIOR_BUILD_TYPE
     SUPERIOR_BUILD_TYPE := UNOFFICIAL
@@ -39,8 +39,8 @@ ifeq ($(SUPERIOR_OFFICIAL), true)
       IS_OFFICIAL=true
       SUPERIOR_BUILD_TYPE := OFFICIAL
 
-include vendor/superior-priv/keys.mk
-PRODUCT_PACKAGES += \
+#include vendor/superior-priv/keys.mk
+#PRODUCT_PACKAGES += \
     Updater
 
     endif

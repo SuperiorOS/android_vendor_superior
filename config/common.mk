@@ -60,8 +60,7 @@ EXCLUDE_SYSTEMUI_TESTS := true
 #Superior Permissions
 PRODUCT_COPY_FILES += \
     vendor/superior/config/permissions/privapp-permissions-superior-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-superior.xml \
-    vendor/superior/config/permissions/privapp-permissions-superior.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-superior.xml \
-    vendor/superior/config/permissions/privapp-permissions-livedisplay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-livedisplay.xml
+    vendor/superior/config/permissions/privapp-permissions-superior.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-superior.xml
 
 # Include LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/superior/overlay/dictionaries
@@ -92,10 +91,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += vendor/superior/overlay/common
-ifeq ($(EXTRA_FOD_ANIMATIONS),true)
-DEVICE_PACKAGE_OVERLAYS += vendor/superior/overlay/fod
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/superior/overlay/fod
-endif
 
 #Telephony
 $(call inherit-product, vendor/superior/config/telephony.mk)
@@ -105,15 +100,6 @@ include vendor/superior/config/packages.mk
 
 #versioning
 include vendor/superior/config/version.mk
-
-# Include Superior theme files
-include vendor/superior/themes/backgrounds/themes.mk
-
-# Fonts
-include vendor/superior/config/fonts.mk
-
-# Icon Shapes
-include vendor/superior/config/iconshapes.mk
 
 # Bootanimation
 include vendor/superior/config/bootanimation.mk

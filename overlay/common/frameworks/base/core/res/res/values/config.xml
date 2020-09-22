@@ -71,16 +71,10 @@
     <!-- Flag indicating which package name can access the persistent data partition -->
     <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
-   <!-- Set icon mask to circle -->
-   <string name="config_icon_mask" translatable="false">"M50 0A50 50,0,1,1,50 100A50 50,0,1,1,50 0"</string>
-
     <!-- Whether action menu items should be displayed in ALLCAPS or not.
          Defaults to true. If this is not appropriate for specific locales
          it should be disabled in that locale's resources. -->
     <bool name="config_buttonTextAllCaps">false</bool>
-
-    <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
-    <bool name="config_useRoundIcon">true</bool>
 
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
@@ -205,8 +199,4 @@
          screenshot chord -->
     <integer name="config_screenshotChordKeyTimeout">0</integer>
 
-    <!-- System font packages (overlay in vendor) -->
-    <string-array name="config_fontPackages" translatable="false">
-        <item>com.custom.fonts</item>
-    </string-array>
 </resources>
