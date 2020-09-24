@@ -11,7 +11,4 @@ PRODUCT_PACKAGES += \
     MaterialOceanSystemOverlay \
     MaterialOceanSystemUIOverlay \
     DarkGreySystemOverlay \
-    DarkGreySystemUIOverlay \
-    SystemMizuThemeOverlay \
-    SystemUIMizuThemeOverlay \
-    SettingsMizuThemeOverlay
+    DarkGreySystemUIOverlay
