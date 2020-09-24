@@ -52,8 +52,9 @@ else
 KERNEL_ARCH := $(TARGET_KERNEL_ARCH)
 endif
 
-GCC_PREBUILTS := $(BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86
 TARGET_KERNEL_HEADERS ?= $(TARGET_KERNEL_SOURCE)
+CLANG_PREBUILTS := $(BUILD_TOP)/prebuilts/clang/host/$(HOST_PREBUILT_TAG)/clang-r383902b
+GCC_PREBUILTS := $(BUILD_TOP)/prebuilts/gcc/$(HOST_PREBUILT_TAG)
 
 # arm64 toolchain
 KERNEL_TOOLCHAIN_arm64 := $(GCC_PREBUILTS)/aarch64/aarch64-linux-android-4.9/bin
@@ -119,9 +120,9 @@ ifeq ($(KERNEL_ARCH),arm64)
 endif
 
 ifeq ($(HOST_OS),darwin)
-  KERNEL_MAKE_FLAGS += HOSTCFLAGS="-I$(BUILD_TOP)/external/elfutils/libelf -I/usr/local/opt/openssl/include -L/usr/local/opt/openssl/lib"
+  KERNEL_MAKE_FLAGS += HOSTCFLAGS="-I$(BUILD_TOP)/external/elfutils/libelf -I/usr/local/opt/openssl/include -fuse-ld=lld" HOSTLDFLAGS="-L/usr/local/opt/openssl/lib -fuse-ld=lld"
 else
-  KERNEL_MAKE_FLAGS += HOSTCFLAGS="-I/usr/include -I/usr/include/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -L/usr/lib64"
+  KERNEL_MAKE_FLAGS += CPATH="/usr/include:/usr/include/x86_64-linux-gnu" HOSTCFLAGS="-fuse-ld=lld" HOSTLDFLAGS="-L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -fuse-ld=lld"
 endif
 
 ifneq ($(TARGET_KERNEL_ADDITIONAL_FLAGS),)
@@ -129,9 +130,9 @@ ifneq ($(TARGET_KERNEL_ADDITIONAL_FLAGS),)
 endif
 
 TOOLS_PATH_OVERRIDE := \
-    PATH=$(BUILD_TOP)/prebuilts/tools-superior/$(HOST_OS)-x86/bin:$$PATH \
-    LD_LIBRARY_PATH=$(BUILD_TOP)/prebuilts/tools-superior/$(HOST_OS)-x86/lib:$$LD_LIBRARY_PATH \
-    PERL5LIB=$(BUILD_TOP)/prebuilts/tools-superior/$(HOST_OS)-x86/lib/perl-base
+    PATH=$(BUILD_TOP)/prebuilts/tools-superior/$(HOST_PREBUILT_TAG)/bin:$$PATH \
+    LD_LIBRARY_PATH=$(BUILD_TOP)/prebuilts/tools-superior/$(HOST_PREBUILT_TAG)/lib:$$LD_LIBRARY_PATH \
+    PERL5LIB=$(BUILD_TOP)/prebuilts/tools-superior/common/perl-base
 
 # Set DTBO image locations so the build system knows to build them
 ifeq (true,$(filter true, $(TARGET_NEEDS_DTBOIMAGE) $(BOARD_KERNEL_SEPARATED_DTBO)))
@@ -139,21 +140,16 @@ BOARD_PREBUILT_DTBOIMAGE ?= $(TARGET_OUT_INTERMEDIATES)/DTBO_OBJ/arch/$(KERNEL_A
 endif
 
 # Set use the full path to the make command
-KERNEL_MAKE_CMD := $(BUILD_TOP)/prebuilts/build-tools/$(HOST_OS)-x86/bin/make
+KERNEL_MAKE_CMD := $(BUILD_TOP)/prebuilts/build-tools/$(HOST_PREBUILT_TAG)/bin/make
 
-# Set the full path to the gcc command
-ifeq ($(HOST_OS),darwin)
-KERNEL_HOST_TOOLCHAIN_ROOT := $(GCC_PREBUILTS)/host/i686-apple-darwin-4.2.1/bin/i686-apple-darwin11-
-else
-KERNEL_HOST_TOOLCHAIN_ROOT := $(GCC_PREBUILTS)/host/x86_64-linux-glibc2.17-4.8/bin/x86_64-linux-
-endif
-KERNEL_MAKE_FLAGS += HOSTCC=$(KERNEL_HOST_TOOLCHAIN_ROOT)gcc
-KERNEL_MAKE_FLAGS += HOSTCXX=$(KERNEL_HOST_TOOLCHAIN_ROOT)g++
+# Set the full path to the clang command
+KERNEL_MAKE_FLAGS += HOSTCC=$(CLANG_PREBUILTS)/bin/clang
+KERNEL_MAKE_FLAGS += HOSTCXX=$(CLANG_PREBUILTS)/bin/clang++
 
 # Since Linux 4.16, flex and bison are required
-KERNEL_MAKE_FLAGS += LEX=$(BUILD_TOP)/prebuilts/build-tools/$(HOST_OS)-x86/bin/flex
-KERNEL_MAKE_FLAGS += YACC=$(BUILD_TOP)/prebuilts/build-tools/$(HOST_OS)-x86/bin/bison
-KERNEL_MAKE_FLAGS += M4=$(BUILD_TOP)/prebuilts/build-tools/$(HOST_OS)-x86/bin/m4
+KERNEL_MAKE_FLAGS += LEX=$(BUILD_TOP)/prebuilts/build-tools/$(HOST_PREBUILT_TAG)/bin/flex
+KERNEL_MAKE_FLAGS += YACC=$(BUILD_TOP)/prebuilts/build-tools/$(HOST_PREBUILT_TAG)/bin/bison
+KERNEL_MAKE_FLAGS += M4=$(BUILD_TOP)/prebuilts/build-tools/$(HOST_PREBUILT_TAG)/bin/m4
 TOOLS_PATH_OVERRIDE += BISON_PKGDATADIR=$(BUILD_TOP)/prebuilts/build-tools/common/bison
 
 # Set the out dir for the kernel's O= arg
