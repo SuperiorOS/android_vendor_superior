@@ -130,3 +130,18 @@ include vendor/superior/config/audio.mk
 
 # Superior_props
 $(call inherit-product, vendor/superior/config/superior_props.mk)
+
+# Custom Overlays
+# Settings
+PRODUCT_PACKAGES += \
+    SystemRavenBlackOverlay \
+    SystemUIRavenBlackOverlay \
+    SystemDarkGrayOverlay \
+    SystemUIDarkGrayOverlay \
+    SystemStyleOverlay \
+    SystemUIStyleOverlay \
+    SystemNightOverlay \
+    SystemUINightOverlay \
+    SystemSolarizedDarkOverlay \
+    SystemUISolarizedDarkOverlay
+
