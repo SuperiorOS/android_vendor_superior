@@ -29,14 +29,9 @@ endif
 
 # Required packages
 PRODUCT_PACKAGES += \
-    Contacts \
     BluetoothExt \
-    Dialer \
     ExactCalculator \
-    messaging \
-    Music \
     Superiorwalls \
-    Stk \
     ThemePicker
 
 # Extra tools in Lineage
@@ -81,8 +76,3 @@ PRODUCT_COPY_FILES += \
 # APN
 PRODUCT_PACKAGES += \
     apns-conf.xml
-
-# Offline charger
-PRODUCT_PACKAGES += \
-    charger_res_images \
-    product_charger_res_images
