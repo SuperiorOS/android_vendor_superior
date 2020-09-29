@@ -32,7 +32,8 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     ExactCalculator \
     Superiorwalls \
-    ThemePicker
+    ThemePicker \
+    ViaBrowser
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
