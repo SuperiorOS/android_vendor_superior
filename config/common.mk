@@ -127,7 +127,10 @@ PRODUCT_PACKAGES += \
     SystemChocoXOverlay \
     SystemUIChocoXOverlay \
     SystemDarkAubergineOverlay \
-    SystemUIDarkAubergineOverlay
+    SystemUIDarkAubergineOverlay \
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium
+
 
 #versioning
 include vendor/superior/config/version.mk
