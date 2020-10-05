@@ -21,4 +21,7 @@
     <dimen name="config_dialogCornerRadius">8.0dip</dimen>
     <dimen name="config_fullTaskSnapshotScale">0.8</dimen>
     <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
+
+    <!--  Blur radius on status bar window and power menu  -->
+    <dimen name="max_window_blur_radius">175px</dimen>
 </resources>
