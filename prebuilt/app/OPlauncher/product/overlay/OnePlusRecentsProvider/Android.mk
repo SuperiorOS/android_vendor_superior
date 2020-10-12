@@ -6,6 +6,6 @@ LOCAL_MODULE_STEM := OnePlusRecentsProvider.apk
 LOCAL_SRC_FILES := OnePlusRecentsProvider.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH := $(TARGET_OUT)/product/overlay/OnePlusRecentsProvider
+LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/overlay/OnePlusRecentsProvider
 
 include $(BUILD_PREBUILT)
