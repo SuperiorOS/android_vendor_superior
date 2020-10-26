@@ -106,7 +106,7 @@ include vendor/superior/config/packages.mk
 include vendor/superior/config/version.mk
 
 # Bootanimation
-include vendor/superior/config/bootanimation.mk
+include vendor/superior/prebuilt/common/bootanimation/bootanimation.mk
 
 #Audio
 include vendor/superior/config/audio.mk
