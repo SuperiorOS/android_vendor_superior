@@ -22,5 +22,5 @@ else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
 else
      $(warning TARGET_BOOT_ANIMATION_RES is invalid or undefined, using generic bootanimation)
 PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/bootanimation/bootanimation-720p.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+    vendor/superior/prebuilt/common/bootanimation/bootanimation-1080p.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
 endif
