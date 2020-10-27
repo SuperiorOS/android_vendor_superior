@@ -41,10 +41,10 @@ except ImportError:
     urllib.request = urllib2
 
 DEBUG = False
-default_manifest = ".repo/manifest.xml"
 
-custom_local_manifest = ".repo/local_manifests/superior_manifest.xml"
+custom_local_manifest = ".repo/local_manifests/superior.xml"
 custom_default_revision = "eleven"
+custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'eleven')
 custom_dependencies = "superior.dependencies"
 org_manifest = "SuperiorOS-Devices"  # leave empty if org is provided in manifest
 org_display = "SuperiorOS-Devices"  # needed for displaying
@@ -96,6 +96,19 @@ def indent(elem, level=0):
             elem.tail = i
 
 
+def get_manifest_path():
+    '''Find the current manifest path
+    In old versions of repo this is at .repo/manifest.xml
+    In new versions, .repo/manifest.xml includes an include
+    to some arbitrary file in .repo/manifests'''
+
+    m = ElementTree.parse(".repo/manifest.xml")
+    try:
+        m.findall('default')[0]
+        return '.repo/manifest.xml'
+    except IndexError:
+        return ".repo/manifests/{}".format(m.find("include").get("name"))
+
 def load_manifest(manifest):
     try:
         man = ElementTree.parse(manifest).getroot()
@@ -105,19 +118,38 @@ def load_manifest(manifest):
 
 
 def get_default(manifest=None):
-    m = manifest or load_manifest(default_manifest)
+    m = manifest or load_manifest(get_manifest_path())
     d = m.findall('default')[0]
     return d
 
 
 def get_remote(manifest=None, remote_name=None):
-    m = manifest or load_manifest(default_manifest)
+    m = manifest or load_manifest(get_manifest_path())
     if not remote_name:
         remote_name = get_default(manifest=m).get('remote')
     remotes = m.findall('remote')
     for remote in remotes:
         if remote_name == remote.get('name'):
             return remote
+
+
+def get_revision(manifest=None, p="build"):
+    return custom_default_revision
+    m = manifest or load_manifest(get_manifest_path())
+    project = None
+    for proj in m.findall('project'):
+        if proj.get('path').strip('/') == p:
+            project = proj
+            break
+    revision = project.get('revision')
+    if revision:
+        return revision.replace('refs/heads/', '').replace('refs/tags/', '')
+    remote = get_remote(manifest=m, remote_name=project.get('remote'))
+    revision = remote.get('revision')
+    if not revision:
+        return custom_default_revision
+    return revision.replace('refs/heads/', '').replace('refs/tags/', '')
+
 
 def get_from_manifest(device_name):
     if os.path.exists(custom_local_manifest):
@@ -130,7 +162,7 @@ def get_from_manifest(device_name):
 
 
 def is_in_manifest(project_path):
-    for man in (custom_local_manifest, default_manifest):
+    for man in (custom_local_manifest, get_manifest_path()):
         man = load_manifest(man)
         for local_path in man.findall("project"):
             if local_path.get("path") == project_path:
@@ -144,16 +176,16 @@ def add_to_manifest(repos, fallback_branch=None):
     for repo in repos:
         repo_name = repo['repository']
         repo_path = repo['target_path']
-	if 'branch' in repo:
-	    repo_branch=repo['branch']
-	else:
-	    repo_branch=custom_default_revision
-	if 'remote' in repo:
-	    repo_remote=repo['remote']
-	elif "/" not in repo_name:
-	    repo_remote=org_manifest
-	elif "/" in repo_name:
-	    repo_remote="github"
+        if 'branch' in repo:
+            repo_branch=repo['branch']
+        else:
+            repo_branch=custom_default_revision
+        if 'remote' in repo:
+            repo_remote=repo['remote']
+        elif "/" not in repo_name:
+            repo_remote=org_manifest
+        elif "/" in repo_name:
+            repo_remote="github"
 
         if is_in_manifest(repo_path):
             print('already exists: %s' % repo_path)
@@ -168,6 +200,10 @@ def add_to_manifest(repos, fallback_branch=None):
                     "name": "%s" % repo_name}
         )
 
+        clone_depth = os.getenv('ROOMSERVICE_CLONE_DEPTH')
+        if clone_depth:
+            project.set('clone-depth', clone_depth)
+
         if repo_branch is not None:
             project.set('revision', repo_branch)
         elif fallback_branch:
@@ -176,9 +212,9 @@ def add_to_manifest(repos, fallback_branch=None):
             project.set('revision', fallback_branch)
         else:
             print("Using default branch for %s" % repo_name)
-	if 'clone-depth' in repo:
-	    print("Setting clone-depth to %s for %s" % (repo['clone-depth'], repo_name))
-	    project.set('clone-depth', repo['clone-depth'])
+        if 'clone-depth' in repo:
+            print("Setting clone-depth to %s for %s" % (repo['clone-depth'], repo_name))
+            project.set('clone-depth', repo['clone-depth'])
         lm.append(project)
 
     indent(lm)
@@ -214,7 +250,8 @@ def fetch_dependencies(repo_path, fallback_branch=None):
     for dependency in dependencies:
         if not is_in_manifest(dependency['target_path']):
             if not dependency.get('branch'):
-                dependency['branch'] = custom_default_revision
+                dependency['branch'] = (get_revision() or
+                                        custom_default_revision)
 
             fetch_list.append(dependency)
             syncable_repos.append(dependency['target_path'])
@@ -248,12 +285,28 @@ def detect_revision(repo):
     add_auth(githubreq)
     result = json.loads(urllib.request.urlopen(githubreq).read().decode())
 
-    print("Calculated revision: %s" % custom_default_revision)
+    calc_revision = get_revision()
+    print("Calculated revision: %s" % calc_revision)
+
+    if has_branch(result, calc_revision):
+        return calc_revision
+
+    fallbacks = os.getenv('ROOMSERVICE_BRANCHES', '').split()
+    for fallback in fallbacks:
+        if has_branch(result, fallback):
+            print("Using fallback branch: %s" % fallback)
+            return fallback
 
     if has_branch(result, custom_default_revision):
+        print("Falling back to custom revision: %s"
+              % custom_default_revision)
         return custom_default_revision
 
-    print("Branch %s not found" % custom_default_revision)
+    print("Branches found:")
+    for branch in result:
+        print(branch['name'])
+    print("Use the ROOMSERVICE_BRANCHES environment variable to "
+          "specify a list of fallback branches.")
     sys.exit()
 
 
@@ -275,7 +328,7 @@ def main():
         if repo_path:
             fetch_dependencies(repo_path)
         else:
-            print("Trying dependencies-only mode on a"
+            print("Trying dependencies-only mode on a "
                   "non-existing device tree?")
         sys.exit()
 

@@ -227,7 +227,9 @@ if __name__ == '__main__':
         name = project.get('name')
         # when name and path are equal, "repo manifest" doesn't return a path at all, so fall back to name
         path = project.get('path', name)
-        revision = project.get('upstream')
+        if path is None:
+            path=name
+        revision = project.get('revision')
         if revision is None:
             for remote in remotes:
                 if remote.get('name') == project.get('remote'):
@@ -401,8 +403,8 @@ if __name__ == '__main__':
             print('--> Project path:  {0}'.format(project_path))
             print('--> Change number: {0} (Patch Set {1})'.format(item['id'], item['patchset']))
 
-        if 'http' in item['fetch']:
-            method = 'http'
+        if 'anonymous http' in item['fetch']:
+            method = 'anonymous http'
         else:
             method = 'ssh'
 
