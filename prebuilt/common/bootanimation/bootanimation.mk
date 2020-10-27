@@ -12,15 +12,29 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Black & White
+TARGET_MISC_BLOCK_OFFSET ?= 0
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.misc.block.offset=$(TARGET_MISC_BLOCK_OFFSET)
+
+PRODUCT_PACKAGES += \
+    boot_theme \
+    misc_writer_system
+
 # Bootanimation
 ifeq ($(TARGET_BOOT_ANIMATION_RES),480)
      PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-480p.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-480p.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
      PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-720p.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-720p.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
      PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-1080p.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-1080p.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 else
      $(warning TARGET_BOOT_ANIMATION_RES is invalid or undefined, using generic bootanimation)
 PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/bootanimation/bootanimation-720p.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+    vendor/superior/prebuilt/common/bootanimation/bootanimation-1080p.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip \
+    vendor/superior/prebuilt/common/bootanimation/bootanimation-1080p.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 endif
