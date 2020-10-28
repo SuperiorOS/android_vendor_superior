@@ -81,3 +81,7 @@ PRODUCT_COPY_FILES += \
 # APN
 PRODUCT_PACKAGES += \
     apns-conf.xml
+
+# Flipendo
+PRODUCT_PACKAGES += \
+    Flipendo
