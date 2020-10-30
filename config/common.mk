@@ -107,5 +107,8 @@ include vendor/superior/prebuilt/common/bootanimation/bootanimation.mk
 #Audio
 include vendor/superior/config/audio.mk
 
+# Fonts
+include vendor/superior/themes/fonts/fonts.mk
+
 # Superior_props
 $(call inherit-product, vendor/superior/config/superior_props.mk)
