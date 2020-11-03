@@ -16,4 +16,5 @@
 -->
 <resources>
     <string name="themes_stub_package" translatable="false">com.android.customization.stub</string>
+    <string name="clocks_stub_package" translatable="false">com.android.customization.stub</string>
 </resources>
