@@ -16,8 +16,8 @@ PRODUCT_BRAND ?= SuperiorOS
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/superior/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/superior/prebuilt/common/bin/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.sh \
+    vendor/superior/prebuilt/common/bin/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.functions \
     vendor/superior/prebuilt/common/bin/50-superior.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-superior.sh
 
 ifneq ($(AB_OTA_PARTITIONS),)
