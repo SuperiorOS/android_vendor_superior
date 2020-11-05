@@ -31,6 +31,10 @@ endif
 PRODUCT_PACKAGES += \
     BluetoothExt \
     ExactCalculator \
+    LatinIME \
+    Launcher3QuickStep \
+    messaging \
+    Stk \
     Superiorwalls \
     ThemePicker \
     ViaBrowser
