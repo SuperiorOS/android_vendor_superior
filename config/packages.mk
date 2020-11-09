@@ -131,6 +131,7 @@ PRODUCT_PACKAGES += \
     GesturalNavigationRadiusLow \
     GesturalNavigationRadiusVeryLow \
     GesturalNavigationRadiusHidden \
+    ImmersiveNavigationOverlay \
     SwitchAOSP \
     SwitchAndroid12 \
     SwitchContained \
