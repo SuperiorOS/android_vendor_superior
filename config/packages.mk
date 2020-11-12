@@ -37,7 +37,8 @@ PRODUCT_PACKAGES += \
     Stk \
     Superiorwalls \
     ThemePicker \
-    ViaBrowser
+    ViaBrowser \
+    QuickAccessWallet
 
 # FOD Animations
 ifeq ($(TARGET_WANTS_FOD_ANIMATIONS),true)
