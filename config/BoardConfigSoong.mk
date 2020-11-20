@@ -26,3 +26,13 @@ define addVar
 endef
 
 $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
+
+SOONG_CONFIG_NAMESPACES += customGlobalVars
+
+ifneq ($(TARGET_FORCE_BUILD_FINGERPRINT),)
+SOONG_CONFIG_customGlobalVars += force_build_fingerprint
+endif
+
+ifneq ($(TARGET_FORCE_BUILD_FINGERPRINT),)
+SOONG_CONFIG_customGlobalVars_force_build_fingerprint := $(TARGET_FORCE_BUILD_FINGERPRINT)
+endif
