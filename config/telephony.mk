@@ -20,10 +20,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     apns-conf.xml
 
-# Telephony packages
-PRODUCT_PACKAGES += \
-    CellBroadcastReceiver
-
 # Tethering - allow without requiring a provisioning app
 # (for devices that check this)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \

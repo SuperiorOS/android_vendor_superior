@@ -51,10 +51,8 @@ PRODUCT_PACKAGES += \
     lib7z \
     libsepol \
     pigz \
-    powertop \
     setcap \
     unrar \
-    unzip \
     vim \
     wget \
     zip
