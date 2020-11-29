@@ -14,8 +14,6 @@
 
 PRODUCT_BRAND ?= SuperiorOS
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
