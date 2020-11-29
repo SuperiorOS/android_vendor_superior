@@ -32,6 +32,7 @@ SUPERIOR_DATE_HOUR := $(shell date -u +%H)
 SUPERIOR_DATE_MINUTE := $(shell date -u +%M)
 SUPERIOR_BUILD_DATE_UTC := $(shell date -d '$(SUPERIOR_DATE_YEAR)-$(SUPERIOR_DATE_MONTH)-$(SUPERIOR_DATE_DAY) $(SUPERIOR_DATE_HOUR):$(SUPERIOR_DATE_MINUTE) UTC' +%s)
 CUSTOM_BUILD_DATE := $(SUPERIOR_DATE_YEAR)$(SUPERIOR_DATE_MONTH)$(SUPERIOR_DATE_DAY)-$(SUPERIOR_DATE_HOUR)$(SUPERIOR_DATE_MINUTE)
+BUILD_DATE_TIME := $(BUILD_TIME)$(BUILD_DATE)
 
 ifeq ($(SUPERIOR_OFFICIAL), true)
    LIST = $(shell cat vendor/superior/superior.devices)
@@ -63,4 +64,5 @@ PRODUCT_GENERIC_PROPERTIES += \
   ro.superior.releasetype=$(SUPERIOR_BUILD_TYPE) \
   ro.modversion=$(SUPERIOR_MOD_VERSION) \
   ro.superior.display.version=$(SUPERIOR_DISPLAY_VERSION) \
-  ro.superior.fingerprint=$(SUPERIOR_FINGERPRINT)
+  ro.superior.fingerprint=$(SUPERIOR_FINGERPRINT) \
+  ro.build.datetime=$(BUILD_DATE_TIME)
