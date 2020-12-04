@@ -39,6 +39,12 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     ViaBrowser
 
+# FOD Animations
+ifeq ($(TARGET_WANTS_FOD_ANIMATIONS),true)
+PRODUCT_PACKAGES += \
+    FodAnimations
+endif
+
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \
