@@ -36,6 +36,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3QuickStep \
     messaging \
+    PixelThemesStub \
     QuickAccessWallet \
     Stk \
     StitchImage \
