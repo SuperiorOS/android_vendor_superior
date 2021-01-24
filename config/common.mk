@@ -103,5 +103,11 @@ include vendor/superior/config/audio.mk
 # Fonts
 include vendor/superior/config/fonts.mk
 
+# Gapps
+ifeq ($(BUILD_WITH_GAPPS), true)
+    WITH_GMS := true
+    $(call inherit-product, vendor/gapps/products/gapps.mk)
+endif
+
 # Superior_props
 $(call inherit-product, vendor/superior/config/superior_props.mk)
