@@ -129,7 +129,10 @@ PRODUCT_PACKAGES += \
     SystemDarkAubergineOverlay \
     SystemUIDarkAubergineOverlay \
     GesturalNavigationOverlayLong \
-    GesturalNavigationOverlayMedium
+    GesturalNavigationOverlayMedium \
+    GesturalNavigationRadiusLow \
+    GesturalNavigationRadiusVeryLow \
+    GesturalNavigationRadiusHidden
 
 
 #versioning
