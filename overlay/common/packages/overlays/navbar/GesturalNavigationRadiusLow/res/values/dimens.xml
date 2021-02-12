@@ -17,4 +17,5 @@
 -->
 <resources>
     <dimen name="navigation_handle_radius">3dp</dimen>
+    <dimen name="navigation_handle_bottom">9dp</dimen>
 </resources>
