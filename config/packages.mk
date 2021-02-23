@@ -122,4 +122,8 @@ PRODUCT_PACKAGES += \
     GesturalNavigationOverlayMedium \
     GesturalNavigationRadiusLow \
     GesturalNavigationRadiusVeryLow \
-    GesturalNavigationRadiusHidden
+    GesturalNavigationRadiusHidden \
+    SwitchAOSP \
+    SwitchTelegram \
+    SwitchMD2 \
+    SwitchOOS
