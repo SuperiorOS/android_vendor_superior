@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7dd8683_310d9656",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-03-04T15:51:28Z",
+      "side": 1,
+      "message": "I won\u0027t allow you to be a maintainer with current state..",
+      "revId": "9be783e51270b4b4d35b53a6575ccc50c51d4573",
+      "serverId": "cff56331-b3cb-4e5e-bf6a-abac220d6299"
+    }
+  ]
+}
