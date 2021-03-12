@@ -25,6 +25,10 @@ ifeq ($(TARGET_USES_UM_4_19),true)
     QSSI_SUPPORTED_PLATFORMS += $(TARGET_BOARD_PLATFORM)
 endif
 
+ifeq ($(TARGET_USES_UM_4_19),true)
+    QSSI_SUPPORTED_PLATFORMS += $(TARGET_BOARD_PLATFORM)
+endif
+
 BOARD_USES_ADRENO := true
 
 # Add qtidisplay to soong config namespaces
