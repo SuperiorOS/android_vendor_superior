@@ -137,34 +137,6 @@ $(call inherit-product, vendor/superior/config/telephony.mk)
 # Packages
 include vendor/superior/config/packages.mk
 
-# Custom Overlays
-# Settings
-PRODUCT_PACKAGES += \
-    SystemPitchBlackOverlay \
-    SystemUIPitchBlackOverlay \
-    SystemDarkGrayOverlay \
-    SystemUIDarkGrayOverlay \
-    SystemStyleOverlay \
-    SystemUIStyleOverlay \
-    SystemNightOverlay \
-    SystemUINightOverlay \
-    SystemSolarizedDarkOverlay \
-    SystemUISolarizedDarkOverlay \
-    SystemMaterialOceanOverlay \
-    SystemUIMaterialOceanOverlay \
-    SystemBakedGreenOverlay \
-    SystemUIBakedGreenOverlay \
-    SystemChocoXOverlay \
-    SystemUIChocoXOverlay \
-    SystemDarkAubergineOverlay \
-    SystemUIDarkAubergineOverlay \
-    GesturalNavigationOverlayLong \
-    GesturalNavigationOverlayMedium \
-    GesturalNavigationRadiusLow \
-    GesturalNavigationRadiusVeryLow \
-    GesturalNavigationRadiusHidden
-
-
 #versioning
 include vendor/superior/config/version.mk
 
@@ -180,6 +152,8 @@ $(call inherit-product, vendor/superior/config/superior_props.mk)
 # Custom Overlays
 # Settings
 PRODUCT_PACKAGES += \
+    SystemDark12Overlay \
+    SystemUIDark12Overlay \
     SystemRavenBlackOverlay \
     SystemUIRavenBlackOverlay \
     SystemDarkGrayOverlay \
@@ -199,5 +173,9 @@ PRODUCT_PACKAGES += \
     SystemDarkAubergineOverlay \
     SystemUIDarkAubergineOverlay \
     SystemClearSpringOverlay \
-    SystemUIClearSpringOverlay
-
+    SystemUIClearSpringOverlay \
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium \
+    GesturalNavigationRadiusLow \
+    GesturalNavigationRadiusVeryLow \
+    GesturalNavigationRadiusHidden
