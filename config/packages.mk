@@ -1,4 +1,4 @@
-# Copyright (C) 2018-19 Superior OS Project
+# Copyright (C) 2018-21 Superior OS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -31,15 +31,16 @@ endif
 PRODUCT_PACKAGES += \
     BluetoothExt \
     ExactCalculator \
+    Flipendo \
     LatinIME \
     Launcher3QuickStep \
     messaging \
+    QuickAccessWallet \
     Stk \
     StitchImage \
     Superiorwalls \
     ThemePicker \
-    ViaBrowser \
-    QuickAccessWallet
+    ViaBrowser
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
@@ -91,14 +92,32 @@ PRODUCT_PACKAGES += \
     ssh-keygen \
     start-ssh
 
-# init file
-PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/etc/init.local.rc:system/etc/init/init.superior.rc
-
-# APN
+# Custom Overlays
 PRODUCT_PACKAGES += \
-    apns-conf.xml
-
-# Flipendo
-PRODUCT_PACKAGES += \
-    Flipendo
+    SystemDark12Overlay \
+    SystemUIDark12Overlay \
+    SystemRavenBlackOverlay \
+    SystemUIRavenBlackOverlay \
+    SystemDarkGrayOverlay \
+    SystemUIDarkGrayOverlay \
+    SystemStyleOverlay \
+    SystemUIStyleOverlay \
+    SystemNightOverlay \
+    SystemUINightOverlay \
+    SystemSolarizedDarkOverlay \
+    SystemUISolarizedDarkOverlay \
+    SystemMaterialOceanOverlay \
+    SystemUIMaterialOceanOverlay \
+    SystemBakedGreenOverlay \
+    SystemUIBakedGreenOverlay \
+    SystemChocoXOverlay \
+    SystemUIChocoXOverlay \
+    SystemDarkAubergineOverlay \
+    SystemUIDarkAubergineOverlay \
+    SystemClearSpringOverlay \
+    SystemUIClearSpringOverlay \
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium \
+    GesturalNavigationRadiusLow \
+    GesturalNavigationRadiusVeryLow \
+    GesturalNavigationRadiusHidden

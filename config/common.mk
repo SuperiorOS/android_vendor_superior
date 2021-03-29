@@ -1,4 +1,4 @@
-# Copyright (C) 2018-19 Superior OS Project
+# Copyright (C) 2018-21 Superior OS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -82,44 +82,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/superior/overlay
 
-# Default ringtone/notification/alarm sounds
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=Soulful.ogg \
-    ro.config.notification_sound=Pikachu.ogg \
-    ro.config.alarm_alert=Helium.ogg
-
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += vendor/superior/overlay/common
-
-# System fonts
-PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/fonts/gobold/Gobold.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Gobold.ttf \
-    vendor/superior/prebuilt/fonts/gobold/Gobold-Italic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Gobold-Italic.ttf \
-    vendor/superior/prebuilt/fonts/gobold/GoboldBold.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoboldBold.ttf \
-    vendor/superior/prebuilt/fonts/gobold/GoboldBold-Italic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoboldBold-Italic.ttf \
-    vendor/superior/prebuilt/fonts/gobold/GoboldThinLight.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoboldThinLight.ttf \
-    vendor/superior/prebuilt/fonts/gobold/GoboldThinLight-Italic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/GoboldThinLight-Italic.ttf \
-    vendor/superior/prebuilt/fonts/roadrage/road_rage.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/RoadRage-Regular.ttf \
-    vendor/superior/prebuilt/fonts/neoneon/neoneon.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Neoneon-Regular.ttf \
-    vendor/superior/prebuilt/fonts/mexcellent/mexcellent.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Mexcellent-Regular.ttf \
-    vendor/superior/prebuilt/fonts/burnstown/burnstown.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Burnstown-Regular.ttf \
-    vendor/superior/prebuilt/fonts/dumbledor/dumbledor.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Dumbledor-Regular.ttf \
-    vendor/superior/prebuilt/fonts/PhantomBold/PhantomBold.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/PhantomBold-Regular.ttf \
-    vendor/superior/prebuilt/fonts/snowstorm/snowstorm.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Snowstorm-Regular.ttf \
-    vendor/superior/prebuilt/fonts/vcrosd/vcr_osd_mono.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/ThemeableFont-Regular.ttf \
-    vendor/superior/prebuilt/fonts/Shamshung/Shamshung.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Shamshung.ttf \
-    vendor/superior/prebuilt/fonts/Aclonica/Aclonica.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Aclonica.ttf \
-    vendor/superior/prebuilt/fonts/Amarante/Amarante.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Amarante.ttf \
-    vendor/superior/prebuilt/fonts/Bariol/Bariol-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Bariol.ttf \
-    vendor/superior/prebuilt/fonts/Cagliostro/Cagliostro-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Cagliostro-Regular.ttf \
-    vendor/superior/prebuilt/fonts/Coolstory/Coolstory-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Coolstory-Regular.ttf \
-    vendor/superior/prebuilt/fonts/LGSmartGothic/LGSmartGothic.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/LGSmartGothic.ttf \
-    vendor/superior/prebuilt/fonts/Rosemary/Rosemary-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Rosemary-Regular.ttf \
-    vendor/superior/prebuilt/fonts/SonySketch/SonySketch.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/SonySketch.ttf \
-    vendor/superior/prebuilt/fonts/SamsungOne/SamsungOne.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/SamsungOne.ttf \
-    vendor/superior/prebuilt/fonts/SlateOP/SlateFromOP-Light.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/SlateFromOP-Light.ttf \
-    vendor/superior/prebuilt/fonts/SlateOP/SlateFromOP-Regular.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/SlateFromOP-Regular.ttf \
-    vendor/superior/prebuilt/fonts/Surfer/Surfer.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Surfer.ttf
 
 #Telephony
 $(call inherit-product, vendor/superior/config/telephony.mk)
@@ -136,36 +100,8 @@ include vendor/superior/prebuilt/common/bootanimation/bootanimation.mk
 #Audio
 include vendor/superior/config/audio.mk
 
+# Fonts
+include vendor/superior/config/fonts.mk
+
 # Superior_props
 $(call inherit-product, vendor/superior/config/superior_props.mk)
-
-# Custom Overlays
-# Settings
-PRODUCT_PACKAGES += \
-    SystemDark12Overlay \
-    SystemUIDark12Overlay \
-    SystemRavenBlackOverlay \
-    SystemUIRavenBlackOverlay \
-    SystemDarkGrayOverlay \
-    SystemUIDarkGrayOverlay \
-    SystemStyleOverlay \
-    SystemUIStyleOverlay \
-    SystemNightOverlay \
-    SystemUINightOverlay \
-    SystemSolarizedDarkOverlay \
-    SystemUISolarizedDarkOverlay \
-    SystemMaterialOceanOverlay \
-    SystemUIMaterialOceanOverlay \
-    SystemBakedGreenOverlay \
-    SystemUIBakedGreenOverlay \
-    SystemChocoXOverlay \
-    SystemUIChocoXOverlay \
-    SystemDarkAubergineOverlay \
-    SystemUIDarkAubergineOverlay \
-    SystemClearSpringOverlay \
-    SystemUIClearSpringOverlay \
-    GesturalNavigationOverlayLong \
-    GesturalNavigationOverlayMedium \
-    GesturalNavigationRadiusLow \
-    GesturalNavigationRadiusVeryLow \
-    GesturalNavigationRadiusHidden
