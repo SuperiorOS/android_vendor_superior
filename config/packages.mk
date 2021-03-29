@@ -34,6 +34,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3QuickStep \
     messaging \
+    OmniStyle \
     Stk \
     StitchImage \
     Superiorwalls \
