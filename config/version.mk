@@ -26,6 +26,7 @@ endif
 
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 SUPERIOR_BUILD_DATE_UTC := $(shell date -u '+%Y%m%d-%H%M')
+BUILD_DATE_TIME := $(shell date -u '+%Y%m%d%H%M')
 
 ifeq ($(SUPERIOR_OFFICIAL), true)
    LIST = $(shell cat vendor/superior/superior.devices)
