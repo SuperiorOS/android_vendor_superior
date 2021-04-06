@@ -36,7 +36,6 @@ PRODUCT_PACKAGES += \
     Launcher3QuickStep \
     messaging \
     QuickAccessWallet \
-    OmniStyle \
     Stk \
     StitchImage \
     Superiorwalls \
