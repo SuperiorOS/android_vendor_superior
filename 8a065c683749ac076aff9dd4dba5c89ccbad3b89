@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "908a364a_88642593",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-04-11T16:46:22Z",
+      "side": 1,
+      "message": "Bed deb",
+      "revId": "8a065c683749ac076aff9dd4dba5c89ccbad3b89",
+      "serverId": "cff56331-b3cb-4e5e-bf6a-abac220d6299"
+    }
+  ]
+}
