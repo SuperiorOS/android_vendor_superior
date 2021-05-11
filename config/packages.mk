@@ -30,6 +30,7 @@ endif
 # Required packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
+    Custom-Fonts \
     ExactCalculator \
     Flipendo \
     LatinIME \
