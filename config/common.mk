@@ -105,9 +105,6 @@ include vendor/superior/prebuilt/common/bootanimation/bootanimation.mk
 #Audio
 include vendor/superior/config/audio.mk
 
-# Fonts
-include vendor/superior/config/fonts.mk
-
 # Gapps
 ifeq ($(BUILD_WITH_GAPPS), true)
     WITH_GMS := true
