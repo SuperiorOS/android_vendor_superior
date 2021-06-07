@@ -40,6 +40,7 @@ PRODUCT_PACKAGES += \
     StitchImage \
     Superiorwalls \
     ThemePicker \
+    TouchGestures \
     ViaBrowser
 
 # Face Unlock
