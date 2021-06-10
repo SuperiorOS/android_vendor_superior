@@ -33,6 +33,7 @@ SOONG_CONFIG_superiorGlobalVars += \
     bootloader_message_offset \
     has_legacy_camera_hal1 \
     ignores_ftp_pptp_conntrack_failure \
+    needs_camera_boottime \
     needs_netd_direct_connect_rule \
     target_init_vendor_lib \
     target_inputdispatcher_skip_event_key \
@@ -86,6 +87,7 @@ TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY ?= libcamera_parameters
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 
 # Soong value variables
+SOONG_CONFIG_superiorGlobalVars_needs_camera_boottime := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
 SOONG_CONFIG_superiorGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
 SOONG_CONFIG_superiorGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
 SOONG_CONFIG_superiorGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
