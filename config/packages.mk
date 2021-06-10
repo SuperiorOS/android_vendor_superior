@@ -77,11 +77,6 @@ PRODUCT_PACKAGES += \
     wget \
     zip
 
-# exFAT tools
- PRODUCT_PACKAGES += \
-    fsck.exfat \
-    mkfs.exfat
-
 # Openssh
 PRODUCT_PACKAGES += \
     scp \
