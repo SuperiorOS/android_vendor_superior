@@ -67,7 +67,6 @@ PRODUCT_PACKAGES += \
     setcap \
     unrar \
     vim \
-    wget \
     zip
 
 # Openssh
