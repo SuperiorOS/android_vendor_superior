@@ -32,6 +32,7 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     Custom-Fonts \
     ExactCalculator \
+    Flipendo \
     LatinIME \
     Launcher3QuickStep \
     messaging \
