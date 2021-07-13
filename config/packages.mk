@@ -124,7 +124,10 @@ PRODUCT_PACKAGES += \
     GesturalNavigationRadiusVeryLow \
     GesturalNavigationRadiusHidden \
     SwitchAOSP \
+    SwitchAndroid12 \
+    SwitchContained \
     SwitchTelegram \
+    SwitchRetro \
     SwitchMD2 \
     SwitchOOS \
     GVM-SBH-L \
