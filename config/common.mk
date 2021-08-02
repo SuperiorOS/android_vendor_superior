@@ -99,7 +99,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/superior/overlay
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/superior/config/device_framework_matrix.xml
 
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += vendor/superior/overlay/common
