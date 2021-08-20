@@ -34,7 +34,6 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     Flipendo \
     LatinIME \
-    Launcher3QuickStep \
     messaging \
     PixelThemesStub \
     QuickAccessWallet \
@@ -66,6 +65,14 @@ ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
 PRODUCT_PACKAGES += \
     charger_res_images \
     product_charger_res_images
+endif
+
+# Launchers
+ifeq ($(TARGET_LAUNCHER),lawnchair)
+include packages/apps/Lawnchair/lawnchair.mk
+else
+PRODUCT_PACKAGES += \
+    Launcher3QuickStep
 endif
 
 # Extra tools in Lineage
