@@ -33,6 +33,7 @@ PRODUCT_PACKAGES += \
     Custom-Fonts \
     ExactCalculator \
     Flipendo \
+    GamingMode \
     LatinIME \
     messaging \
     PixelThemesStub \
