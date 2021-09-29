@@ -1,7 +1,7 @@
 -----------------------------------------------------------------------------
 
 <p align="center">
- <img src="https://github.com/SuperiorOS/android_vendor_superior/blob/eleven/Xcalibur.png" > 
+  <img src="https://user-images.githubusercontent.com/29405483/135295575-3f06ad38-bd37-46e5-a32b-c7732b71d935.png" />
 </p>
 
 -----------------------------------------------------------------------------
@@ -9,7 +9,7 @@
 Want Official Maintainership..??
 =================================
 
-• Look here for Requirements and form link : [**Apply Here**](https://github.com/SuperiorOS-Devices/official_devices/blob/eleven/README.md)
+• Look here for Requirements and form link : [**Closed**](https://github.com/SuperiorOS-Devices/official_devices/blob/eleven/README.md)
 
 • To publish builds use our Template : [**XDA Thread Template**](https://github.com/SuperiorOS/superior_extras/blob/master/XDA-Thread%20Template-ten.txt)
 
