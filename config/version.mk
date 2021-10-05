@@ -59,7 +59,7 @@ endif
 
 TARGET_PRODUCT_SHORT := $(subst superior_,,$(SUPERIOR_BUILD))
 
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.superior.version=$(SUPERIOR_VERSION) \
   ro.superior.releasetype=$(SUPERIOR_BUILD_TYPE) \
   ro.modversion=$(SUPERIOR_MOD_VERSION) \
