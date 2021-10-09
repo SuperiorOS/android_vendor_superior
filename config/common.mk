@@ -53,9 +53,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Launcher3QuickStep
 
 # Gapps
-ifeq ($(BUILD_WITH_GAPPS), true)
-    $(call inherit-product, vendor/gapps/common/common-vendor.mk)
-endif
+$(call inherit-product, vendor/superior/config/gapps.mk)
 
 #Superior Permissions
 PRODUCT_COPY_FILES += \
