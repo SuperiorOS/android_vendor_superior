@@ -207,4 +207,11 @@
        <item>app_cloning/enable_app_cloning_building_blocks=true</item>
     </string-array>
 
+    <!-- Assign roles to AiAi and exempt it from privacy indicators -->
+    <string name="config_systemAmbientAudioIntelligence">com.google.android.as</string>
+    <string name="config_systemAudioIntelligence">com.google.android.as</string>
+    <string name="config_systemNotificationIntelligence">com.google.android.as</string>
+    <string name="config_systemTextIntelligence">com.google.android.as</string>
+    <string name="config_systemUiIntelligence">com.google.android.as</string>
+    <string name="config_systemVisualIntelligence">com.google.android.as</string>
 </resources>
