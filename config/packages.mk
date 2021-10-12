@@ -30,50 +30,21 @@ endif
 # Required packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
-    Custom-Fonts \
     ExactCalculator \
     Flipendo \
-    GamingMode \
     LatinIME \
+    Launcher3QuickStep \
     messaging \
-    PixelThemesStub \
-    QuickAccessWallet \
     Stk \
-    StitchImage \
     Superiorwalls \
     ThemePicker \
     ViaBrowser
-
-# Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED ?= true
-ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
-PRODUCT_PACKAGES += \
-    FaceUnlockService
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.face_unlock_service.enabled=$(TARGET_FACE_UNLOCK_SUPPORTED)
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
-endif
-
-# FOD Animations
-ifeq ($(TARGET_WANTS_FOD_ANIMATIONS),true)
-PRODUCT_PACKAGES += \
-    FodAnimations
-endif
 
 # Charger mode images
 ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
 PRODUCT_PACKAGES += \
     charger_res_images \
     product_charger_res_images
-endif
-
-# Launchers
-ifeq ($(TARGET_LAUNCHER),lawnchair)
-include packages/apps/Lawnchair/lawnchair.mk
-else
-PRODUCT_PACKAGES += \
-    Launcher3QuickStep
 endif
 
 # Extra tools in Lineage
@@ -101,41 +72,3 @@ PRODUCT_PACKAGES += \
     sshd_config \
     ssh-keygen \
     start-ssh
-
-# Custom Overlays
-PRODUCT_PACKAGES += \
-    SystemDark12Overlay \
-    SystemUIDark12Overlay \
-    SystemRavenBlackOverlay \
-    SystemUIRavenBlackOverlay \
-    SystemDarkGrayOverlay \
-    SystemUIDarkGrayOverlay \
-    SystemStyleOverlay \
-    SystemUIStyleOverlay \
-    SystemNightOverlay \
-    SystemUINightOverlay \
-    SystemSolarizedDarkOverlay \
-    SystemUISolarizedDarkOverlay \
-    SystemMaterialOceanOverlay \
-    SystemUIMaterialOceanOverlay \
-    SystemBakedGreenOverlay \
-    SystemUIBakedGreenOverlay \
-    SystemChocoXOverlay \
-    SystemUIChocoXOverlay \
-    SystemDarkAubergineOverlay \
-    SystemUIDarkAubergineOverlay \
-    SystemClearSpringOverlay \
-    SystemUIClearSpringOverlay \
-    GesturalNavigationOverlayLong \
-    GesturalNavigationOverlayMedium \
-    GesturalNavigationRadiusLow \
-    GesturalNavigationRadiusVeryLow \
-    GesturalNavigationRadiusHidden \
-    ImmersiveNavigationOverlay \
-    SwitchAOSP \
-    SwitchAndroid12 \
-    SwitchContained \
-    SwitchTelegram \
-    SwitchRetro \
-    SwitchMD2 \
-    SwitchOOS

@@ -52,6 +52,11 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
     Launcher3QuickStep
 
+# Gapps
+ifeq ($(BUILD_WITH_GAPPS), true)
+    $(call inherit-product, vendor/gapps/common/common-vendor.mk)
+endif
+
 #Superior Permissions
 PRODUCT_COPY_FILES += \
     vendor/superior/config/permissions/privapp-permissions-superior-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-superior.xml \
@@ -101,12 +106,6 @@ include vendor/superior/prebuilt/common/bootanimation/bootanimation.mk
 
 #Audio
 include vendor/superior/config/audio.mk
-
-# Gapps
-ifeq ($(BUILD_WITH_GAPPS), true)
-    WITH_GMS := true
-    $(call inherit-product, vendor/gapps/products/gapps.mk)
-endif
 
 # Superior_props
 $(call inherit-product, vendor/superior/config/superior_props.mk)
