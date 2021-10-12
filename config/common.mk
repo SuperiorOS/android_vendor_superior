@@ -52,9 +52,6 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
     Launcher3QuickStep
 
-# Don't compile SystemUITests
-EXCLUDE_SYSTEMUI_TESTS := true
-
 #Superior Permissions
 PRODUCT_COPY_FILES += \
     vendor/superior/config/permissions/privapp-permissions-superior-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-superior.xml \
