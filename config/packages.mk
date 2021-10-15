@@ -33,11 +33,9 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     Flipendo \
     LatinIME \
-    Launcher3QuickStep \
     messaging \
     Stk \
     Superiorwalls \
-    ThemePicker \
     ViaBrowser
 
 # Charger mode images

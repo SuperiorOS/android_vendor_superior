@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #Superior OS Versioning :
-SUPERIOR_MOD_VERSION = Alpha
+SUPERIOR_MOD_VERSION = Twelve
 
 ifndef SUPERIOR_BUILD_TYPE
     SUPERIOR_BUILD_TYPE := UNOFFICIAL
@@ -34,9 +34,9 @@ ifeq ($(SUPERIOR_OFFICIAL), true)
       IS_OFFICIAL=true
       SUPERIOR_BUILD_TYPE := OFFICIAL
 
-include vendor/superior-priv/keys.mk
-PRODUCT_PACKAGES += \
-    Updater
+#include vendor/superior-priv/keys.mk
+#PRODUCT_PACKAGES += \
+#    Updater
 
     endif
     ifneq ($(IS_OFFICIAL), true)
