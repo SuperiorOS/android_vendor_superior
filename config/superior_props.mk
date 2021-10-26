@@ -32,3 +32,7 @@ PRODUCT_GENERIC_PROPERTIES += \
 # Enable support of one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
+
+# Blur
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.launcher.blur.appLaunch=false
