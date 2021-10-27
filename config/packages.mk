@@ -34,6 +34,7 @@ PRODUCT_PACKAGES += \
     Flipendo \
     LatinIME \
     messaging \
+    PixelThemesStub \
     Stk \
     Superiorwalls \
     ViaBrowser
