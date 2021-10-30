@@ -37,7 +37,8 @@ PRODUCT_PACKAGES += \
     PixelThemesStub \
     Stk \
     Superiorwalls \
-    ViaBrowser
+    ViaBrowser \
+    WallpaperPickerGoogleRelease
 
 # Charger mode images
 ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
