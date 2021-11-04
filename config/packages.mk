@@ -40,6 +40,9 @@ PRODUCT_PACKAGES += \
     ViaBrowser \
     WallpaperPickerGoogleRelease
 
+#Lawnchair
+include packages/apps/Lawnchair/lawnchair.mk
+
 # Charger mode images
 ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
 PRODUCT_PACKAGES += \
