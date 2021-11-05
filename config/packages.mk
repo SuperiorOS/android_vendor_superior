@@ -36,6 +36,7 @@ PRODUCT_PACKAGES += \
     messaging \
     Stk \
     Superiorwalls \
+    ThemePicker \
     ViaBrowser
 
 #Lawnchair
