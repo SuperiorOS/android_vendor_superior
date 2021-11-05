@@ -54,7 +54,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 # Gapps
 ifeq ($(BUILD_WITH_GAPPS), true)
-    $(call inherit-product, vendor/gapps/gms_full.mk)
+    $(call inherit-product, vendor/gapps/common/common-vendor.mk)
 endif
 
 #Superior Permissions
