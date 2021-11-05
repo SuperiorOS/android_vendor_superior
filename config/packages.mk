@@ -41,7 +41,12 @@ PRODUCT_PACKAGES += \
     WallpaperPickerGoogleRelease
 
 #Lawnchair
+ifeq ($(BUILD_WITH_LAWNCHAIR),true)
 include packages/apps/Lawnchair/lawnchair.mk
+else
+PRODUCT_PACKAGES += \
+    Launcher3QuickStep
+endif
 
 # Charger mode images
 ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
