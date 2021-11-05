@@ -34,11 +34,9 @@ PRODUCT_PACKAGES += \
     Flipendo \
     LatinIME \
     messaging \
-    PixelThemesStub \
     Stk \
     Superiorwalls \
-    ViaBrowser \
-    WallpaperPickerGoogleRelease
+    ViaBrowser
 
 #Lawnchair
 ifeq ($(BUILD_WITH_LAWNCHAIR),true)
