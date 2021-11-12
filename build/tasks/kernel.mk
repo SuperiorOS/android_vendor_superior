@@ -109,7 +109,7 @@ TARGET_PREBUILT_INT_KERNEL := $(KERNEL_OUT)/arch/$(KERNEL_ARCH)/boot/$(BOARD_KER
 ifeq "$(wildcard $(KERNEL_SRC) )" ""
     ifneq ($(TARGET_PREBUILT_KERNEL),)
         HAS_PREBUILT_KERNEL := true
-        NEEDS_KERNEL_COPY := true
+        NEEDS_KERNEL_COPY := false
     else
         $(foreach cf,$(PRODUCT_COPY_FILES), \
             $(eval _src := $(call word-colon,1,$(cf))) \
