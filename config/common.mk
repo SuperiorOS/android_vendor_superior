@@ -27,9 +27,11 @@ PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 endif
 
-# Copy all Superior-specific init rc files
-$(foreach f,$(wildcard vendor/superior/prebuilt/common/etc/init/*.rc),\
-	$(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
+# init file
+PRODUCT_COPY_FILES += \
+    vendor/superior/prebuilt/common/etc/init/superior-system.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/superior-system.rc \
+    vendor/superior/prebuilt/common/etc/init/superior-updates.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/superior-updates.rc \
+    vendor/superior/prebuilt/common/etc/init/init.openssh.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.openssh.rc
 
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
