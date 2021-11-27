@@ -38,8 +38,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/superior/overlay/dictionaries
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/superior/overlay/dictionaries
 
 # Charger
+ifeq ($(USE_PIXEL_CHARGER),true)
 PRODUCT_PACKAGES += \
     product_charger_res_images
+endif
 
 # Extra tools in Superior
 PRODUCT_PACKAGES += \
