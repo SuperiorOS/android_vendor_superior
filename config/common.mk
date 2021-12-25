@@ -62,6 +62,15 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 ifeq ($(BUILD_WITH_GAPPS), true)
     $(call inherit-product, vendor/gapps/common/common-vendor.mk)
 endif
+ifeq ($(BUILD_WITH_PIXEL_GAPPS), true)
+    $(call inherit-product, vendor/gms/common/common-vendor.mk)
+
+# SetupWizard and Google Assistant properties
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.setupwizard.rotation_locked=true \
+    setupwizard.theme=glif_v3_light \
+    ro.opa.eligible_device=true
+endif
 
 #Superior Permissions
 PRODUCT_COPY_FILES += \
