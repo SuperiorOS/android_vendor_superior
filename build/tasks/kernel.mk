@@ -28,7 +28,8 @@
 #
 #   TARGET_KERNEL_CLANG_COMPILE        = Compile kernel with clang, defaults to false
 #
-#   TARGET_KERNEL_CLANG_VERSION        = Clang prebuilts version, optional, defaults to clang-stable
+#   TARGET_KERNEL_CLANG_VERSION        = Folder name of clang toolchain cloned under prebuilts/clang/host/{host-os}/, optional,
+#                                        defaults to aosp llvm if unspecified
 #
 #   TARGET_KERNEL_CLANG_PATH           = Clang prebuilts path, optional
 #
@@ -184,7 +185,7 @@ MODULES_INTERMEDIATES := $(KERNEL_BUILD_OUT_PREFIX)$(call intermediates-dir-for,
 PATH_OVERRIDE := PATH=$(KERNEL_BUILD_OUT_PREFIX)$(HOST_OUT_EXECUTABLES):$$PATH
 ifeq ($(TARGET_KERNEL_CLANG_COMPILE),true)
     ifneq ($(TARGET_KERNEL_CLANG_VERSION),)
-        KERNEL_CLANG_VERSION := clang-$(TARGET_KERNEL_CLANG_VERSION)
+        KERNEL_CLANG_VERSION := $(TARGET_KERNEL_CLANG_VERSION)
     else
         # Use the default version of clang if TARGET_KERNEL_CLANG_VERSION hasn't been set by the device config
         KERNEL_CLANG_VERSION := $(LLVM_PREBUILTS_VERSION)
