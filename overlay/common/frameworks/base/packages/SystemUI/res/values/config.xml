@@ -46,5 +46,5 @@
     <bool name="config_enableShellMainThread">true</bool>
 
     <!-- SystemUIFactory component -->
-    <string name="config_systemUIFactoryComponent" translatable="false">org.protonaosp.systemui.CustomSystemUIFactory</string>
+    <string name="config_systemUIFactoryComponent" translatable="false">com.superior.android.systemui.SuperiorSystemUIFactory</string>
 </resources>
