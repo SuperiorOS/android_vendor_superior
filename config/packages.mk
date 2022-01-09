@@ -47,13 +47,6 @@ PRODUCT_PACKAGES += \
     Launcher3QuickStep
 endif
 
-# Charger mode images
-ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
-PRODUCT_PACKAGES += \
-    charger_res_images \
-    product_charger_res_images
-endif
-
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \
@@ -87,4 +80,11 @@ PRODUCT_PACKAGES += \
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/procmem
+endif
+
+
+# Charger
+ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
+PRODUCT_PACKAGES += \
+    product_charger_res_images
 endif
