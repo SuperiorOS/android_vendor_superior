@@ -9,9 +9,9 @@
 Want Official Maintainership..??
 =================================
 
-• Look here for Requirements and form link : [**Closed**](https://github.com/SuperiorOS-Devices/official_devices/blob/eleven/README.md)
+• Look here for Requirements and form link : [**Closed**](https://github.com/SuperiorOS-Devices/official_devices/blob/twelve/README.md)
 
-• To publish builds use our Template : [**XDA Thread Template**](https://github.com/SuperiorOS/superior_extras/blob/master/XDA-Thread%20Template-ten.txt)
+• To publish builds use our Template : [**XDA Thread Template**](https://github.com/SuperiorOS/superior_extras/blob/master/XDA-Thread%20Template-twelve.txt)
 
 Join:-
 ======
