@@ -39,9 +39,9 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     ViaBrowser
 
-#Lawnchair
+# Lawnchair
 ifeq ($(BUILD_WITH_LAWNCHAIR),true)
-include packages/apps/Lawnchair/lawnchair.mk
+$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
 else
 PRODUCT_PACKAGES += \
     Launcher3QuickStep
