@@ -1,4 +1,4 @@
-# Copyright (C) 2018-19 The Superior OS Project
+# Copyright (C) 2018-22 The Superior OS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,5 +13,14 @@
 # limitations under the License.
 
 # Bootanimation
+ifeq ($(TARGET_BOOT_ANIMATION_RES),480)
+     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-480p.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
+     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-720p.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
+else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
+     PRODUCT_COPY_FILES += vendor/superior/prebuilt/common/bootanimation/bootanimation-1080p.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
+else
+     $(warning TARGET_BOOT_ANIMATION_RES is invalid or undefined, using generic bootanimation)
 PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/bootanimation/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+    vendor/superior/prebuilt/common/bootanimation/bootanimation-720p.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
+endif
