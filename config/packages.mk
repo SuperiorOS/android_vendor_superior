@@ -84,6 +84,9 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/procmem
 endif
 
+# Repainter integration
+PRODUCT_PACKAGES += \
+    RepainterServicePriv
 
 # Charger
 ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
