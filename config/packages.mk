@@ -32,6 +32,7 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     ExactCalculator \
     Flipendo \
+    GamingMode \
     LatinIME \
     messaging \
     Stk \
