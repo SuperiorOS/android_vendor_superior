@@ -50,6 +50,10 @@
         <name>vendor.lineage.touch</name>
         <version>1.0</version>
         <interface>
+            <name>IHighTouchPollingRate</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
             <name>IKeySwapper</name>
             <instance>default</instance>
         </interface>
