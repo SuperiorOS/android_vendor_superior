@@ -1,4 +1,4 @@
-# Copyright (C) 2018-21 Superior OS Project
+# Copyright (C) 2018-22 Superior OS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -32,8 +32,8 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     ExactCalculator \
     Flipendo \
-    GamingMode \
     LatinIME \
+    Launcher3QuickStep \
     messaging \
     Stk \
     Superiorwalls \
@@ -41,12 +41,12 @@ PRODUCT_PACKAGES += \
     ViaBrowser
 
 # Lawnchair
-ifeq ($(BUILD_WITH_LAWNCHAIR),true)
-$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
-else
-PRODUCT_PACKAGES += \
-    Launcher3QuickStep
-endif
+#ifeq ($(BUILD_WITH_LAWNCHAIR),true)
+#$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
+#else
+#PRODUCT_PACKAGES += \
+#    Launcher3QuickStep
+#endif
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \

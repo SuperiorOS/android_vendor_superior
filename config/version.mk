@@ -1,4 +1,4 @@
-# Copyright (C) 2018-21 The SuperiorOS Project
+# Copyright (C) 2018-22 The SuperiorOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #Superior OS Versioning :
-SUPERIOR_MOD_VERSION = Twelve
+SUPERIOR_MOD_VERSION = TwelveL
 
 ifndef SUPERIOR_BUILD_TYPE
     SUPERIOR_BUILD_TYPE := UNOFFICIAL
