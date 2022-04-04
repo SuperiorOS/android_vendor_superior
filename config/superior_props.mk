@@ -36,3 +36,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Blur
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.launcher.blur.appLaunch=false
+
+# Disable remote keyguard animation
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.wm.enable_remote_keyguard_animation=0
