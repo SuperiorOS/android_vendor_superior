@@ -53,6 +53,20 @@
         <item>com.shannon.imsservice</item>
         <!-- MediaTek ImsService -->
         <item>com.mediatek.ims</item>
+        <!-- PrintSpooler -->
+        <item>com.android.printspooler</item>
+        <!-- Network Tethering -->
+        <item>com.android.networkstack.tethering</item>
+        <!-- Systemui -->
+        <item>com.android.systemui</item>
+        <!-- Settings Intelligence -->
+        <item>com.google.android.settings.intelligence</item>
+        <!-- Cellbroadcastservice -->
+        <item>com.android.cellbroadcastservice</item>
+        <!-- MicroG -->
+        <item>org.microg.nlp.backend.ichnaea</item>
+        <item>org.microg.nlp.backend.apple</item>
+        <item>org.fitchfamily.android.dejavu</item>
     </string-array>
 
     <bool name="config_cellBroadcastAppLinks">true</bool>
