@@ -56,8 +56,7 @@ SOONG_CONFIG_superiorQcomVars += \
     supports_hw_fde \
     supports_hw_fde_perf \
     uses_pre_uplink_features_netmgrd \
-    uses_qcom_bsp_legacy \
-    uses_qti_camera_device
+    uses_qcom_bsp_legacy
 
 # Only create display_headers_namespace var if dealing with UM platforms to avoid breaking build for all other platforms
 ifneq ($(filter $(UM_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
@@ -76,7 +75,6 @@ SOONG_CONFIG_superiorQcomVars_supports_hw_fde := $(TARGET_HW_DISK_ENCRYPTION)
 SOONG_CONFIG_superiorQcomVars_supports_hw_fde_perf := $(TARGET_HW_DISK_ENCRYPTION_PERF)
 SOONG_CONFIG_superiorQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 SOONG_CONFIG_superiorQcomVars_uses_qcom_bsp_legacy := $(TARGET_USES_QCOM_BSP_LEGACY)
-SOONG_CONFIG_superiorQcomVars_uses_qti_camera_device := $(TARGET_USES_QTI_CAMERA_DEVICE)
 SOONG_CONFIG_superiorGlobalVars_target_uses_prebuilt_dynamic_partitions := $(TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS)
 SOONG_CONFIG_superiorQcomVars_legacy_hw_disk_encryption := $(TARGET_LEGACY_HW_DISK_ENCRYPTION)
 
