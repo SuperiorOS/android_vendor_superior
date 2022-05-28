@@ -32,6 +32,7 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     ExactCalculator \
     Flipendo \
+    GameSpace \
     LatinIME \
     Launcher3QuickStep \
     messaging \
