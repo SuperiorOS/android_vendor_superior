@@ -71,10 +71,7 @@ endif
 
 # Gapps
 ifeq ($(BUILD_WITH_GAPPS), true)
-    $(call inherit-product, vendor/gapps/common/common-vendor.mk)
-endif
-ifeq ($(BUILD_WITH_PIXEL_GAPPS), true)
-    $(call inherit-product, vendor/gms/common/common-vendor.mk)
+     $(call inherit-product, vendor/gms/products/gms.mk)
 
 # SetupWizard and Google Assistant properties
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -83,7 +80,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.opa.eligible_device=true
 endif
 
-#Superior Permissions
+# Superior Permissions
 PRODUCT_COPY_FILES += \
     vendor/superior/config/permissions/privapp-permissions-superior-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-superior.xml \
     vendor/superior/config/permissions/privapp-permissions-superior-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-superior-system_ext.xml \
