@@ -36,6 +36,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3QuickStep \
     messaging \
+    NetworkStackOverlay \
     Stk \
     Superiorwalls \
     ThemePicker \
