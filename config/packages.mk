@@ -32,7 +32,6 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     ExactCalculator \
     Flipendo \
-    GameSpace \
     LatinIME \
     Launcher3QuickStep \
     messaging \
@@ -40,14 +39,6 @@ PRODUCT_PACKAGES += \
     Superiorwalls \
     ThemePicker \
     ViaBrowser
-
-# Lawnchair
-#ifeq ($(BUILD_WITH_LAWNCHAIR),true)
-#$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
-#else
-#PRODUCT_PACKAGES += \
-#    Launcher3QuickStep
-#endif
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
@@ -84,9 +75,6 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/procmem
 endif
 
-# Repainter integration
-PRODUCT_PACKAGES += \
-    RepainterServicePriv
 
 # Charger
 ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
