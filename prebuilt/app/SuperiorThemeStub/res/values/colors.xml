@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary_bundle1">#ff0a8758</color>
+    <color name="color_primary_bundle2">#ff746bc1</color>
+    <color name="color_primary_bundle3">#ffa66800</color>
+    <color name="color_primary_default">#ffffffff</color>
+    <color name="color_primary_fruits1">#ffffeeb2</color>
+    <color name="color_primary_fruits2">#ffccee99</color>
+    <color name="color_primary_fruits3">#ffb1ebff</color>
+    <color name="color_primary_fruits4">#ffebdcff</color>
+    <color name="color_primary_fruits5">#ffffd8eb</color>
+    <color name="color_primary_rainbow1">#ffffb2b5</color>
+    <color name="color_primary_rainbow2">#ffffb868</color>
+    <color name="color_primary_rainbow3">#ffe9c44a</color>
+    <color name="color_primary_rainbow4">#ffbaf293</color>
+    <color name="color_primary_rainbow5">#ff96cbff</color>
+    <color name="color_primary_rainbow6">#ffcbbfff</color>
+    <color name="color_primary_rainbow7">#fff5acfb</color>
+    <color name="color_secondary_bundle1">#ff0a8758</color>
+    <color name="color_secondary_bundle2">#ff746bc1</color>
+    <color name="color_secondary_bundle3">#ffa66800</color>
+    <color name="color_secondary_default">#ff1a73e8</color>
+    <color name="color_secondary_fruits1">#ffffeeb2</color>
+    <color name="color_secondary_fruits2">#ffccee99</color>
+    <color name="color_secondary_fruits3">#ffb1ebff</color>
+    <color name="color_secondary_fruits4">#ffebdcff</color>
+    <color name="color_secondary_fruits5">#ffffd8eb</color>
+    <color name="color_secondary_rainbow1">#ffffb2b5</color>
+    <color name="color_secondary_rainbow2">#ffffb868</color>
+    <color name="color_secondary_rainbow3">#ffe9c44a</color>
+    <color name="color_secondary_rainbow4">#ffbaf293</color>
+    <color name="color_secondary_rainbow5">#ff96cbff</color>
+    <color name="color_secondary_rainbow6">#ffcbbfff</color>
+    <color name="color_secondary_rainbow7">#fff5acfb</color>
+</resources>

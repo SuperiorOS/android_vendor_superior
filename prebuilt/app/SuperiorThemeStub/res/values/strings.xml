@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Superior Themes</string>
+
+    <string name="bundle1_color_name">Carbon</string>
+    <string name="bundle2_color_name">Paper</string>
+    <string name="bundle3_color_name">Sun</string>
+    <string name="bundle_name_bundle1">@string/bundle1_color_name</string>
+    <string name="bundle_name_bundle2">@string/bundle2_color_name</string>
+    <string name="bundle_name_bundle3">@string/bundle3_color_name</string>
+    <string name="bundle_name_default">@string/default_color_name</string>
+    <string name="bundle_name_fruits1">@string/default_color_name</string>
+    <string name="bundle_name_fruits2">@string/default_color_name</string>
+    <string name="bundle_name_fruits3">@string/default_color_name</string>
+    <string name="bundle_name_fruits4">@string/default_color_name</string>
+    <string name="bundle_name_fruits5">@string/default_color_name</string>
+    <string name="bundle_name_rainbow1">@string/default_color_name</string>
+    <string name="bundle_name_rainbow2">@string/default_color_name</string>
+    <string name="bundle_name_rainbow3">@string/default_color_name</string>
+    <string name="bundle_name_rainbow4">@string/default_color_name</string>
+    <string name="bundle_name_rainbow5">@string/default_color_name</string>
+    <string name="bundle_name_rainbow6">@string/default_color_name</string>
+    <string name="bundle_name_rainbow7">@string/default_color_name</string>
+    <string name="color_style_fruits1">FRUIT_SALAD</string>
+    <string name="color_style_fruits2">FRUIT_SALAD</string>
+    <string name="color_style_fruits3">FRUIT_SALAD</string>
+    <string name="color_style_fruits4">FRUIT_SALAD</string>
+    <string name="color_style_fruits5">FRUIT_SALAD</string>
+    <string name="color_style_rainbow1">RAINBOW</string>
+    <string name="color_style_rainbow2">RAINBOW</string>
+    <string name="color_style_rainbow3">RAINBOW</string>
+    <string name="color_style_rainbow4">RAINBOW</string>
+    <string name="color_style_rainbow5">RAINBOW</string>
+    <string name="color_style_rainbow6">RAINBOW</string>
+    <string name="color_style_rainbow7">RAINBOW</string>
+    <string name="default_color_name">Classic</string>
 </resources>
