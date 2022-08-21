@@ -13,10 +13,10 @@
 # limitations under the License.
 
 #Superior OS Versioning :
-SUPERIOR_MOD_VERSION = Thirteen-Beta
+SUPERIOR_MOD_VERSION = Thirteen-Alpha
 
 ifndef SUPERIOR_BUILD_TYPE
-    SUPERIOR_BUILD_TYPE := UNOFFICIAL
+    SUPERIOR_BUILD_TYPE := COMMUNITY
 endif
 
 # Test Build Tag
@@ -32,7 +32,7 @@ ifeq ($(SUPERIOR_OFFICIAL), true)
    LIST = $(shell cat vendor/superior/superior.devices)
     ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
       IS_OFFICIAL=true
-      SUPERIOR_BUILD_TYPE := OFFICIAL
+      SUPERIOR_BUILD_TYPE := RELEASE
 
 #include vendor/superior-priv/keys.mk
 PRODUCT_PACKAGES += \
@@ -40,7 +40,7 @@ PRODUCT_PACKAGES += \
 
     endif
     ifneq ($(IS_OFFICIAL), true)
-       SUPERIOR_BUILD_TYPE := UNOFFICIAL
+       SUPERIOR_BUILD_TYPE := COMMUNITY
        $(error Device is not official "$(CURRENT_DEVICE)")
     endif
 endif
