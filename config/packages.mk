@@ -33,6 +33,7 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     ExactCalculator \
     GameSpace \
+    ImmersiveNavigationOverlay \
     LatinIME \
     Launcher3QuickStep \
     messaging \
