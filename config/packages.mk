@@ -33,6 +33,7 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     Etar \
     GameSpace \
+    ImmersiveNavigationOverlay \
     LatinIME \
     Launcher3QuickStep \
     messaging \
