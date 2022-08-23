@@ -1,5 +1,5 @@
-# Inherit common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_mobile.mk)
+# Inherit common Superior stuff
+$(call inherit-product, vendor/superior/config/common_mobile.mk)
 
 PRODUCT_SIZE := full
 
