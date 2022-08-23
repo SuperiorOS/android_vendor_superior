@@ -1,8 +1,8 @@
-// LineageOS soong configs
+// SuperiorOS soong configs
 
 bootstrap_go_package {
-    name: "soong-lineage-generator",
-    pkgPath: "lineage/soong/generator",
+    name: "soong-superior-generator",
+    pkgPath: "superior/soong/generator",
     deps: [
         "blueprint",
         "blueprint-pathtools",
@@ -17,7 +17,7 @@ bootstrap_go_package {
     pluginFor: ["soong_build"],
 }
 
-lineage_generator {
+superior_generator {
     name: "generated_kernel_includes",
 
     // The headers make command
@@ -54,7 +54,7 @@ cc_library_headers {
 soong_config_module_type {
     name: "aapt_version_code",
     module_type: "java_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "superiorGlobalVars",
     value_variables: ["aapt_version_code"],
     properties: ["aaptflags"],
 }
@@ -74,7 +74,7 @@ aapt_version_code {
 soong_config_module_type {
     name: "camera_override_format_from_reserved",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "superiorGlobalVars",
     bool_variables: ["camera_override_format_from_reserved"],
     properties: ["cppflags"],
 }
@@ -91,7 +91,7 @@ camera_override_format_from_reserved {
 soong_config_module_type {
     name: "gralloc_10_usage_bits",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "superiorGlobalVars",
     value_variables: ["additional_gralloc_10_usage_bits"],
     properties: ["cppflags"],
 }
@@ -108,7 +108,7 @@ gralloc_10_usage_bits {
 soong_config_module_type {
     name: "gralloc_handle_custom_content_md_reserved_size",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "superiorGlobalVars",
     bool_variables: ["gralloc_handle_has_custom_content_md_reserved_size"],
     properties: ["export_cflags"],
 }
@@ -125,7 +125,7 @@ gralloc_handle_custom_content_md_reserved_size {
 soong_config_module_type {
     name: "gralloc_handle_reserved_size",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "superiorGlobalVars",
     bool_variables: ["gralloc_handle_has_reserved_size"],
     properties: ["export_cflags"],
 }
@@ -142,7 +142,7 @@ gralloc_handle_reserved_size {
 soong_config_module_type {
     name: "gralloc_handle_ubwcp_format",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "superiorGlobalVars",
     bool_variables: ["gralloc_handle_has_ubwcp_format"],
     properties: ["export_cflags"],
 }
@@ -159,7 +159,7 @@ gralloc_handle_ubwcp_format {
 soong_config_module_type {
     name: "target_shim_libs",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "superiorGlobalVars",
     value_variables: ["target_ld_shim_libs"],
     properties: ["cppflags"],
 }
@@ -176,7 +176,7 @@ target_shim_libs {
 soong_config_module_type {
     name: "vendor_init",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "superiorGlobalVars",
     value_variables: ["target_init_vendor_lib"],
     properties: ["whole_static_libs"],
 }
@@ -193,7 +193,7 @@ vendor_init {
 soong_config_module_type {
     name: "surfaceflinger_udfps_lib",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "superiorGlobalVars",
     value_variables: ["target_surfaceflinger_udfps_lib"],
     properties: [
         "cppflags",
@@ -214,7 +214,7 @@ surfaceflinger_udfps_lib {
 soong_config_module_type {
     name: "trust_usb_control",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "superiorGlobalVars",
     value_variables: [
         "target_trust_usb_control_path",
         "target_trust_usb_control_enable",
@@ -241,7 +241,7 @@ trust_usb_control {
 soong_config_module_type {
     name: "bootloader_message_offset",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "superiorGlobalVars",
     value_variables: ["bootloader_message_offset"],
     properties: [
         "cflags",
@@ -262,7 +262,7 @@ bootloader_message_offset {
 soong_config_module_type {
     name: "egl_display_array",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "superiorGlobalVars",
     bool_variables: ["uses_egl_display_array"],
     properties: ["cflags"],
 }
@@ -279,7 +279,7 @@ egl_display_array {
 soong_config_module_type {
     name: "health_charging_control",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "superiorGlobalVars",
     bool_variables: [
         "target_health_charging_control_supports_toggle",
         "target_health_charging_control_supports_bypass",
@@ -325,7 +325,7 @@ health_charging_control {
 soong_config_module_type {
     name: "nvidia_enhancements",
     module_type: "cc_defaults",
-    config_namespace: "lineageNvidiaVars",
+    config_namespace: "superiorNvidiaVars",
     bool_variables: ["uses_nvidia_enhancements"],
     properties: ["cppflags"],
 }
@@ -343,7 +343,7 @@ nvidia_enhancements {
 soong_config_module_type {
     name: "librmnetctl_pre_uplink",
     module_type: "cc_defaults",
-    config_namespace: "lineageQcomVars",
+    config_namespace: "superiorQcomVars",
     bool_variables: ["uses_pre_uplink_features_netmgrd"],
     properties: ["cflags"],
 }
@@ -360,7 +360,7 @@ librmnetctl_pre_uplink {
 soong_config_module_type {
     name: "extended_compress_format",
     module_type: "cc_defaults",
-    config_namespace: "lineageQcomVars",
+    config_namespace: "superiorQcomVars",
     bool_variables: ["supports_extended_compress_format"],
     properties: ["cflags"],
 }
@@ -377,7 +377,7 @@ extended_compress_format {
 soong_config_module_type {
     name: "surfaceflinger_qcom_extensions",
     module_type: "cc_defaults",
-    config_namespace: "lineageQcomVars",
+    config_namespace: "superiorQcomVars",
     value_variables: ["qcom_display_headers_namespace"],
     properties: [
         "cppflags",

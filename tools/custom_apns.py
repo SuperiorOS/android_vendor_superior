@@ -21,7 +21,7 @@ from importlib import reload
 
 def main(argv):
     reload(sys)
-    original_file = 'vendor/lineage/prebuilt/common/etc/apns-conf.xml'
+    original_file = 'vendor/prebuilts/common/etc/apns-conf.xml'
 
     if len(argv) == 3:
         output_file_path = argv[1]
