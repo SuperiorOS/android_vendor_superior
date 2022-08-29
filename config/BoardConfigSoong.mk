@@ -31,7 +31,6 @@ SOONG_CONFIG_superiorGlobalVars += \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
     camera_needs_client_info \
-    ignores_ftp_pptp_conntrack_failure \
     needs_camera_boottime \
     needs_netd_direct_connect_rule \
     target_init_vendor_lib \
@@ -58,7 +57,6 @@ SOONG_CONFIG_superiorQcomVars += \
 endif
 
 # Soong bool variables
-SOONG_CONFIG_superiorGlobalVars_ignores_ftp_pptp_conntrack_failure := $(TARGET_IGNORES_FTP_PPTP_CONNTRACK_FAILURE)
 SOONG_CONFIG_superiorGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE)
 SOONG_CONFIG_superiorGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_ARRAY)
 SOONG_CONFIG_superiorNvidiaVars_uses_nv_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
