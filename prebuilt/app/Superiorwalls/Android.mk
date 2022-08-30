@@ -21,6 +21,8 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_BUILT_MODULE_STEM := package.apk
 # Make sure the build system doesn't try to resign the APK
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
 LOCAL_SRC_FILES := Superiorwalls.apk
+# Disable library checks for now
+LOCAL_ENFORCE_USES_LIBRARIES := false
+LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
