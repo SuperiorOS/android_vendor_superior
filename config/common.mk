@@ -70,14 +70,12 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 #endif
 
 # Gapps
-ifeq ($(BUILD_WITH_GAPPS), true)
-     $(call inherit-product, vendor/gms/products/gms.mk)
+ifeq ($(SUPERIOR_GAPPS), minimal)
+    $(call inherit-product, vendor/gapps/common/common-vendor.mk)
+endif
 
-# SetupWizard and Google Assistant properties
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.setupwizard.rotation_locked=true \
-    setupwizard.theme=glif_v3_light \
-    ro.opa.eligible_device=true
+ifeq ($(SUPERIOR_GAPPS), full)
+     $(call inherit-product, vendor/gms/products/gms.mk)
 endif
 
 # Superior Permissions
