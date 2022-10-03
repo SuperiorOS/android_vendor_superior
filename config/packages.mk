@@ -29,6 +29,7 @@ endif
 
 # Required packages
 PRODUCT_PACKAGES += \
+    Aperture \
     BluetoothExt \
     ExactCalculator \
     Flipendo \
