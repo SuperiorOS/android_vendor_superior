@@ -21,6 +21,10 @@ PRODUCT_PACKAGES += \
     AudioFX
 endif
 
+# Camera
+PRODUCT_PACKAGES += \
+    Aperture
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
