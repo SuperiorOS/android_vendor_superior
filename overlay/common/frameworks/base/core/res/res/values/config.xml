@@ -252,4 +252,8 @@
 
     <!-- Whether or not we should show the option to show battery percentage -->
     <bool name="config_battery_percentage_setting_available">false</bool>
+
+    <!-- Default component for QR code scanner -->
+    <string name="config_defaultQrCodeComponent">org.lineageos.aperture/.QrScannerActivity</string>
+
 </resources>
