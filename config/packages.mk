@@ -17,6 +17,7 @@ PRODUCT_PACKAGES += \
     Aperture \
     DocumentsUI \
     Etar \
+    BatteryStatsViewer \
     GameSpace \
     LatinIME \
     Launcher3QuickStep \
