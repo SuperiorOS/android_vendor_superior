@@ -111,6 +111,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/superior/overlay
 
+ifeq ($(TARGET_DISABLE_GRALLOC2_P010_SUPPORT), true)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.gralloc.disablep010?=true
+endif
+
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += vendor/superior/overlay/common
 
