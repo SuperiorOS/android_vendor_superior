@@ -15,7 +15,7 @@
 -->
 <permissions>
 
-    <privapp-permissions package="org.lineageos.updater">
+    <privapp-permissions package="org.superioros.updater">
         <permission name="android.permission.ACCESS_CACHE_FILESYSTEM"/>
         <permission name="android.permission.REBOOT"/>
         <permission name="android.permission.RECOVERY"/>
