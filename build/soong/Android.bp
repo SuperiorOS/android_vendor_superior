@@ -143,7 +143,7 @@ surfaceflinger_udfps_lib {
 soong_config_module_type {
     name: "target_uses_prebuilt_dynamic_partitions",
     module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
+    config_namespace: "superiorGlobalVars",
     bool_variables: ["target_uses_prebuilt_dynamic_partitions"],
     properties: ["cppflags"],
 }
@@ -205,6 +205,40 @@ nvidia_enhancements {
     soong_config_variables: {
         uses_nvidia_enhancements: {
             cppflags: ["-DNV_ANDROID_FRAMEWORK_ENHANCEMENTS"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "disable_bluetooth_le_read_buffer_size_v2",
+    module_type: "cc_defaults",
+    config_namespace: "superiorGlobalVars",
+    bool_variables: ["disable_bluetooth_le_read_buffer_size_v2"],
+    properties: ["cppflags"],
+}
+
+disable_bluetooth_le_read_buffer_size_v2 {
+    name: "disable_bluetooth_le_read_buffer_size_v2_defaults",
+    soong_config_variables: {
+        disable_bluetooth_le_read_buffer_size_v2: {
+            cppflags: ["-DDISABLE_LE_READ_BUFFER_SIZE_V2"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "disable_bluetooth_le_set_host_feature",
+    module_type: "cc_defaults",
+    config_namespace: "superiorGlobalVars",
+    bool_variables: ["disable_bluetooth_le_set_host_feature"],
+    properties: ["cppflags"],
+}
+
+disable_bluetooth_le_set_host_feature {
+    name: "disable_bluetooth_le_set_host_feature_defaults",
+    soong_config_variables: {
+        disable_bluetooth_le_set_host_feature: {
+            cppflags: ["-DDISABLE_LE_SET_HOST_FEATURE"],
         },
     },
 }

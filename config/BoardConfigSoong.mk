@@ -30,6 +30,8 @@ SOONG_CONFIG_NAMESPACES += superiorGlobalVars
 SOONG_CONFIG_superiorGlobalVars += \
     additional_gralloc_10_usage_bits \
     camera_needs_client_info \
+    disable_bluetooth_le_read_buffer_size_v2 \
+    disable_bluetooth_le_set_host_feature \
     needs_camera_boottime \
     target_init_vendor_lib \
     target_inputdispatcher_skip_event_key \
@@ -73,6 +75,9 @@ SOONG_CONFIG_superiorGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_L
 SOONG_CONFIG_superiorGlobalVars_target_inputdispatcher_skip_event_key := $(TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY)
 SOONG_CONFIG_superiorGlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TARGET_LD_SHIM_LIBS))
 SOONG_CONFIG_superiorGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_SURFACEFLINGER_UDFPS_LIB)
+SOONG_CONFIG_superiorGlobalVars_disable_bluetooth_le_read_buffer_size_v2 := $(TARGET_DISABLE_BLUETOOTH_LE_READ_BUFFER_SIZE_V2)
+SOONG_CONFIG_superiorGlobalVars_disable_bluetooth_le_set_host_feature := $(TARGET_DISABLE_BLUETOOTH_LE_SET_HOST_FEATURE)
+
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_superiorQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
 else
