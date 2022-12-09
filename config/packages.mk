@@ -41,6 +41,7 @@ PRODUCT_PACKAGES += \
     Stk \
     Superiorwalls \
     ThemePicker \
+    ThemesStub \
     ViaBrowser
 
 # Extra tools in Lineage
