@@ -39,7 +39,6 @@ PRODUCT_PACKAGES += \
     messaging \
     NetworkStackOverlay \
     Stk \
-    SuperiorThemesStub \
     Superiorwalls \
     ThemePicker \
     ViaBrowser
