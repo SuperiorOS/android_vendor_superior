@@ -164,9 +164,6 @@ else
         $(error "NO KERNEL CONFIG")
     else
         ifneq ($(TARGET_FORCE_PREBUILT_KERNEL),)
-            ifneq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(LINEAGE_BUILDTYPE)),)
-                $(error "PREBUILT KERNEL IS NOT ALLOWED ON OFFICIAL BUILDS!")
-            else
                 $(warning **********************************************************)
                 $(warning * Kernel source found and configuration was defined,     *)
                 $(warning * but prebuilt kernel is being forced.                   *)
@@ -179,7 +176,6 @@ else
                 $(warning **********************************************************)
                 FULL_KERNEL_BUILD := false
                 KERNEL_BIN := $(TARGET_PREBUILT_KERNEL)
-            endif
         else
             FULL_KERNEL_BUILD := true
             KERNEL_BIN := $(TARGET_PREBUILT_INT_KERNEL)
@@ -269,11 +265,7 @@ ifneq ($(TARGET_KERNEL_CLANG_COMPILE),false)
     endif
     PATH_OVERRIDE += PATH=$(TARGET_KERNEL_CLANG_PATH)/bin:$$PATH LD_LIBRARY_PATH=$(TARGET_KERNEL_CLANG_PATH)/lib64:$$LD_LIBRARY_PATH
     ifeq ($(KERNEL_CC),)
-        CLANG_EXTRA_FLAGS := --cuda-path=/dev/null
-        ifeq ($(shell $(TARGET_KERNEL_CLANG_PATH)/bin/clang -v --hip-path=/dev/null >/dev/null 2>&1; echo $$?),0)
-            CLANG_EXTRA_FLAGS += --hip-path=/dev/null
-        endif
-        KERNEL_CC := CC="$(CCACHE_BIN) clang $(CLANG_EXTRA_FLAGS)"
+        KERNEL_CC := CC="$(CCACHE_BIN) clang"
     endif
 endif
 
@@ -301,7 +293,7 @@ endif
 # $(1): output path (The value passed to O=)
 # $(2): target to build (eg. defconfig, modules, dtbo.img)
 define internal-make-kernel-target
-$(PATH_OVERRIDE) $(KERNEL_MAKE_CMD) $(KERNEL_MAKE_FLAGS) -C $(KERNEL_SRC) O=$(KERNEL_BUILD_OUT_PREFIX)$(1) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) $(KERNEL_CLANG_TRIPLE) $(KERNEL_CC) $(KERNEL_AR) $(KERNEL_NM) $(KERNEL_OBJCOPY) $(KERNEL_OBJDUMP) $(KERNEL_STRIP) $(2)
+$(PATH_OVERRIDE) $(KERNEL_MAKE_CMD) $(KERNEL_MAKE_FLAGS) -C $(KERNEL_SRC) O=$(KERNEL_BUILD_OUT_PREFIX)$(1) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) $(KERNEL_CLANG_TRIPLE) $(KERNEL_CC) $(2)
 endef
 
 # Make an external module target

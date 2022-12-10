@@ -30,7 +30,6 @@
 #
 #   TARGET_KERNEL_CLANG_COMPILE        = Compile kernel with clang, defaults to true
 #   TARGET_KERNEL_LLVM_BINUTILS        = Use LLVM binutils, defaults to true
-#   TARGET_KERNEL_NEW_GCC_COMPILE      = Compile kernel with newer version GCC, defaults to false
 #   TARGET_KERNEL_VERSION              = Reported kernel version in top level kernel
 #                                        makefile. Can be overriden in device trees
 #                                        in the event of prebuilt kernel.
@@ -71,22 +70,7 @@ KERNEL_VERSION := $(shell grep -s "^VERSION = " $(TARGET_KERNEL_SOURCE)/Makefile
 KERNEL_PATCHLEVEL := $(shell grep -s "^PATCHLEVEL = " $(TARGET_KERNEL_SOURCE)/Makefile | awk '{ print $$3 }')
 TARGET_KERNEL_VERSION ?= $(shell echo $(KERNEL_VERSION)"."$(KERNEL_PATCHLEVEL))
 
-TARGET_KERNEL_HEADERS ?= $(TARGET_KERNEL_SOURCE)
-
-ifneq ($(TARGET_CLANG_PREBUILTS_VERSION),)
-    ifeq ($(TARGET_CLANG_PREBUILTS_VERSION),latest)
-        # Set the latest version of clang
-        CLANG_PREBUILTS_VERSION := $(shell ls -d $(BUILD_TOP)/prebuilts/clang/host/$(HOST_OS)-x86/clang-r* | xargs -n 1 basename | tail -1)
-    else
-        # Find the clang-* directory containing the specified version
-        CLANG_PREBUILTS_VERSION := clang-$(TARGET_CLANG_PREBUILTS_VERSION)
-    endif
-else
-    # Use the default version of clang if TARGET_CLANG_PREBUILTS_VERSION hasn't been set by the device config
-    CLANG_PREBUILTS_VERSION := clang-r450784d
-endif
-
-CLANG_PREBUILTS := $(BUILD_TOP)/prebuilts/clang/host/$(HOST_PREBUILT_TAG)/$(CLANG_PREBUILTS_VERSION)
+CLANG_PREBUILTS := $(BUILD_TOP)/prebuilts/clang/host/$(HOST_PREBUILT_TAG)/clang-r450784d
 
 ifneq ($(USE_CCACHE),)
     ifneq ($(CCACHE_EXEC),)
@@ -98,131 +82,87 @@ endif
 # Clear this first to prevent accidental poisoning from env
 KERNEL_MAKE_FLAGS :=
 
-# Add back threads, ninja cuts this to $(getconf _NPROCESSORS_ONLN)/2
-KERNEL_MAKE_FLAGS += -j$(shell getconf _NPROCESSORS_ONLN)
+# Add back threads, ninja cuts this to $(nproc)/2
+KERNEL_MAKE_FLAGS += -j$(shell prebuilts/tools-superior/$(HOST_PREBUILT_TAG)/bin/nproc --all)
 
 TOOLS_PATH_OVERRIDE := \
     LD_LIBRARY_PATH=$(BUILD_TOP)/prebuilts/tools-superior/$(HOST_PREBUILT_TAG)/lib:$$LD_LIBRARY_PATH \
     PERL5LIB=$(BUILD_TOP)/prebuilts/tools-superior/common/perl-base
 
-# 5.10+ can fully compile without gcc
-ifeq (,$(filter 5.10, $(TARGET_KERNEL_VERSION)))
-ifeq ($(TARGET_CLANG_WITH_GNU_BINUTILS),true)
-    # arm64 toolchain
-    KERNEL_TOOLCHAIN_arm64 := $(CLANG_PREBUILTS)/bin
-    KERNEL_TOOLCHAIN_PREFIX_arm64 := aarch64-linux-gnu-
-    # arm toolchain
-    KERNEL_TOOLCHAIN_arm := $(KERNEL_TOOLCHAIN_arm64)
-    KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-gnueabi-
+GCC_PREBUILTS := $(BUILD_TOP)/prebuilts/gcc/$(HOST_PREBUILT_TAG)
+# arm64 toolchain
+KERNEL_TOOLCHAIN_arm64 := $(GCC_PREBUILTS)/aarch64/aarch64-linux-android-4.9/bin
+KERNEL_TOOLCHAIN_PREFIX_arm64 := aarch64-linux-android-
+# arm toolchain
+KERNEL_TOOLCHAIN_arm := $(GCC_PREBUILTS)/arm/arm-linux-androideabi-4.9/bin
+KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-androidkernel-
+# x86 toolchain
+KERNEL_TOOLCHAIN_x86 := $(GCC_PREBUILTS)/x86/x86_64-linux-android-4.9/bin
+KERNEL_TOOLCHAIN_PREFIX_x86 := x86_64-linux-android-
+
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(strip $(TARGET_KERNEL_CROSS_COMPILE_PREFIX))
+ifneq ($(TARGET_KERNEL_CROSS_COMPILE_PREFIX),)
+    KERNEL_TOOLCHAIN_PREFIX ?= $(TARGET_KERNEL_CROSS_COMPILE_PREFIX)
 else
-    GCC_PREBUILTS := $(BUILD_TOP)/prebuilts/gcc/$(HOST_PREBUILT_TAG)
-    # x86 toolchain
-    KERNEL_TOOLCHAIN_x86 := $(GCC_PREBUILTS)/x86/x86_64-linux-android-4.9/bin
-    KERNEL_TOOLCHAIN_PREFIX_x86 := x86_64-linux-android-
+    KERNEL_TOOLCHAIN ?= $(KERNEL_TOOLCHAIN_$(KERNEL_ARCH))
+    KERNEL_TOOLCHAIN_PREFIX ?= $(KERNEL_TOOLCHAIN_PREFIX_$(KERNEL_ARCH))
 endif
 
-ifeq ($(TARGET_KERNEL_NEW_GCC_COMPILE),true)
-    ifeq ($(TARGET_KERNEL_CLANG_COMPILE),true)
-        $(error TARGET_KERNEL_NEW_GCC_COMPILE cannot be used with TARGET_KERNEL_CLANG_COMPILE!)
-    endif
-    # arm64 toolchain
-    KERNEL_TOOLCHAIN_arm64 := $(GCC_PREBUILTS)/aarch64/aarch64-elf/bin
-    KERNEL_TOOLCHAIN_PREFIX_arm64 := aarch64-elf-
-    # arm toolchain
-    KERNEL_TOOLCHAIN_arm := $(GCC_PREBUILTS)/arm/arm-eabi/bin
-    KERNEL_TOOLCHAIN_PREFIX_arm := arm-eabi-
+ifeq ($(KERNEL_TOOLCHAIN),)
+    KERNEL_TOOLCHAIN_PATH := $(KERNEL_TOOLCHAIN_PREFIX)
 else
-    # arm64 toolchain
-    KERNEL_TOOLCHAIN_arm64 := $(GCC_PREBUILTS)/aarch64/aarch64-linux-android-4.9/bin
-    KERNEL_TOOLCHAIN_PREFIX_arm64 := aarch64-linux-android-
-    # arm toolchain
-    KERNEL_TOOLCHAIN_arm := $(GCC_PREBUILTS)/arm/arm-linux-androideabi-4.9/bin
-    KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-androidkernel-
+    KERNEL_TOOLCHAIN_PATH := $(KERNEL_TOOLCHAIN)/$(KERNEL_TOOLCHAIN_PREFIX)
 endif
 
-    TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(strip $(TARGET_KERNEL_CROSS_COMPILE_PREFIX))
-    ifneq ($(TARGET_KERNEL_CROSS_COMPILE_PREFIX),)
-        KERNEL_TOOLCHAIN_PREFIX ?= $(TARGET_KERNEL_CROSS_COMPILE_PREFIX)
-    else
-        KERNEL_TOOLCHAIN ?= $(KERNEL_TOOLCHAIN_$(KERNEL_ARCH))
-        KERNEL_TOOLCHAIN_PREFIX ?= $(KERNEL_TOOLCHAIN_PREFIX_$(KERNEL_ARCH))
-    endif
+# We need to add GCC toolchain to the path no matter what
+# for tools like `as`
+KERNEL_TOOLCHAIN_PATH_gcc := $(KERNEL_TOOLCHAIN_$(KERNEL_ARCH))
 
-    TARGET_KERNEL_CROSS_COMPILE_PREFIX_ARM32 := $(strip $(TARGET_KERNEL_CROSS_COMPILE_PREFIX_ARM32))
-    ifneq ($(TARGET_KERNEL_CROSS_COMPILE_PREFIX_ARM32),)
-        KERNEL_TOOLCHAIN_PREFIX_ARM32 ?= $(TARGET_KERNEL_CROSS_COMPILE_PREFIX_ARM32)
-    else
-        KERNEL_TOOLCHAIN_ARM32 ?= $(KERNEL_TOOLCHAIN_arm)
-        KERNEL_TOOLCHAIN_PREFIX_ARM32 ?= $(KERNEL_TOOLCHAIN_PREFIX_arm)
-    endif
+ifneq ($(TARGET_KERNEL_CLANG_COMPILE),false)
+    KERNEL_CROSS_COMPILE := CROSS_COMPILE="$(KERNEL_TOOLCHAIN_PATH)"
+else
+    KERNEL_CROSS_COMPILE := CROSS_COMPILE="$(CCACHE_BIN) $(KERNEL_TOOLCHAIN_PATH)"
+endif
 
-    ifeq ($(KERNEL_TOOLCHAIN),)
-        KERNEL_TOOLCHAIN_PATH := $(KERNEL_TOOLCHAIN_PREFIX)
-    else
-        KERNEL_TOOLCHAIN_PATH := $(KERNEL_TOOLCHAIN)/$(KERNEL_TOOLCHAIN_PREFIX)
-    endif
+# Needed for CONFIG_COMPAT_VDSO, safe to set for all arm64 builds
+ifeq ($(KERNEL_ARCH),arm64)
+    KERNEL_CROSS_COMPILE += CROSS_COMPILE_ARM32="$(KERNEL_TOOLCHAIN_arm)/$(KERNEL_TOOLCHAIN_PREFIX_arm)"
+    KERNEL_CROSS_COMPILE += CROSS_COMPILE_COMPAT="$(KERNEL_TOOLCHAIN_arm)/$(KERNEL_TOOLCHAIN_PREFIX_arm)"
+endif
 
-    ifeq ($(KERNEL_TOOLCHAIN_ARM32),)
-        KERNEL_TOOLCHAIN_PATH_ARM32 := $(KERNEL_TOOLCHAIN_PREFIX_ARM32)
-    else
-        KERNEL_TOOLCHAIN_PATH_ARM32 := $(KERNEL_TOOLCHAIN_ARM32)/$(KERNEL_TOOLCHAIN_PREFIX_ARM32)
-    endif
-
-    # We need to add GCC toolchain to the path no matter what
-    # for tools like `as`
-    KERNEL_TOOLCHAIN_PATH_gcc := $(KERNEL_TOOLCHAIN_$(KERNEL_ARCH))
-
-    ifneq ($(TARGET_KERNEL_CLANG_COMPILE),false)
-        KERNEL_CROSS_COMPILE := CROSS_COMPILE="$(KERNEL_TOOLCHAIN_PATH)"
-    else
-        KERNEL_CROSS_COMPILE := CROSS_COMPILE="$(CCACHE_BIN) $(KERNEL_TOOLCHAIN_PATH)"
-    endif
-
-    # Needed for CONFIG_COMPAT_VDSO, safe to set for all arm64 builds
-    ifeq ($(KERNEL_ARCH),arm64)
-        KERNEL_CROSS_COMPILE += CROSS_COMPILE_ARM32="$(KERNEL_TOOLCHAIN_PATH_ARM32)"
-        KERNEL_CROSS_COMPILE += CROSS_COMPILE_COMPAT="$(KERNEL_TOOLCHAIN_PATH_ARM32)"
-    endif
-
-    ifeq ($(TARGET_KERNEL_CLANG_COMPILE),false)
-        ifeq ($(KERNEL_ARCH),arm)
-            # Avoid "Unknown symbol _GLOBAL_OFFSET_TABLE_" errors
-            KERNEL_MAKE_FLAGS += CFLAGS_MODULE="-fno-pic"
-        endif
-
-        ifeq ($(KERNEL_ARCH),arm64)
-            # Avoid "unsupported RELA relocation: 311" errors (R_AARCH64_ADR_GOT_PAGE)
-            KERNEL_MAKE_FLAGS += CFLAGS_MODULE="-fno-pic"
-        endif
-    endif
-
-    ifeq ($(HOST_OS),darwin)
-        KERNEL_MAKE_FLAGS += HOSTCFLAGS="-I$(BUILD_TOP)/external/elfutils/libelf -I/usr/local/opt/openssl/include" HOSTLDFLAGS="-L/usr/local/opt/openssl/lib -fuse-ld=lld"
-    else
-        KERNEL_MAKE_FLAGS += CPATH="/usr/include:/usr/include/x86_64-linux-gnu" HOSTLDFLAGS="-L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -fuse-ld=lld"
+ifeq ($(TARGET_KERNEL_CLANG_COMPILE),false)
+    ifeq ($(KERNEL_ARCH),arm)
+        # Avoid "Unknown symbol _GLOBAL_OFFSET_TABLE_" errors
+        KERNEL_MAKE_FLAGS += CFLAGS_MODULE="-fno-pic"
     endif
 
     ifeq ($(KERNEL_ARCH),arm64)
-        # Add 32-bit GCC to PATH so that arm-linux-androidkernel-as is available for CONFIG_COMPAT_VDSO
-        TOOLS_PATH_OVERRIDE += PATH=$(BUILD_TOP)/prebuilts/tools-superior/$(HOST_PREBUILT_TAG)/bin:$(KERNEL_TOOLCHAIN_arm):$$PATH
-    else
-        TOOLS_PATH_OVERRIDE += PATH=$(BUILD_TOP)/prebuilts/tools-superior/$(HOST_PREBUILT_TAG)/bin:$$PATH
+        # Avoid "unsupported RELA relocation: 311" errors (R_AARCH64_ADR_GOT_PAGE)
+        KERNEL_MAKE_FLAGS += CFLAGS_MODULE="-fno-pic"
     endif
+endif
 
-    # Set the full path to the clang command and LLVM binutils
-    KERNEL_MAKE_FLAGS += HOSTCC=$(CLANG_PREBUILTS)/bin/clang
-    KERNEL_MAKE_FLAGS += HOSTCXX=$(CLANG_PREBUILTS)/bin/clang++
-    ifneq ($(TARGET_KERNEL_CLANG_COMPILE), false)
-        ifneq ($(TARGET_KERNEL_LLVM_BINUTILS), false)
-            KERNEL_MAKE_FLAGS += LD=$(CLANG_PREBUILTS)/bin/ld.lld
-            KERNEL_MAKE_FLAGS += AR=$(CLANG_PREBUILTS)/bin/llvm-ar
-        endif
-    endif
+ifeq ($(HOST_OS),darwin)
+    KERNEL_MAKE_FLAGS += HOSTCFLAGS="-I$(BUILD_TOP)/external/elfutils/libelf -I/usr/local/opt/openssl/include" HOSTLDFLAGS="-L/usr/local/opt/openssl/lib -fuse-ld=lld"
 else
-    KERNEL_MAKE_FLAGS += HOSTCFLAGS="--sysroot=$(BUILD_TOP)/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8/sysroot -I$(BUILD_TOP)/prebuilts/kernel-build-tools/linux-x86/include"
-    KERNEL_MAKE_FLAGS += HOSTLDFLAGS="--sysroot=$(BUILD_TOP)/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8/sysroot -Wl,-rpath,$(BUILD_TOP)/prebuilts/kernel-build-tools/linux-x86/lib64 -L $(BUILD_TOP)/prebuilts/kernel-build-tools/linux-x86/lib64 -fuse-ld=lld --rtlib=compiler-rt"
+    KERNEL_MAKE_FLAGS += CPATH="/usr/include:/usr/include/x86_64-linux-gnu" HOSTLDFLAGS="-L/usr/lib/x86_64-linux-gnu -L/usr/lib64 -fuse-ld=lld"
+endif
 
-    TOOLS_PATH_OVERRIDE += PATH=$(BUILD_TOP)/prebuilts/tools-lineage/$(HOST_PREBUILT_TAG)/bin:$(CLANG_PREBUILTS)/bin:$$PATH
+ifeq ($(KERNEL_ARCH),arm64)
+    # Add 32-bit GCC to PATH so that arm-linux-androidkernel-as is available for CONFIG_COMPAT_VDSO
+    TOOLS_PATH_OVERRIDE += PATH=$(BUILD_TOP)/prebuilts/tools-superior/$(HOST_PREBUILT_TAG)/bin:$(KERNEL_TOOLCHAIN_arm):$$PATH
+else
+    TOOLS_PATH_OVERRIDE += PATH=$(BUILD_TOP)/prebuilts/tools-superior/$(HOST_PREBUILT_TAG)/bin:$$PATH
+endif
+
+# Set the full path to the clang command and LLVM binutils
+KERNEL_MAKE_FLAGS += HOSTCC=$(CLANG_PREBUILTS)/bin/clang
+KERNEL_MAKE_FLAGS += HOSTCXX=$(CLANG_PREBUILTS)/bin/clang++
+ifneq ($(TARGET_KERNEL_CLANG_COMPILE), false)
+    ifneq ($(TARGET_KERNEL_LLVM_BINUTILS), false)
+        KERNEL_MAKE_FLAGS += LD=$(CLANG_PREBUILTS)/bin/ld.lld
+        KERNEL_MAKE_FLAGS += AR=$(CLANG_PREBUILTS)/bin/llvm-ar
+    endif
 endif
 
 # Set DTBO image locations so the build system knows to build them
