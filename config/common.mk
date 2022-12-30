@@ -25,6 +25,12 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
     Launcher3QuickStep
 
+# Gapps
+ifeq ($(SUPERIOR_GAPPS), full)
+     $(call inherit-product, vendor/gms/products/gms.mk)
+     $(call inherit-product-if-exists, vendor/partner_modules/build/mainline_modules.mk)
+endif
+
 # Superior Permissions
 PRODUCT_COPY_FILES += \
     vendor/superior/config/permissions/privapp-permissions-superior-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-superior.xml \
