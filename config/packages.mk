@@ -85,3 +85,9 @@ ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
 PRODUCT_PACKAGES += \
     product_charger_res_images
 endif
+
+# Matlog
+ifeq ($(TARGET_INCLUDE_MATLOG),true)
+PRODUCT_PACKAGES += \
+    MatLog
+endif
