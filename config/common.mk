@@ -62,7 +62,7 @@ DEVICE_PACKAGE_OVERLAYS += vendor/superior/overlay/common
 $(call inherit-product, vendor/superior/config/telephony.mk)
 
 # ThemeOverlays
-#include packages/overlays/Themes/themes.mk
+include packages/overlays/Themes/themes.mk
 
 # Packages
 include vendor/superior/config/packages.mk

@@ -37,6 +37,7 @@ PRODUCT_PACKAGES += \
     Launcher3QuickStep \
     messaging \
     NetworkStackOverlay \
+    SimpleDeviceConfig \
     Stk \
     Superiorwalls \
     ThemePicker \
