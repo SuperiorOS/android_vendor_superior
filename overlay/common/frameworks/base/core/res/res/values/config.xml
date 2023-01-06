@@ -177,9 +177,6 @@
          should also be non-empty.-->
     <string name="config_rawContactsLocalAccountType" translatable="false">com.android.contacts</string>
 
-    <!-- Default component for QR code scanner -->
-    <string name="config_defaultQrCodeComponent" translatable="false">org.lineageos.aperture/.QrScannerActivity</string>
-
     <!-- Name of the font family to use in the default lockscreen clock -->
     <string name="config_clockFontFamily" translatable="false" />
 
@@ -194,4 +191,8 @@
         <item>"com.android.stk"</item>
         <item>"com.android.phone"</item>
     </string-array>
+
+    <!-- Default component for QR code scanner -->
+    <string name="config_defaultQrCodeComponent" translatable="false">com.google.android.gms/.mlkit.barcode.ui.PlatformBarcodeScanningActivityProxy</string>
+
 </resources>
