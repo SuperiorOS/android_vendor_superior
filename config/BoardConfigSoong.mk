@@ -38,7 +38,8 @@ SOONG_CONFIG_superiorGlobalVars += \
     target_ld_shim_libs \
     target_surfaceflinger_udfps_lib \
     target_uses_prebuilt_dynamic_partitions \
-    uses_egl_display_array
+    uses_egl_display_array \
+    uses_oplus_camera
 
 SOONG_CONFIG_NAMESPACES += superiorNvidiaVars
 SOONG_CONFIG_superiorNvidiaVars += \
@@ -61,6 +62,7 @@ SOONG_CONFIG_superiorNvidiaVars_uses_nvidia_enhancements := $(NV_ANDROID_FRAMEWO
 SOONG_CONFIG_superiorQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_superiorQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 SOONG_CONFIG_superiorGlobalVars_target_uses_prebuilt_dynamic_partitions := $(TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS)
+SOONG_CONFIG_superiorGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 
 # Set default values
 TARGET_INIT_VENDOR_LIB ?= vendor_init
