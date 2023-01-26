@@ -31,7 +31,6 @@ endif
 PRODUCT_PACKAGES += \
     Aperture \
     BluetoothExt \
-    ExactCalculator \
     Flipendo \
     GameSpace \
     LatinIME \
