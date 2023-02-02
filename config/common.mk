@@ -78,16 +78,11 @@ ifeq ($(SUPERIOR_GAPPS), full)
      $(call inherit-product, vendor/gms/products/gms.mk)
 endif
 
-# Google Photos Pixel Exclusive XML
-PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/etc/sysconfig/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_2016_exclusive.xml
-
 # Superior Permissions
 PRODUCT_COPY_FILES += \
     vendor/superior/config/permissions/privapp-permissions-superior-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-superior.xml \
     vendor/superior/config/permissions/privapp-permissions-superior-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-superior-system_ext.xml \
-    vendor/superior/config/permissions/privapp-permissions-superior.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-superior.xml \
-    vendor/superior/prebuilt/google/etc/sysconfig/pixel_experience_2020.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2020.xml
+    vendor/superior/config/permissions/privapp-permissions-superior.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-superior.xml
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
@@ -123,6 +118,7 @@ include packages/overlays/Themes/themes.mk
 
 # Packages
 include vendor/superior/config/packages.mk
+include vendor/prebuilts/prebuilts.mk
 
 #versioning
 include vendor/superior/config/version.mk

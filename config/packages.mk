@@ -32,17 +32,14 @@ PRODUCT_PACKAGES += \
     Aperture \
     BluetoothExt \
     Etar \
-    Flipendo \
     GameSpace \
     LatinIME \
     Launcher3QuickStep \
     messaging \
     NetworkStackOverlay \
     Stk \
-    Superiorwalls \
     ThemePicker \
-    ThemesStub \
-    ViaBrowser
+    ThemesStub
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
