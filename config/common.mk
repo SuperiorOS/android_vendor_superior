@@ -76,6 +76,13 @@ endif
 
 ifeq ($(SUPERIOR_GAPPS), full)
      $(call inherit-product, vendor/gms/products/gms.mk)
+    
+# include apex modules
+ifeq ($(TARGET_FLATTEN_APEX),false)
+     $(call inherit-product-if-exists, vendor/partner_modules/build/mainline_modules.mk)
+else
+     $(call inherit-product-if-exists, vendor/partner_modules/build/mainline_modules_flatten_apex.mk)
+endif
 endif
 
 # Superior Permissions
