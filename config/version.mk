@@ -47,10 +47,10 @@ endif
 
 ifeq ($(SUPERIOR_GAPPS), minimal)
 SUPERIOR_EDITION := GAPPS
-endif
-
-ifeq ($(SUPERIOR_GAPPS), full)
+else ifeq ($(SUPERIOR_GAPPS), full)
 SUPERIOR_EDITION := GAPPS
+else
+SUPERIOR_EDITION := Vanilla
 endif
 
 ifeq ($(SUPERIOR_EDITION), GAPPS)
