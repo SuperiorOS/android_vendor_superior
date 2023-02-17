@@ -102,3 +102,10 @@ ifeq ($(TARGET_INCLUDE_MATLOG),true)
 PRODUCT_PACKAGES += \
     MatLog
 endif
+
+# QS Panel
+PRODUCT_PACKAGES += \
+    QSRoundedRectangle \
+    QSOutline \
+    QSTwoToneAccent \
+    QSShaded
