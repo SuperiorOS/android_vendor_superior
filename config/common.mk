@@ -14,33 +14,6 @@
 
 PRODUCT_BRAND ?= SuperiorOS
 
-# Backup Tool
-PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/superior/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/superior/prebuilt/common/bin/50-superior.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-superior.sh
-
-PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
-    system/addon.d/50-superior.sh
-
-ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
-PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
-    vendor/superior/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
-    vendor/superior/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
-endif
-
-PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
-    system/bin/backuptool_ab.sh \
-    system/bin/backuptool_ab.functions \
-    system/bin/backuptool_postinstall.sh
-
-# init file
-PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/etc/init/superior-system.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/superior-system.rc \
-    vendor/superior/prebuilt/common/etc/init/superior-updates.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/superior-updates.rc \
-    vendor/superior/prebuilt/common/etc/init/init.openssh.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.openssh.rc
-
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
     vendor/superior/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.nfc.beam.xml
@@ -118,12 +91,6 @@ include vendor/prebuilts/prebuilts.mk
 
 #versioning
 include vendor/superior/config/version.mk
-
-# Bootanimation
-include vendor/superior/prebuilt/common/bootanimation/bootanimation.mk
-
-#Audio
-include vendor/superior/config/audio.mk
 
 # Superior_props
 $(call inherit-product, vendor/superior/config/superior_props.mk)
