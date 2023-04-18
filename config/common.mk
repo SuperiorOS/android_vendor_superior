@@ -219,6 +219,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/superior/overlay/no-rro
 
 PRODUCT_PACKAGES += \
+    DocumentsUIOverlay \
     SuperiorLauncherOverlay \
     NetworkStackOverlay
 
