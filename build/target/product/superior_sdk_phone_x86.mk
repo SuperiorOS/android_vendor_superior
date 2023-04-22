@@ -16,6 +16,9 @@ $(call inherit-product, build/target/product/sdk_phone_x86.mk)
 
 include vendor/superior/build/target/product/superior_generic_target.mk
 
+# Always build modules from source
+PRODUCT_MODULE_BUILD_FROM_SOURCE := true
+
 # Enable mainline checking
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed
 
