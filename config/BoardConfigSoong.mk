@@ -54,7 +54,8 @@ SOONG_CONFIG_superiorGlobalVars += \
     uses_egl_display_array \
     uses_legacy_fd_fbdev \
     uses_nothing_camera \
-    uses_oplus_camera
+    uses_oplus_camera \
+    uses_oppo_camera
 
 SOONG_CONFIG_NAMESPACES += superiorNvidiaVars
 SOONG_CONFIG_superiorNvidiaVars += \
@@ -87,6 +88,7 @@ SOONG_CONFIG_superiorGlobalVars_target_alternative_futex_waiters := $(TARGET_ALT
 SOONG_CONFIG_superiorGlobalVars_uses_legacy_fd_fbdev := $(TARGET_USES_LEGACY_FD_FBDEV)
 SOONG_CONFIG_superiorGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_superiorGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
+SOONG_CONFIG_superiorGlobalVars_uses_oppo_camera := $(TARGET_USES_OPPO_CAMERA)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
