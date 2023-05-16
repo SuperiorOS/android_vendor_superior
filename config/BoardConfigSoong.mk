@@ -33,6 +33,7 @@ SOONG_CONFIG_superiorGlobalVars += \
     bootloader_message_offset \
     disable_bluetooth_le_read_buffer_size_v2 \
     disable_bluetooth_le_set_host_feature \
+    gralloc_handle_has_custom_content_md_reserved_size \
     gralloc_handle_has_reserved_size \
     target_init_vendor_lib \
     target_ld_shim_libs \
@@ -58,6 +59,7 @@ SOONG_CONFIG_superiorQcomVars += \
 endif
 
 # Soong bool variables
+SOONG_CONFIG_superiorGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
 SOONG_CONFIG_superiorGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_superiorGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_ARRAY)
 SOONG_CONFIG_superiorNvidiaVars_uses_nvidia_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
