@@ -22,8 +22,10 @@ PRODUCT_PACKAGES += \
 endif
 
 # Camera
+ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
     Aperture
+endif
 
 # Charger
 PRODUCT_PACKAGES += \
