@@ -40,6 +40,7 @@ PRODUCT_PACKAGES += \
     NetworkStackOverlay \
     SimpleDeviceConfig \
     Stk \
+    SuperiorWalls \
     ThemePicker \
     ThemesStub
 
