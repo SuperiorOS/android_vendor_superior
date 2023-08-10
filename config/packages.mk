@@ -39,6 +39,7 @@ PRODUCT_PACKAGES += \
     messaging \
     NetworkStackOverlay \
     Stk \
+    SuperiorWalls \
     ThemePicker \
     ThemesStub
 
