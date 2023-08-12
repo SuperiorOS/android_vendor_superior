@@ -40,10 +40,8 @@ PRODUCT_PACKAGES += \
     NetworkStackOverlay \
     SimpleDeviceConfig \
     Stk \
-    Superiorwalls \
     ThemePicker \
-    ThemesStub \
-    ViaBrowser
+    ThemesStub
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
