@@ -38,6 +38,7 @@ PRODUCT_PACKAGES += \
     Launcher3QuickStep \
     messaging \
     NetworkStackOverlay \
+    OmniJaws \
     Stk \
     SuperiorWalls \
     ThemePicker \
