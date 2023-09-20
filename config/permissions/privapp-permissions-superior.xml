@@ -22,17 +22,4 @@
         <permission name="android.permission.WRITE_EXTERNAL_STORAGE" />
         <permission name="android.permission.READ_EXTERNAL_STORAGE" />
     </privapp-permissions>
-
-    <privapp-permissions package="org.omnirom.omnistyle">
-        <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
-    </privapp-permissions>
-
-    <privapp-permissions package="io.github.muntashirakon.Music.debug">
-        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
-    </privapp-permissions>
-
-    <privapp-permissions package="com.sipun.superiorwalls">
-        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" />
-        <permission name="android.permission.READ_EXTERNAL_STORAGE" />
-    </privapp-permissions>
 </permissions>
