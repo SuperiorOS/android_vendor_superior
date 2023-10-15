@@ -113,7 +113,8 @@ PRODUCT_COPY_FILES += \
 
 # Themes
 PRODUCT_PACKAGES += \
-    ThemePicker
+    ThemePicker \
+    ThemesStub
 
 # Charger
 ifeq ($(USE_PIXEL_CHARGER),true)
