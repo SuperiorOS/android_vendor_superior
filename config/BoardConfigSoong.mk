@@ -37,6 +37,7 @@ SOONG_CONFIG_superiorGlobalVars += \
     gralloc_handle_has_reserved_size \
     camera_needs_client_info \
     camera_needs_client_info_lib \
+    camera_override_format_from_reserved \
     needs_camera_boottime \
     uses_oplus_camera \
     uses_nothing_camera \
@@ -74,6 +75,7 @@ SOONG_CONFIG_superiorGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_
 SOONG_CONFIG_superiorGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 SOONG_CONFIG_superiorGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
 SOONG_CONFIG_superiorGlobalVars_gralloc_handle_has_ubwcp_format := $(TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT)
+SOONG_CONFIG_superiorGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
@@ -85,6 +87,7 @@ TARGET_TRUST_USB_CONTROL_PATH ?= /proc/sys/kernel/deny_new_usb
 TARGET_TRUST_USB_CONTROL_ENABLE ?= 1
 TARGET_TRUST_USB_CONTROL_DISABLE ?= 0
 TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT ?= false
+TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED ?= false
 
 # Soong value variables
 SOONG_CONFIG_superiorGlobalVars_aapt_version_code := $(shell date -u +%Y%m%d)
