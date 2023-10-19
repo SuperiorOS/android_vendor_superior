@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #Superior OS Versioning :
-SUPERIOR_MOD_VERSION = Thirteen
+SUPERIOR_MOD_VERSION = Fourteen-Alpha
 
 ifndef SUPERIOR_BUILD_TYPE
     SUPERIOR_BUILD_TYPE := COMMUNITY
