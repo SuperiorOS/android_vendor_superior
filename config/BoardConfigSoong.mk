@@ -73,6 +73,7 @@ SOONG_CONFIG_superiorQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_
 SOONG_CONFIG_superiorGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
 SOONG_CONFIG_superiorGlobalVars_uses_oplus_camera := $(TARGET_USES_OPLUS_CAMERA)
 SOONG_CONFIG_superiorGlobalVars_uses_nothing_camera := $(TARGET_USES_NOTHING_CAMERA)
+SOONG_CONFIG_superiorGlobalVars_gralloc_handle_has_ubwcp_format := $(TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
@@ -83,6 +84,7 @@ TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 TARGET_TRUST_USB_CONTROL_PATH ?= /proc/sys/kernel/deny_new_usb
 TARGET_TRUST_USB_CONTROL_ENABLE ?= 1
 TARGET_TRUST_USB_CONTROL_DISABLE ?= 0
+TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT ?= false
 
 # Soong value variables
 SOONG_CONFIG_superiorGlobalVars_aapt_version_code := $(shell date -u +%Y%m%d)
