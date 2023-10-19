@@ -98,7 +98,7 @@ ifneq ($(TARGET_CLANG_PREBUILTS_VERSION),)
     endif
 else
     # Use the default version of clang if TARGET_CLANG_PREBUILTS_VERSION hasn't been set by the device config
-    CLANG_PREBUILTS_VERSION := clang-r450784d
+    CLANG_PREBUILTS_VERSION := clang-r487747c
 endif
 
 CLANG_PREBUILTS := $(BUILD_TOP)/prebuilts/clang/host/$(HOST_PREBUILT_TAG)/$(CLANG_PREBUILTS_VERSION)
