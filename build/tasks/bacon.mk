@@ -16,7 +16,7 @@
 # -----------------------------------------------------------------
 # SuperiorOS OTA update package
 
-SUPERIOR_TARGET_PACKAGE := $(PRODUCT_OUT)/superior-$(SUPERIOR_VERSION).zip
+SUPERIOR_TARGET_PACKAGE := $(PRODUCT_OUT)/$(SUPERIOR_VERSION).zip
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
