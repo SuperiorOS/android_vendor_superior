@@ -104,10 +104,6 @@ SKIP_BOOT_JARS_CHECK := true
 # Bootanimation
 $(call inherit-product, vendor/superior/config/bootanimation.mk)
 
-# Superior packages
-PRODUCT_PACKAGES += \
-    SuperiorWallpaperStub
-
 PRODUCT_COPY_FILES += \
     vendor/superior/prebuilt/common/etc/init/init.superior-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.superior-updater.rc
 
@@ -128,10 +124,6 @@ ifeq ($(USE_PIXEL_CHARGER),true)
 PRODUCT_PACKAGES += \
     product_charger_res_images
 endif
-
-# Config
-PRODUCT_PACKAGES += \
-    SimpleDeviceConfig
 
 # Disable RescueParty due to high risk of data loss
 PRODUCT_PRODUCT_PROPERTIES += \

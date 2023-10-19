@@ -11,13 +11,3 @@ $(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
 PRODUCT_PACKAGES += \
     unrar \
     zstd
-
-# Fonts
-PRODUCT_PACKAGES += \
-    fonts_customization.xml \
-    FontLatoOverlay \
-    FontRubikOverlay
-
-# Recorder
-PRODUCT_PACKAGES += \
-    Recorder
