@@ -116,6 +116,8 @@ PRODUCT_PACKAGES += \
 
 # Themes
 PRODUCT_PACKAGES += \
+    Browser2 \
+    DocumentsUI \
     Launcher3QuickStep \
     ThemePicker \
     ThemesStub
