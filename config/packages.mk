@@ -80,9 +80,6 @@ PRODUCT_PACKAGES += \
     ssh-keygen \
     start-ssh
 
-PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/etc/init/init.openssh.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.openssh.rc
-
 # rsync
 PRODUCT_PACKAGES += \
     rsync
@@ -105,4 +102,4 @@ PRODUCT_PACKAGES += \
 
 # Sensitive Phone Numbers list
 PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/etc/sensitive_pn.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sensitive_pn.xml
+    vendor/prebuilts/common/etc/sensitive_pn.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sensitive_pn.xml
