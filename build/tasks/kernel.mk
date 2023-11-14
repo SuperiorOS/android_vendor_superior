@@ -68,6 +68,8 @@
 #   TARGET_FORCE_PREBUILT_KERNEL       = Optional, use TARGET_PREBUILT_KERNEL even if
 #                                          kernel sources are present
 
+include vendor/superior/config/BoardConfigKernel.mk
+
 ifneq ($(TARGET_NO_KERNEL),true)
 ifneq ($(TARGET_NO_KERNEL_OVERRIDE),true)
 
