@@ -16,11 +16,9 @@
 PRODUCT_PACKAGES += \
     Aperture \
     DocumentsUI \
-    DocumentsUIOverlay \
     LatinIME \
     Launcher3QuickStep \
     messaging \
-    NetworkStackOverlay \
     Stk \
     ThemePicker \
     ThemesStub
