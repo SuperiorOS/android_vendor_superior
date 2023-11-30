@@ -72,6 +72,9 @@ $(call inherit-product-if-exists, vendor/SystemUIClocks/product.mk)
 include vendor/superior/config/packages.mk
 include vendor/prebuilts/prebuilts.mk
 
+# ThemeOverlays
+include packages/overlays/Themes/themes.mk
+
 # Include Superior_props
 $(call inherit-product, vendor/superior/config/superior_props.mk)
 
