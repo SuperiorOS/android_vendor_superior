@@ -16,6 +16,7 @@
 PRODUCT_PACKAGES += \
     Aperture \
     DocumentsUI \
+    Etar \
     LatinIME \
     Launcher3QuickStep \
     messaging \
