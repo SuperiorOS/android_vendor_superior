@@ -59,6 +59,9 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
+# Certification
+$(call inherit-product-if-exists, vendor/certification/config.mk)
+
 # Gapps
 ifeq ($(BUILD_WITH_GAPPS),true)
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
