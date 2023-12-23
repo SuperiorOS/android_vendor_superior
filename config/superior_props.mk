@@ -57,6 +57,10 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.surface_flinger.supports_background_blur=1
 endif
 
+# Disable lockscreen live wallpaper
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.wm.debug.lockscreen_live_wallpaper=false
+
 # Log privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=log
