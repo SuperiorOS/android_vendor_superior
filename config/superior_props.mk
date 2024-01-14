@@ -1,4 +1,4 @@
-# Copyright (C) 2018-23 The SuperiorOS Project
+# Copyright (C) 2018-24 The SuperiorOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -48,6 +48,13 @@ endif
 ifneq ($(TARGET_BUILD_VARIANT),user)
 # Thank you, please drive thru!
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.dun.override=0
+endif
+
+# Blur .??
+ifeq ($(TARGET_SUPPORTS_BLUR),true)
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.sf.blurs_are_expensive=1 \
+    ro.surface_flinger.supports_background_blur=1
 endif
 
 # Log privapp-permissions whitelist
