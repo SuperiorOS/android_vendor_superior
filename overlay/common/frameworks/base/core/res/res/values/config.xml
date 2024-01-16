@@ -195,4 +195,13 @@
     <!-- Default component for QR code scanner -->
     <string name="config_defaultQrCodeComponent" translatable="false">com.google.android.gms/.mlkit.barcode.ui.PlatformBarcodeScanningActivityProxy</string>
 
+    <!-- Define device configs on boot -->
+    <string-array name="global_device_configs_override">
+
+    <!-- Enable app cloning  -->
+       <item>app_cloning/cloned_apps_enabled=true</item>
+       <item>app_cloning/delete_all_app_clones_enabled=true</item>
+       <item>app_cloning/enable_app_cloning_building_blocks=true</item>
+    </string-array>
+
 </resources>
