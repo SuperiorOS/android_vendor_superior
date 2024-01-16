@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3QuickStep \
     messaging \
+    OmniJaws \
     Stk \
     ThemePicker \
     ThemesStub
