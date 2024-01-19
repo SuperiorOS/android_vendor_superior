@@ -20,3 +20,6 @@ export SKIP_ABI_CHECKS=true
 
 # Disable path requirement (Not going to maintain fek it)
 export DISABLE_ARTIFACT_PATH_REQUIREMENTS=true
+
+# Fetch LFS files for vendor/gapps
+cd vendor/gapps && git lfs pull && cd - 1> /dev/null
