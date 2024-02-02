@@ -39,12 +39,6 @@ PRODUCT_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGE_OVERLAYS += vendor/superior/overlay/dictionaries
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/superior/overlay/dictionaries
 
-# Charger
-PRODUCT_PACKAGES += \
-    charger_res_images \
-    product_charger_res_images \
-    product_charger_res_images_vendor
-
 # Extra tools in Superior
 PRODUCT_PACKAGES += \
     curl \
