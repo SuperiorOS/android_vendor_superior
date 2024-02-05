@@ -64,7 +64,7 @@ $(call inherit-product-if-exists, vendor/certification/config.mk)
 
 # Gapps
 ifeq ($(BUILD_WITH_GAPPS),true)
-$(call inherit-product-if-exists, vendor/gms/gms.mk)
+$(call inherit-product, vendor/gms/products/gms.mk)
 endif
 
 # Include AOSP audio files
