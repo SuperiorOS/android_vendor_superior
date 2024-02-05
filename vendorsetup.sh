@@ -22,4 +22,4 @@ export SKIP_ABI_CHECKS=true
 export DISABLE_ARTIFACT_PATH_REQUIREMENTS=true
 
 # Fetch LFS files for vendor/gapps
-cd vendor/gapps && git lfs pull && cd - 1> /dev/null
+cd vendor/gms && git lfs pull superior-gitlab fourteen-aosp && cd - 1> /dev/null
