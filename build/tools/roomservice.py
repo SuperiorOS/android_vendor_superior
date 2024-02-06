@@ -27,6 +27,12 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+dryrun = os.getenv('ROOMSERVICE_DRYRUN') == "true"
+if dryrun:
+    print("Dry run roomservice, no change will be made.")
+
+product = sys.argv[1]
+
 DEBUG = False
 
 custom_local_manifest = ".repo/local_manifests/superior.xml"
@@ -142,6 +148,8 @@ def is_in_manifest(project_path):
 
 def add_to_manifest(repos, fallback_branch=None):
     lm = load_manifest(custom_local_manifest)
+    if dryrun:
+        return
 
     for repo in repos:
 
@@ -247,7 +255,8 @@ def fetch_dependencies(repo_path, fallback_branch=None):
 
     if syncable_repos:
         print('Syncing dependencies')
-        os.system('repo sync --force-sync --no-tags --current-branch --no-clone-bundle %s' % ' '.join(syncable_repos))
+        if not dryrun:
+            os.system('repo sync --force-sync %s' % ' '.join(syncable_repos))
 
     for deprepo in syncable_repos:
         fetch_dependencies(deprepo)
