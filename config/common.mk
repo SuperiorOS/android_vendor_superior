@@ -73,9 +73,6 @@ include vendor/superior/config/aosp_audio.mk
 # Incude Superior Branding
 include vendor/superior/config/branding.mk
 
-# Inherit SystemUI Clocks if they exist
-$(call inherit-product-if-exists, vendor/SystemUIClocks/product.mk)
-
 # Include Superior Packages
 include vendor/superior/config/packages.mk
 include vendor/prebuilts/prebuilts.mk
