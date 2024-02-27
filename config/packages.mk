@@ -19,6 +19,7 @@ PRODUCT_PACKAGES += \
     Etar \
     BatteryStatsViewer \
     GameSpace \
+    Glimpse \
     LatinIME \
     Launcher3QuickStep \
     messaging \
