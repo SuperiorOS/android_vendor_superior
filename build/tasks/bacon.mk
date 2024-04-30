@@ -28,10 +28,18 @@ CL_GRN="\033[32m"
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(SUPERIOR_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(SUPERIOR_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(SUPERIOR_TARGET_PACKAGE).sha256sum
-	echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
-	echo -e ${CL_BLD}${CL_GRN}"Zip: "${CL_RED} $(SUPERIOR_TARGET_PACKAGE)${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"SHA256: "${CL_RED}" `cat $(SUPERIOR_TARGET_PACKAGE).sha256sum | awk '{print $$1}' `"${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"Size:"${CL_RED}" `du -sh $(SUPERIOR_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"TimeStamp:"${CL_RED}" `cat $(PRODUCT_OUT)/system/build.prop | grep ro.build.date.utc | cut -d'=' -f2 | awk '{print $$1}' `"${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"Integer Value:"${CL_RED}" `wc -c $(SUPERIOR_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
-	echo -e ${CL_BLD}${CL_RED}"================================================================================"${CL_RED}
+	@echo -e ""
+	@echo -e ${CL_RED}"███████╗██╗   ██╗██████╗ ███████╗██████╗ ██╗ ██████╗ ██████╗      ██████╗ ███████╗ "${CL_RED}
+	@echo -e ${CL_RED}"██╔════╝██║   ██║██╔══██╗██╔════╝██╔══██╗██║██╔═══██╗██╔══██╗    ██╔═══██╗██╔════╝ "${CL_RED}
+	@echo -e ${CL_RED}"███████╗██║   ██║██████╔╝█████╗  ██████╔╝██║██║   ██║██████╔╝    ██║   ██║███████╗ "${CL_RED}
+	@echo -e ${CL_RED}"╚════██║██║   ██║██╔═══╝ ██╔══╝  ██╔══██╗██║██║   ██║██╔══██╗    ██║   ██║╚════██║ "${CL_RED}
+	@echo -e ${CL_RED}"███████║╚██████╔╝██║     ███████╗██║  ██║██║╚██████╔╝██║  ██║    ╚██████╔╝███████║ "${CL_RED}
+	@echo -e ${CL_RED}"╚══════╝ ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═╝  ╚═╝     ╚═════╝ ╚══════╝ "${CL_RED}
+	@echo -e ${CL_RED}"                        Your Build Is Ready! Enjoy the SuperiorOS                  "${CL_RED}
+	@echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
+	@echo -e ${CL_BLD}${CL_GRN}"Zip: "${CL_RED} $(SUPERIOR_TARGET_PACKAGE)${CL_RST}
+	@echo -e ${CL_BLD}${CL_GRN}"SHA256: "${CL_RED}" `cat $(SUPERIOR_TARGET_PACKAGE).sha256sum | awk '{print $$1}' `"${CL_RST}
+	@echo -e ${CL_BLD}${CL_GRN}"Size:"${CL_RED}" `du -sh $(SUPERIOR_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
+	@echo -e ${CL_BLD}${CL_GRN}"TimeStamp:"${CL_RED}" `cat $(PRODUCT_OUT)/system/build.prop | grep ro.build.date.utc | cut -d'=' -f2 | awk '{print $$1}' `"${CL_RST}
+	@echo -e ${CL_BLD}${CL_GRN}"Integer Value:"${CL_RED}" `wc -c $(SUPERIOR_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
+	@echo -e ${CL_BLD}${CL_RED}"================================================================================"${CL_RED}
