@@ -34,7 +34,6 @@ ifeq ($(SUPERIOR_OFFICIAL), true)
       IS_OFFICIAL=true
       SUPERIOR_BUILD_TYPE := RELEASE
 
-#include vendor/superior-priv/keys.mk
 PRODUCT_PACKAGES += \
     Updater
 
@@ -71,3 +70,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.superior.fingerprint=$(SUPERIOR_FINGERPRINT) \
   ro.build.datetime=$(BUILD_DATE_TIME) \
   ro.superior.edition=$(SUPERIOR_EDITION)
+
+# Private keys for signing
+-include vendor/superior-priv/keys/keys.mk
