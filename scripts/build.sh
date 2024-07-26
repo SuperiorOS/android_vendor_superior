@@ -138,7 +138,7 @@ echo -e ""
 # Lunch-time!
 echo -e "${CLR_BLD_BLU}Lunching $DEVICE${CLR_RST}"
 echo -e ""
-lunch "superior_$DEVICE-ap1a-$BUILD_TYPE"
+lunch "superior_$DEVICE-ap2a-$BUILD_TYPE"
 SUPERIOR_VERSION="$(get_build_var SUPERIOR_VERSION)"
 checkExit
 echo -e ""
@@ -181,7 +181,10 @@ elif [ "${KEY_MAPPINGS}" ]; then
     echo -e "${CLR_BLD_BLU}Signing target files apks${CLR_RST}"
     sign_target_files_apks -o -d $KEY_MAPPINGS \
         --extra_apks AdServicesApk.apk=$KEY_MAPPINGS/releasekey \
+        --extra_apks FederatedCompute.apk=$KEY_MAPPINGS/releasekey \
         --extra_apks HalfSheetUX.apk=$KEY_MAPPINGS/releasekey \
+        --extra_apks HealthConnectBackupRestore.apk=$KEY_MAPPINGS/releasekey \
+        --extra_apks HealthConnectController.apk=$KEY_MAPPINGS/releasekey \
         --extra_apks OsuLogin.apk=$KEY_MAPPINGS/releasekey \
         --extra_apks SafetyCenterResources.apk=$KEY_MAPPINGS/releasekey \
         --extra_apks ServiceConnectivityResources.apk=$KEY_MAPPINGS/releasekey \
