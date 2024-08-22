@@ -53,6 +53,9 @@ SOONG_CONFIG_superiorGlobalVars += \
     target_inputdispatcher_skip_event_key \
     target_ld_shim_libs \
     target_power_libperfmgr_mode_extension_lib \
+    target_powershare_path \
+    target_powershare_enabled \
+    target_powershare_disabled \
     target_surfaceflinger_udfps_lib \
     target_trust_usb_control_path \
     target_trust_usb_control_enable \
@@ -117,6 +120,8 @@ TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE ?= false
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE ?= true
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB ?= libperfmgr-ext
+TARGET_POWERSHARE_ENABLED ?= 1
+TARGET_POWERSHARE_DISABLED ?= 0
 TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY ?= 0
 TARGET_QTI_VIBRATOR_EFFECT_LIB ?= libqtivibratoreffect
 TARGET_SDMCORE_HAS_IS_DISPLAY_HW_AVAILABLE_FUNC ?= true
@@ -141,6 +146,9 @@ SOONG_CONFIG_superiorGlobalVars_target_health_charging_control_supports_deadline
 SOONG_CONFIG_superiorGlobalVars_target_health_charging_control_supports_toggle := $(TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE)
 SOONG_CONFIG_superiorGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
 SOONG_CONFIG_superiorGlobalVars_target_power_libperfmgr_mode_extension_lib := $(TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB)
+SOONG_CONFIG_superiorGlobalVars_target_powershare_path := $(TARGET_POWERSHARE_PATH)
+SOONG_CONFIG_superiorGlobalVars_target_powershare_enabled := $(TARGET_POWERSHARE_ENABLED)
+SOONG_CONFIG_superiorGlobalVars_target_powershare_disabled := $(TARGET_POWERSHARE_DISABLED)
 SOONG_CONFIG_superiorGlobalVars_target_inputdispatcher_skip_event_key := $(TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY)
 SOONG_CONFIG_superiorGlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TARGET_LD_SHIM_LIBS))
 SOONG_CONFIG_superiorGlobalVars_target_surfaceflinger_udfps_lib := $(TARGET_SURFACEFLINGER_UDFPS_LIB)
