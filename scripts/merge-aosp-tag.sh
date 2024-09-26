@@ -9,7 +9,7 @@ blu=$'\e[1;34m'
 end=$'\e[0m'
 
 REMOTE="superior"
-BRANCH="fourteen"
+BRANCH="fifteen"
 
 BLACKLIST="
 packages/apps/Updater \
