@@ -24,6 +24,7 @@ PRODUCT_PACKAGES += \
     messaging \
     OmniJaws \
     SimpleDeviceConfig \
+    OmniStyle \
     Stk \
     ThemePicker \
     ThemesStub
