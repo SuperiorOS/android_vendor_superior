@@ -24,6 +24,7 @@ PRODUCT_PACKAGES += \
     Launcher3QuickStep \
     messaging \
     OmniJaws \
+    OmniStyle \
     Stk \
     ThemePicker \
     ThemesStub
