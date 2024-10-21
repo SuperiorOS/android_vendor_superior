@@ -63,6 +63,7 @@ PRODUCT_PACKAGES += \
 $(call inherit-product-if-exists, vendor/certification/config.mk)
 
 # Gapps
+BUILD_WITH_GAPPS ?= true
 ifeq ($(BUILD_WITH_GAPPS),true)
 $(call inherit-product, vendor/gms/products/gms.mk)
 endif
