@@ -17,7 +17,6 @@ PRODUCT_PACKAGES += \
     Aperture \
     DocumentsUI \
     Etar \
-    BatteryStatsViewer \
     GameSpace \
     Glimpse \
     LatinIME \
