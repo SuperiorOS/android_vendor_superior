@@ -18,36 +18,37 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources>
-    <!-- SystemUI Plugins that can be loaded on user builds. -->
-    <string-array name="config_pluginAllowlist" translatable="false">
-        <item>com.android.systemui</item>
-        <item>com.android.systemui.plugin.globalactions.wallet</item>
-        <item>com.android.systemui.clocks</item>
-        <item>com.android.systemui.clocks.debug</item>
-        <item>com.android.systemui.clocks.bignum</item>
-        <item>com.android.systemui.clocks.calligraphy</item>
-        <item>com.android.systemui.clocks.flex</item>
-        <item>com.android.systemui.clocks.growth</item>
-        <item>com.android.systemui.clocks.handwritten</item>
-        <item>com.android.systemui.clocks.inflate</item>
-        <item>com.android.systemui.clocks.metro</item>
-        <item>com.android.systemui.clocks.numoverlap</item>
-        <item>com.android.systemui.clocks.weather</item>
-    </string-array>
+     <!-- SystemUI Plugins that can be loaded on user builds. -->
+     <string-array name="config_pluginAllowlist" translatable="false">
+          <item>com.android.systemui</item>
+          <item>com.android.systemui.plugin.globalactions.wallet</item>
+          <item>com.android.systemui.clocks</item>
+          <item>com.android.systemui.clocks.debug</item>
+          <item>com.android.systemui.clocks.bignum</item>
+          <item>com.android.systemui.clocks.calligraphy</item>
+          <item>com.android.systemui.clocks.flex</item>
+          <item>com.android.systemui.clocks.growth</item>
+          <item>com.android.systemui.clocks.handwritten</item>
+          <item>com.android.systemui.clocks.inflate</item>
+          <item>com.android.systemui.clocks.metro</item>
+          <item>com.android.systemui.clocks.numoverlap</item>
+          <item>com.android.systemui.clocks.weather</item>
+     </string-array>
 
-    <!-- Icons that don't show in a collapsed non-keyguard statusbar -->
-    <string-array name="config_collapsed_statusbar_icon_blocklist" translatable="false">
-    </string-array>
+     <!-- Icons that don't show in a collapsed non-keyguard statusbar -->
+     <string-array name="config_collapsed_statusbar_icon_blocklist" translatable="false">
+     </string-array>
 
-    <!-- Icons that don't show in a collapsed statusbar on keyguard -->
-    <string-array name="config_keyguard_statusbar_icon_blocklist" translatable="false">
-    </string-array>
+     <!-- Icons that don't show in a collapsed statusbar on keyguard -->
+     <string-array name="config_keyguard_statusbar_icon_blocklist" translatable="false">
+     </string-array>
 
-    <!-- ComponentName for the file browsing app that the system would expect to be used in work
+     <!-- ComponentName for the file browsing app that the system would expect to be used in work
          profile. The icon for this app will be shown to the user when informing them that a
          screenshot has been saved to work profile. If blank, a default icon will be shown. -->
-    <string name="config_sceenshotWorkProfileFilesApp" translatable="false">com.android.documentsui/.files.LauncherActivity</string>
+     <string name="config_sceenshotWorkProfileFilesApp" translatable="false">
+          com.android.documentsui/.files.LauncherActivity</string>
 
-    <!-- Whether or not lockscreen shortcuts can be customized -->
-    <bool name="custom_lockscreen_shortcuts_enabled" translatable="false">true</bool>
+     <!-- Whether or not lockscreen shortcuts can be customized -->
+     <bool name="custom_lockscreen_shortcuts_enabled" translatable="false">true</bool>
 </resources>

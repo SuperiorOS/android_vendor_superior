@@ -1,4 +1,4 @@
-# Copyright (C) 2018-22 The SuperiorOS Project
+# Copyright (C) 2018-24 The SuperiorOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -57,14 +57,8 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
-# Certification
-$(call inherit-product-if-exists, vendor/certification/config.mk)
-
 # Gapps
-BUILD_WITH_GAPPS ?= true
-ifeq ($(BUILD_WITH_GAPPS),true)
 $(call inherit-product, vendor/gms/products/gms.mk)
-endif
 
 # Include AOSP audio files
 include vendor/superior/config/aosp_audio.mk
@@ -82,9 +76,6 @@ endif
 
 # Incude Superior Branding
 include vendor/superior/config/branding.mk
-
-# Inherit SystemUI Clocks if they exist
-$(call inherit-product-if-exists, vendor/SystemUIClocks/product.mk)
 
 # Include Superior Packages
 include vendor/superior/config/packages.mk
