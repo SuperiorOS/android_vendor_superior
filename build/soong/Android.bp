@@ -731,5 +731,20 @@ include_miui_camera {
         include_miui_camera: {
             cppflags: ["-DINCLUDES_MIUI_CAMERA"],
         },
+    }
+}
+soong_config_module_type {
+    name: "qcom_libfmjni",
+    module_type: "cc_defaults",
+    config_namespace: "superiorQcomVars",
+    bool_variables: ["no_fm_firmware"],
+    properties: ["cflags"],
+}
+qcom_libfmjni {
+    name: "qcom_libfmjni_defaults",
+    soong_config_variables: {
+        no_fm_firmware: {
+            cflags: ["-DQCOM_NO_FM_FIRMWARE"],
+        },
     },
 }
